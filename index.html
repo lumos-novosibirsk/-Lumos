@@ -77,8 +77,6 @@ footer a:hover{color:#f0e6d2!important}
 .tg:hover{background:#1a7fb0}
 .max{background:#7c3aed;color:white!important}
 .max:hover{background:#5f2ab8}
-.whatsapp{background:#25D366;color:white!important}
-.whatsapp:hover{background:#1da851}
 .cart-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(4,33,29,.6);opacity:0;visibility:hidden;transition:all .3s;z-index:998}
 .cart-overlay.open{opacity:1;visibility:visible}
 .cart-panel{position:fixed;top:0;right:0;width:420px;max-width:100%;height:100%;background:#faf5ea;box-shadow:-10px 0 40px rgba(0,0,0,.3);transform:translateX(100%);transition:transform .4s;z-index:999;display:flex;flex-direction:column}
@@ -95,21 +93,48 @@ footer a:hover{color:#f0e6d2!important}
 .cart-item-remove{background:transparent;border:1px solid #d9c5a0;color:#0a3d36;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:16px;flex-shrink:0}
 .cart-item-remove:hover{background:#0a3d36;color:#d9c5a0}
 .cart-footer{background:white;padding:22px 28px;border-top:1px solid #f0e6d2}
-.cart-total{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.cart-total{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
 .cart-total-label{font-size:14px;color:#666;text-transform:uppercase;letter-spacing:1px}
 .cart-total-value{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:#04211d}
 .cart-checkout{width:100%;background:#0a3d36;color:#d9c5a0;padding:15px;border:none;border-radius:50px;font-family:'Montserrat',sans-serif;font-weight:600;font-size:13px;letter-spacing:2px;text-transform:uppercase;cursor:pointer}
 .cart-checkout:hover{background:#d9c5a0;color:#04211d}
-.toast{position:fixed;bottom:30px;right:30px;background:#04211d;color:#d9c5a0;padding:18px 28px;border-radius:16px;border:1px solid #d9c5a0;transform:translateY(150px);opacity:0;transition:all .4s;z-index:1000;font-family:'Cormorant Garamond',serif;font-size:18px}
+.checkout-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(4,33,29,.7);opacity:0;visibility:hidden;transition:all .3s;z-index:1000;display:flex;align-items:center;justify-content:center;padding:20px}
+.checkout-overlay.open{opacity:1;visibility:visible}
+.checkout-modal{background:#faf5ea;border-radius:24px;max-width:520px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.checkout-header{background:#04211d;color:#d9c5a0;padding:22px 28px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #d9c5a0;position:sticky;top:0;z-index:2}
+.checkout-header h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:500;letter-spacing:2px}
+.checkout-close{background:transparent;border:none;color:#d9c5a0;font-size:28px;cursor:pointer}
+.checkout-body{padding:26px 28px}
+.checkout-label{font-size:11px;color:#0a3d36;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;display:block;margin-bottom:10px}
+.delivery-options{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:22px}
+.delivery-option{border:2px solid #e0d5c0;border-radius:14px;padding:16px;cursor:pointer;text-align:center;background:white;transition:all .2s}
+.delivery-option:hover{border-color:#0a3d36}
+.delivery-option.active{border-color:#0a3d36;background:#f0f9f7}
+.delivery-option-icon{font-size:28px;margin-bottom:6px}
+.delivery-option-title{font-weight:600;font-size:14px;color:#04211d}
+.delivery-note{font-size:12px;color:#888;text-align:center;margin-top:8px;font-style:italic;line-height:1.5}
+.checkout-field{margin-bottom:16px}
+.checkout-field input,.checkout-field textarea{width:100%;padding:14px 18px;border:1px solid #e0d5c0;border-radius:14px;font-size:14px;outline:none;font-family:'Montserrat',sans-serif;background:white;transition:border-color .2s}
+.checkout-field input:focus,.checkout-field textarea:focus{border-color:#0a3d36}
+.checkout-field textarea{resize:vertical;min-height:80px}
+.checkout-summary{background:white;border-radius:14px;padding:18px 20px;margin-bottom:20px;border:1px solid #e0d5c0}
+.checkout-summary-row{display:flex;justify-content:space-between;padding:6px 0;font-size:14px}
+.checkout-summary-total{display:flex;justify-content:space-between;padding-top:12px;margin-top:12px;border-top:1px solid #f0e6d2;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:#04211d}
+.send-buttons{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.send-btn{padding:16px;border:none;border-radius:50px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all .3s;display:flex;align-items:center;justify-content:center;gap:8px}
+.send-tg{background:#229ED9;color:white}
+.send-tg:hover{background:#1a7fb0}
+.send-max{background:#7c3aed;color:white}
+.send-max:hover{background:#5f2ab8}
+.checkout-note{font-size:12px;color:#888;text-align:center;margin-top:14px;font-style:italic;line-height:1.5}
+.toast{position:fixed;bottom:30px;right:30px;background:#04211d;color:#d9c5a0;padding:18px 28px;border-radius:16px;border:1px solid #d9c5a0;transform:translateY(150px);opacity:0;transition:all .4s;z-index:1100;font-family:'Cormorant Garamond',serif;font-size:18px;max-width:340px}
 .toast.show{transform:translateY(0);opacity:1}
 @media(max-width:1000px){.header-phone{font-size:13px}nav a{margin:0 8px;font-size:12px}}
 @media(max-width:900px){.header-phone{display:none}}
-@media(max-width:768px){.hero h1{font-size:36px}nav{display:none}.section-title{font-size:30px}.contact{padding:45px 22px}.contact h2{font-size:26px}.logo{font-size:20px;letter-spacing:3px}header{padding:12px 5%}.cart-panel{width:100%}.catalog-controls{padding:20px}.filter-row{flex-direction:column;align-items:flex-start;gap:8px}.filter-label{min-width:auto}.filter-btn{padding:7px 12px;font-size:12px}.sort-select{min-width:100%}.reset-filters{margin-left:0}}
+@media(max-width:768px){.hero h1{font-size:36px}nav{display:none}.section-title{font-size:30px}.contact{padding:45px 22px}.contact h2{font-size:26px}.logo{font-size:20px;letter-spacing:3px}header{padding:12px 5%}.cart-panel{width:100%}.catalog-controls{padding:20px}.filter-row{flex-direction:column;align-items:flex-start;gap:8px}.filter-label{min-width:auto}.filter-btn{padding:7px 12px;font-size:12px}.sort-select{min-width:100%}.reset-filters{margin-left:0}.send-buttons{grid-template-columns:1fr}.checkout-modal{max-height:95vh}.delivery-options{grid-template-columns:1fr}}
 </style>
 </head>
-<body>
-
-<header>
+<body><header>
   <div class="logo">LŪMOS</div>
   <nav>
     <a href="#catalog">Каталог</a>
@@ -310,7 +335,6 @@ footer a:hover{color:#f0e6d2!important}
   <div class="messengers">
     <a href="https://t.me/+79095295349" target="_blank" class="messenger-btn tg">✈️ Telegram</a>
     <a href="https://max.ru/+79095295349" target="_blank" class="messenger-btn max">💬 MAX</a>
-    <a href="https://wa.me/79095295349" target="_blank" class="messenger-btn whatsapp">📱 WhatsApp</a>
   </div>
 </footer>
 
@@ -328,26 +352,78 @@ footer a:hover{color:#f0e6d2!important}
       <span class="cart-total-label">Итого</span>
       <span class="cart-total-value" id="cartTotal">0 ₽</span>
     </div>
-    <button class="cart-checkout" onclick="checkout()">Оформить заказ</button>
+    <button class="cart-checkout" onclick="openCheckout()">Оформить заказ</button>
   </div>
 </div>
 
-<div class="toast" id="toast"></div>
+<div class="checkout-overlay" id="checkoutOverlay" onclick="closeCheckout(event)">
+  <div class="checkout-modal" onclick="event.stopPropagation()">
+    <div class="checkout-header">
+      <h3>Оформление заказа</h3>
+      <button class="checkout-close" onclick="closeCheckout()">×</button>
+    </div>
+    <div class="checkout-body">
+      
+      <span class="checkout-label">Как получите заказ?</span>
+      <div class="delivery-options">
+        <div class="delivery-option active" id="optDelivery" onclick="selectDelivery('delivery')">
+          <div class="delivery-option-icon">🚚</div>
+          <div class="delivery-option-title">Доставка</div>
+        </div>
+        <div class="delivery-option" id="optPickup" onclick="selectDelivery('pickup')">
+          <div class="delivery-option-icon">🏪</div>
+          <div class="delivery-option-title">Самовывоз</div>
+        </div>
+      </div>
+      <p class="delivery-note" id="deliveryNote">Стоимость доставки уточним при подтверждении</p>
+      
+      <div class="checkout-field">
+        <span class="checkout-label">Ваше имя</span>
+        <input type="text" id="coName" placeholder="Как к вам обращаться?">
+      </div>
+      
+      <div class="checkout-field">
+        <span class="checkout-label">Телефон</span>
+        <input type="tel" id="coPhone" placeholder="+7 (___) ___-__-__">
+      </div>
+      
+      <div class="checkout-field" id="fieldAddress">
+        <span class="checkout-label">Адрес доставки</span>
+        <input type="text" id="coAddress" placeholder="Улица, дом, квартира">
+      </div>
+      
+      <div class="checkout-field">
+        <span class="checkout-label">Комментарий (необязательно)</span>
+        <textarea id="coComment" placeholder="Пожелания к букету, время доставки..."></textarea>
+      </div>
+      
+      <div class="checkout-summary" id="checkoutSummary"></div>
+      
+      <div class="send-buttons">
+        <button class="send-btn send-tg" onclick="sendOrder('tg')">✈️ В Telegram</button>
+        <button class="send-btn send-max" onclick="sendOrder('max')">💬 В MAX</button>
+      </div>
+      <p class="checkout-note">Нажмите — откроется мессенджер<br>с готовым текстом заказа</p>
+      
+    </div>
+  </div>
+</div>
 
-<script>
+<div class="toast" id="toast"></div><script>
 let cart=[];
 const filterState={occasion:'all',type:'all',size:'all'};
 let sortMode='popular';
+let deliveryType='delivery';
 
 function addToCart(name,price){
-  const ex=cart.find(i=>i.name===name);
+  const ex=cart.find(function(i){return i.name===name;});
   if(ex)ex.qty++;else cart.push({name:name,price:price,qty:1});
   renderCart();
   showToast('«'+name+'» · добавлено в корзину');
 }
 
 function removeFromCart(name){
-  cart=cart.filter(i=>i.name!==name);
+  cart=cart.filter(function(i){return i.name!==name;});
   renderCart();
 }
 
@@ -380,11 +456,80 @@ function closeCart(){
   document.body.style.overflow='';
 }
 
-function checkout(){
+function openCheckout(){
   if(cart.length===0){showToast('Корзина пуста · добавьте букет 🌸');return;}
-  const t=cart.reduce(function(s,i){return s+i.price*i.qty;},0);
-  showToast('Заказ на '+t.toLocaleString('ru-RU')+' ₽ · мы позвоним');
   closeCart();
+  const total=cart.reduce(function(s,i){return s+i.price*i.qty;},0);
+  const summary='<div class="checkout-summary-row"><span>Товаров:</span><span>'+cart.reduce(function(s,i){return s+i.qty;},0)+'</span></div>'+cart.map(function(i){return '<div class="checkout-summary-row"><span>'+i.name+(i.qty>1?' × '+i.qty:'')+'</span><span>'+(i.price*i.qty).toLocaleString('ru-RU')+' ₽</span></div>';}).join('')+'<div class="checkout-summary-total"><span>Итого</span><span>'+total.toLocaleString('ru-RU')+' ₽</span></div>';
+  document.getElementById('checkoutSummary').innerHTML=summary;
+  document.getElementById('checkoutOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+
+function closeCheckout(e){
+  if(e && e.target !== document.getElementById('checkoutOverlay')) return;
+  document.getElementById('checkoutOverlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+function selectDelivery(type){
+  deliveryType=type;
+  document.getElementById('optDelivery').classList.toggle('active',type==='delivery');
+  document.getElementById('optPickup').classList.toggle('active',type==='pickup');
+  document.getElementById('fieldAddress').style.display=type==='delivery'?'block':'none';
+  document.getElementById('deliveryNote').textContent=type==='delivery'
+    ?'Стоимость доставки уточним при подтверждении'
+    :'Заберёте по адресу: ул. Владимира Заровного, 8';
+}
+
+function sendOrder(messenger){
+  const name=document.getElementById('coName').value.trim();
+  const phone=document.getElementById('coPhone').value.trim();
+  const address=document.getElementById('coAddress').value.trim();
+  const comment=document.getElementById('coComment').value.trim();
+  
+  if(!name){showToast('Пожалуйста, укажите имя');return;}
+  if(!phone){showToast('Пожалуйста, укажите телефон');return;}
+  if(deliveryType==='delivery' && !address){showToast('Пожалуйста, укажите адрес доставки');return;}
+  
+  const total=cart.reduce(function(s,i){return s+i.price*i.qty;},0);
+  
+  let text='🌸 Заказ с сайта LŪMOS\n\n';
+  cart.forEach(function(i){
+    text+='• '+i.name+(i.qty>1?' × '+i.qty:'')+' = '+(i.price*i.qty).toLocaleString('ru-RU')+' ₽\n';
+  });
+  text+='━━━━━━━━━━━━━━\n';
+  text+='Итого: '+total.toLocaleString('ru-RU')+' ₽\n\n';
+  text+='Способ: '+(deliveryType==='delivery'?'🚚 Доставка курьером':'🏪 Самовывоз')+'\n';
+  if(deliveryType==='delivery'){
+    text+='Адрес: '+address+'\n';
+    text+='Доставка: по договорённости\n';
+  } else {
+    text+='Заберу по адресу: ул. Владимира Заровного, 8\n';
+  }
+  text+='\nИмя: '+name+'\n';
+  text+='Телефон: '+phone+'\n';
+  if(comment) text+='Комментарий: '+comment+'\n';
+  
+  const encoded=encodeURIComponent(text);
+  
+  if(messenger==='tg'){
+    window.open('https://t.me/+79095295349?text='+encoded,'_blank');
+  } else if(messenger==='max'){
+    window.open('https://max.ru/+79095295349?text='+encoded,'_blank');
+  }
+  
+  showToast('Мессенджер открывается · отправьте сообщение');
+  setTimeout(function(){
+    cart=[];
+    renderCart();
+    document.getElementById('checkoutOverlay').classList.remove('open');
+    document.body.style.overflow='';
+    document.getElementById('coName').value='';
+    document.getElementById('coPhone').value='';
+    document.getElementById('coAddress').value='';
+    document.getElementById('coComment').value='';
+  },1500);
 }
 
 function applyFilters(){
@@ -462,7 +607,9 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){
   });
 });
 
-document.addEventListener('keydown',function(e){if(e.key==='Escape')closeCart();});
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'){closeCart();closeCheckout();}
+});
 
 applyFilters();
 </script>
