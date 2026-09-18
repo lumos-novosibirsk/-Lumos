@@ -341,7 +341,7 @@ let sortMode='popular';
 
 function addToCart(name,price){
   const ex=cart.find(i=>i.name===name);
-  if(ex)ex.qty++;else cart.push({name,price,qty:1});
+  if(ex)ex.qty++;else cart.push({name:name,price:price,qty:1});
   renderCart();
   showToast('«'+name+'» · добавлено в корзину');
 }
@@ -355,15 +355,17 @@ function renderCart(){
   const box=document.getElementById('cartItems');
   const cnt=document.getElementById('cartCount');
   const tot=document.getElementById('cartTotal');
-  const c=cart.reduce((s,i)=>s+i.qty,0);
-  const t=cart.reduce((s,i)=>s+i.price*i.qty,0);
+  const c=cart.reduce(function(s,i){return s+i.qty;},0);
+  const t=cart.reduce(function(s,i){return s+i.price*i.qty;},0);
   cnt.textContent=c;
   tot.textContent=t.toLocaleString('ru-RU')+' ₽';
   if(cart.length===0){
     box.innerHTML='<div class="cart-empty">Корзина пуста<br>Выберите букет из каталога 🌸</div>';
     return;
   }
-  box.innerHTML=cart.map(i=>'<div class="cart-item"><div class="cart-item-info"><div class="cart-item-name">'+i.name+(i.qty>1?' × '+i.qty:'')+'</div><div class="cart-item-price">'+(i.price*i.qty).toLocaleString('ru-RU')+' ₽</div></div><button class="cart-item-remove" onclick="removeFromCart(\''+i.name+'\')">×</button></div>').join('');
+  box.innerHTML=cart.map(function(i){
+    return '<div class="cart-item"><div class="cart-item-info"><div class="cart-item-name">'+i.name+(i.qty>1?' × '+i.qty:'')+'</div><div class="cart-item-price">'+(i.price*i.qty).toLocaleString('ru-RU')+' ₽</div></div><button class="cart-item-remove" onclick="removeFromCart(\''+i.name+'\')">×</button></div>';
+  }).join('');
 }
 
 function openCart(){
@@ -380,14 +382,14 @@ function closeCart(){
 
 function checkout(){
   if(cart.length===0){showToast('Корзина пуста · добавьте букет 🌸');return;}
-  const t=cart.reduce((s,i)=>s+i.price*i.qty,0);
+  const t=cart.reduce(function(s,i){return s+i.price*i.qty;},0);
   showToast('Заказ на '+t.toLocaleString('ru-RU')+' ₽ · мы позвоним');
   closeCart();
 }
 
 function applyFilters(){
   let v=0;
-  document.querySelectorAll('#catalogGrid .card').forEach(card=>{
+  document.querySelectorAll('#catalogGrid .card').forEach(function(card){
     const ok1=filterState.occasion==='all'||(card.dataset.occasion||'').includes(filterState.occasion);
     const ok2=filterState.type==='all'||card.dataset.type===filterState.type;
     const ok3=filterState.size==='all'||card.dataset.size===filterState.size;
@@ -407,3 +409,62 @@ function applyFilters(){
     }
   } else if(no) no.remove();
 }
+
+function sortCards(){
+  const g=document.getElementById('catalogGrid');
+  const cards=Array.from(g.querySelectorAll('.card'));
+  cards.sort(function(a,b){
+    if(sortMode==='price-asc')return +a.dataset.price-+b.dataset.price;
+    if(sortMode==='price-desc')return +b.dataset.price-+a.dataset.price;
+    return +b.dataset.popularity-+a.dataset.popularity;
+  });
+  cards.forEach(function(c){g.appendChild(c);});
+}
+
+document.querySelectorAll('.filter-buttons').forEach(function(group){
+  group.querySelectorAll('.filter-btn').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      group.querySelectorAll('.filter-btn').forEach(function(b){b.classList.remove('active');});
+      btn.classList.add('active');
+      filterState[group.dataset.filterGroup]=btn.dataset.value;
+      applyFilters();
+    });
+  });
+});
+
+const sortSel=document.getElementById('sortSelect');
+if(sortSel) sortSel.addEventListener('change',function(e){sortMode=e.target.value;applyFilters();});
+
+function resetFilters(){
+  filterState.occasion='all';
+  filterState.type='all';
+  filterState.size='all';
+  sortMode='popular';
+  document.querySelectorAll('.filter-buttons').forEach(function(g){
+    g.querySelectorAll('.filter-btn').forEach(function(b){b.classList.toggle('active',b.dataset.value==='all');});
+  });
+  if(sortSel) sortSel.value='popular';
+  applyFilters();
+}
+
+function showToast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg;
+  t.classList.add('show');
+  setTimeout(function(){t.classList.remove('show');},3000);
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    e.preventDefault();
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t) t.scrollIntoView({behavior:'smooth'});
+  });
+});
+
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeCart();});
+
+applyFilters();
+</script>
+</body>
+</html>
