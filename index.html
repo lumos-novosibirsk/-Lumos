@@ -15,7 +15,6 @@
     background: #faf5ea;
   }
   
-  /* Шапка */
   header {
     position: sticky;
     top: 0;
@@ -53,11 +52,7 @@
   
   nav a:hover { color: #d9c5a0; }
   
-  .header-right {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-  }
+  .header-right { display: flex; align-items: center; gap: 18px; }
   
   .header-phone {
     color: #d9c5a0;
@@ -88,7 +83,6 @@
   
   .cart:hover { background: #c9b088; }
   
-  /* Hero */
   .hero {
     background: linear-gradient(135deg, #0a3d36 0%, #04211d 100%);
     padding: 120px 5%;
@@ -145,7 +139,6 @@
     box-shadow: 0 15px 30px rgba(217,197,160,0.4);
   }
   
-  /* Секции */
   section { padding: 80px 5%; }
   
   .section-title {
@@ -171,13 +164,124 @@
   .section-subtitle {
     text-align: center;
     color: #6b6b6b;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     font-style: italic;
     font-size: 16px;
   }
   
-  /* Каталог */
-  .catalog {
+  .catalog-controls {
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    background: white;
+    padding: 30px 35px;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(4,33,29,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+  
+  .filter-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .filter-label {
+    font-size: 11px;
+    color: #0a3d36;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    min-width: 90px;
+  }
+  
+  .filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .filter-btn {
+    background: transparent;
+    border: 1px solid #e0d5c0;
+    color: #666;
+    padding: 8px 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.25s;
+    letter-spacing: 0.3px;
+  }
+  
+  .filter-btn:hover {
+    border-color: #0a3d36;
+    color: #0a3d36;
+  }
+  
+  .filter-btn.active {
+    background: #0a3d36;
+    color: #d9c5a0;
+    border-color: #0a3d36;
+  }
+  
+  .sort-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-top: 18px;
+    border-top: 1px solid #f0e6d2;
+    flex-wrap: wrap;
+  }
+  
+  .sort-select {
+    background: white;
+    border: 1px solid #e0d5c0;
+    color: #0a3d36;
+    padding: 10px 40px 10px 18px;
+    border-radius: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.25s;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3e%3cpath d='M1 1L6 6L11 1' stroke='%230a3d36' stroke-width='2' stroke-linecap='round'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    min-width: 220px;
+  }
+  
+  .sort-select:hover, .sort-select:focus { border-color: #0a3d36; }
+  
+  .results-count {
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    color: #888;
+    font-size: 14px;
+    font-style: italic;
+    text-align: center;
+  }
+  
+  .results-count strong { color: #0a3d36; font-weight: 600; }
+  
+  .reset-filters {
+    background: transparent;
+    border: none;
+    color: #888;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-left: auto;
+    transition: color 0.3s;
+  }
+  
+  .reset-filters:hover { color: #0a3d36; }  .catalog {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
@@ -198,6 +302,8 @@
     box-shadow: 0 20px 45px rgba(4,33,29,0.18);
   }
   
+  .card.hidden { display: none; }
+  
   .card-img {
     height: 260px;
     background: linear-gradient(135deg, #f0e6d2, #d9c5a0);
@@ -205,6 +311,21 @@
     align-items: center;
     justify-content: center;
     font-size: 100px;
+    position: relative;
+  }
+  
+  .card-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #04211d;
+    color: #d9c5a0;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
   }
   
   .card-body { padding: 25px; }
@@ -261,7 +382,22 @@
     color: #04211d;
   }
   
-  /* Преимущества */
+  .no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 80px 20px;
+    color: #888;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-style: italic;
+  }
+  
+  .no-results span {
+    display: block;
+    font-size: 60px;
+    margin-bottom: 20px;
+  }
+  
   .features {
     background: white;
     display: grid;
@@ -288,7 +424,6 @@
   
   .feature p { color: #777; font-size: 14px; }
   
-  /* Отзывы */
   .reviews {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -321,7 +456,6 @@
     font-size: 14px;
   }
   
-  /* Контакты */
   .contact {
     background: linear-gradient(135deg, #04211d, #0a3d36);
     color: white;
@@ -370,7 +504,6 @@
   .contact .btn { background: #d9c5a0; color: #04211d; font-size: 12px; }
   .contact .btn:hover { background: #f0e6d2; }
   
-  /* Подвал */
   footer {
     background: #04211d;
     color: #a89b80;
@@ -386,17 +519,9 @@
     letter-spacing: 4px;
   }
   
-  footer p {
-    margin: 8px 0;
-    font-size: 13px;
-    letter-spacing: 0.5px;
-  }
-  
+  footer p { margin: 8px 0; font-size: 13px; letter-spacing: 0.5px; }
   footer a { color: #d9c5a0 !important; text-decoration: none; }
-  footer a:hover { color: #f0e6d2 !important; }
-  
-  /* Панель корзины */
-  .cart-overlay {
+  footer a:hover { color: #f0e6d2 !important; }  .cart-overlay {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     background: rgba(4,33,29,0.6);
@@ -567,7 +692,6 @@
     color: #04211d;
   }
   
-  /* Уведомление */
   .toast {
     position: fixed;
     bottom: 30px;
@@ -589,7 +713,6 @@
   
   .toast.show { transform: translateY(0); opacity: 1; }
   
-  /* Адаптив */
   @media (max-width: 1100px) {
     .header-phone { font-size: 13px; }
     nav a { margin: 0 8px; font-size: 12px; }
@@ -608,6 +731,12 @@
     .logo { font-size: 20px; letter-spacing: 3px; }
     header { padding: 12px 5%; }
     .cart-panel { width: 100%; }
+    .catalog-controls { padding: 20px; }
+    .filter-row { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .filter-label { min-width: auto; }
+    .filter-btn { padding: 7px 12px; font-size: 12px; }
+    .sort-select { min-width: 100%; }
+    .reset-filters { margin-left: 0; }
   }
 </style>
 </head>
@@ -637,9 +766,54 @@
   <h2 class="section-title">Наши букеты</h2>
   <p class="section-subtitle">Каждый букет создаётся вручную с любовью</p>
   
-  <div class="catalog">
-    <div class="card">
-      <div class="card-img">🌸</div>
+  <div class="catalog-controls">
+    <div class="filter-row">
+      <span class="filter-label">Повод</span>
+      <div class="filter-buttons" data-filter-group="occasion">
+        <button class="filter-btn active" data-value="all">Все</button>
+        <button class="filter-btn" data-value="birthday">🎂 День рождения</button>
+        <button class="filter-btn" data-value="wedding">💍 Свадьба</button>
+      </div>
+    </div>
+    <div class="filter-row">
+      <span class="filter-label">Тип</span>
+      <div class="filter-buttons" data-filter-group="type">
+        <button class="filter-btn active" data-value="all">Все</button>
+        <button class="filter-btn" data-value="mono">🌹 Монобукеты</button>
+        <button class="filter-btn" data-value="mix">💐 Миксы</button>
+        <button class="filter-btn" data-value="author">🌿 Авторские</button>
+        <button class="filter-btn" data-value="box">🎁 В коробке</button>
+        <button class="filter-btn" data-value="interior">🏺 Интерьерные</button>
+        <button class="filter-btn" data-value="event">🎊 Для оформления</button>
+      </div>
+    </div>
+    <div class="filter-row">
+      <span class="filter-label">Размер</span>
+      <div class="filter-buttons" data-filter-group="size">
+        <button class="filter-btn active" data-value="all">Все</button>
+        <button class="filter-btn" data-value="small">S</button>
+        <button class="filter-btn" data-value="medium">M</button>
+        <button class="filter-btn" data-value="large">L</button>
+        <button class="filter-btn" data-value="xl">XL</button>
+      </div>
+    </div>
+    <div class="sort-row">
+      <span class="filter-label">Сортировка</span>
+      <select class="sort-select" id="sortSelect">
+        <option value="popular">По популярности</option>
+        <option value="price-asc">Сначала дешёвые</option>
+        <option value="price-desc">Сначала дорогие</option>
+      </select>
+      <button class="reset-filters" onclick="resetFilters()">Сбросить всё</button>
+    </div>
+  </div>
+  
+  <p class="results-count">Показано <strong id="resultsCount">4</strong> из 4 букетов</p>
+  
+  <div class="catalog" id="catalogGrid">
+    
+    <div class="card" data-occasion="birthday wedding" data-type="mono" data-size="medium" data-price="3500" data-name="Классические розы" data-popularity="4">
+      <div class="card-img">🌸<span class="card-badge">Хит</span></div>
       <div class="card-body">
         <h3 class="card-title">Классические розы</h3>
         <p class="card-desc">15 бархатных роз пудрового оттенка</p>
@@ -650,7 +824,7 @@
       </div>
     </div>
     
-    <div class="card">
+    <div class="card" data-occasion="birthday" data-type="mix" data-size="small" data-price="2200" data-name="Весенний микс" data-popularity="2">
       <div class="card-img">🌷</div>
       <div class="card-body">
         <h3 class="card-title">Весенний микс</h3>
@@ -662,7 +836,7 @@
       </div>
     </div>
     
-    <div class="card">
+    <div class="card" data-occasion="wedding" data-type="mix" data-size="medium" data-price="2800" data-name="Нежный пион" data-popularity="3">
       <div class="card-img">🌺</div>
       <div class="card-body">
         <h3 class="card-title">Нежный пион</h3>
@@ -674,8 +848,8 @@
       </div>
     </div>
     
-    <div class="card">
-      <div class="card-img">💐</div>
+    <div class="card" data-occasion="wedding birthday" data-type="author" data-size="large" data-price="4500" data-name="Авторский микс" data-popularity="5">
+      <div class="card-img">💐<span class="card-badge">Новинка</span></div>
       <div class="card-body">
         <h3 class="card-title">Авторский микс</h3>
         <p class="card-desc">Сезонные цветы от флориста</p>
@@ -685,6 +859,7 @@
         </div>
       </div>
     </div>
+    
   </div>
 </section>
 
@@ -692,26 +867,10 @@
   <h2 class="section-title">Почему мы</h2>
   <p class="section-subtitle">Заботимся о каждом клиенте</p>
   <div class="features">
-    <div class="feature">
-      <div class="feature-icon">🚚</div>
-      <h3>Доставка за 2 часа</h3>
-      <p>Привезём букет в течение двух часов по городу</p>
-    </div>
-    <div class="feature">
-      <div class="feature-icon">💐</div>
-      <h3>Свежие цветы</h3>
-      <p>Работаем напрямую с плантациями Эквадора и Голландии</p>
-    </div>
-    <div class="feature">
-      <div class="feature-icon">📷</div>
-      <h3>Фото перед отправкой</h3>
-      <p>Пришлём фото букета, чтобы вы были уверены</p>
-    </div>
-    <div class="feature">
-      <div class="feature-icon">💝</div>
-      <h3>Открытка в подарок</h3>
-      <p>Бесплатная авторская открытка к каждому букету</p>
-    </div>
+    <div class="feature"><div class="feature-icon">🚚</div><h3>Доставка за 2 часа</h3><p>Привезём букет в течение двух часов по городу</p></div>
+    <div class="feature"><div class="feature-icon">💐</div><h3>Свежие цветы</h3><p>Работаем напрямую с плантациями Эквадора и Голландии</p></div>
+    <div class="feature"><div class="feature-icon">📷</div><h3>Фото перед отправкой</h3><p>Пришлём фото букета, чтобы вы были уверены</p></div>
+    <div class="feature"><div class="feature-icon">💝</div><h3>Открытка в подарок</h3><p>Бесплатная авторская открытка к каждому букету</p></div>
   </div>
 </section>
 
@@ -719,18 +878,9 @@
   <h2 class="section-title">Отзывы клиентов</h2>
   <p class="section-subtitle">Нам доверяют более 5000 клиентов</p>
   <div class="reviews">
-    <div class="review">
-      <p class="review-text">"Заказала маме букет на день рождения — привезли точно в срок, цветы свежайшие! Мама была в восторге."</p>
-      <div class="review-author">— Анна К.</div>
-    </div>
-    <div class="review">
-      <p class="review-text">"Отличный сервис! Прислали фото букета до отправки, всё как на сайте. Обязательно закажу ещё."</p>
-      <div class="review-author">— Дмитрий С.</div>
-    </div>
-    <div class="review">
-      <p class="review-text">"Авторский микс превзошёл все ожидания! Флорист учла все пожелания. Спасибо!"</p>
-      <div class="review-author">— Мария В.</div>
-    </div>
+    <div class="review"><p class="review-text">"Заказала маме букет на день рождения — привезли точно в срок, цветы свежайшие! Мама была в восторге."</p><div class="review-author">— Анна К.</div></div>
+    <div class="review"><p class="review-text">"Отличный сервис! Прислали фото букета до отправки, всё как на сайте. Обязательно закажу ещё."</p><div class="review-author">— Дмитрий С.</div></div>
+    <div class="review"><p class="review-text">"Авторский микс превзошёл все ожидания! Флорист учла все пожелания. Спасибо!"</p><div class="review-author">— Мария В.</div></div>
   </div>
 </section>
 
@@ -738,131 +888,4 @@
   <div class="contact">
     <h2>Закажите консультацию флориста</h2>
     <p>Поможем выбрать идеальный букет для любого повода</p>
-    <form onsubmit="event.preventDefault(); showToast('Заявка отправлена · Мы свяжемся с вами 🌿'); this.reset();">
-      <input type="text" placeholder="Ваше имя" required>
-      <input type="tel" placeholder="Телефон" required>
-      <button type="submit" class="btn">Отправить</button>
-    </form>
-  </div>
-</section>
-
-<footer>
-  <div class="logo">LŪMOS</div>
-  <p>© 2025 LŪMOS. Все права защищены.</p>
-  <p>📞 <a href="tel:+79095295349">+7 (909) 529-53-49</a></p>
-  <p>📍 г. Новосибирск, ул. Владимира Заровного, 8</p>
-  <p>🕐 Пн–Пт: 10:00–21:00 · Сб–Вс: 11:00–21:00</p>
-  <p>📸 <a href="https://instagram.com/lumos_novosibirsk" target="_blank">@lumos_novosibirsk</a></p>
-</footer>
-
-<!-- Корзина -->
-<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
-<div class="cart-panel" id="cartPanel">
-  <div class="cart-header">
-    <h3>Корзина</h3>
-    <button class="cart-close" onclick="closeCart()">×</button>
-  </div>
-  <div class="cart-items" id="cartItems">
-    <div class="cart-empty">Корзина пуста<br>Выберите букет из каталога 🌸</div>
-  </div>
-  <div class="cart-footer">
-    <div class="cart-total">
-      <span class="cart-total-label">Итого</span>
-      <span class="cart-total-value" id="cartTotal">0 ₽</span>
-    </div>
-    <button class="cart-checkout" onclick="checkout()">Оформить заказ</button>
-  </div>
-</div>
-
-<div class="toast" id="toast"></div>
-
-<script>
-  let cart = [];
-  
-  function addToCart(name, price) {
-    const existing = cart.find(item => item.name === name);
-    if (existing) {
-      existing.qty++;
-    } else {
-      cart.push({ name: name, price: price, qty: 1 });
-    }
-    renderCart();
-    showToast(`«${name}» · добавлено в корзину`);
-  }
-  
-  function removeFromCart(name) {
-    cart = cart.filter(item => item.name !== name);
-    renderCart();
-  }
-  
-  function renderCart() {
-    const container = document.getElementById('cartItems');
-    const countEl = document.getElementById('cartCount');
-    const totalEl = document.getElementById('cartTotal');
-    
-    const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
-    const totalSum = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
-    
-    countEl.textContent = totalCount;
-    totalEl.textContent = totalSum.toLocaleString('ru-RU') + ' ₽';
-    
-    if (cart.length === 0) {
-      container.innerHTML = '<div class="cart-empty">Корзина пуста<br>Выберите букет из каталога 🌸</div>';
-      return;
-    }
-    
-    container.innerHTML = cart.map(item => `
-      <div class="cart-item">
-        <div class="cart-item-info">
-          <div class="cart-item-name">${item.name} ${item.qty > 1 ? '× ' + item.qty : ''}</div>
-          <div class="cart-item-price">${(item.price * item.qty).toLocaleString('ru-RU')} ₽</div>
-        </div>
-        <button class="cart-item-remove" onclick="removeFromCart('${item.name}')">×</button>
-      </div>
-    `).join('');
-  }
-  
-  function openCart() {
-    document.getElementById('cartPanel').classList.add('open');
-    document.getElementById('cartOverlay').classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  
-  function closeCart() {
-    document.getElementById('cartPanel').classList.remove('open');
-    document.getElementById('cartOverlay').classList.remove('open');
-    document.body.style.overflow = '';
-  }
-  
-  function checkout() {
-    if (cart.length === 0) {
-      showToast('Корзина пуста · добавьте букет 🌸');
-      return;
-    }
-    const totalSum = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
-    showToast(`Заказ на ${totalSum.toLocaleString('ru-RU')} ₽ · мы позвоним для подтверждения`);
-    closeCart();
-  }
-  
-  function showToast(message) {
-    const toast = document.getElementById('toast');
-    toast.textContent = message;
-    toast.classList.add('show');
-    setTimeout(() => toast.classList.remove('show'), 3000);
-  }
-  
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      const target = document.querySelector(link.getAttribute('href'));
-      if (target) target.scrollIntoView({ behavior: 'smooth' });
-    });
-  });
-  
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') closeCart();
-  });
-</script>
-
-</body>
-</html>
+    <form onsubmit="event.preventDefault(); showToast('Заявка отправлена · Мы свяжемся с вами 🌿'); this
