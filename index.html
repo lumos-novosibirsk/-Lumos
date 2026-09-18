@@ -4,11 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LUMOS — Цветы, полные света</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   
   body {
-    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: #2c2c2c;
     line-height: 1.6;
     background: #faf5ea;
@@ -29,11 +30,11 @@
   }
   
   .logo {
-    font-size: 26px;
-    font-weight: bold;
+    font-size: 28px;
+    font-weight: 600;
     color: #d9c5a0;
-    font-family: Georgia, serif;
-    letter-spacing: 2px;
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 4px;
   }
   
   nav a {
@@ -43,6 +44,7 @@
     font-weight: 500;
     transition: color 0.3s;
     letter-spacing: 0.5px;
+    font-size: 14px;
   }
   
   nav a:hover { color: #d9c5a0; }
@@ -57,6 +59,8 @@
     font-weight: 700;
     letter-spacing: 0.5px;
     transition: background 0.3s;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
   }
   
   .cart:hover { background: #c9b088; }
@@ -79,19 +83,21 @@
   }
   
   .hero h1 {
-    font-size: 58px;
-    font-family: Georgia, serif;
+    font-size: 64px;
+    font-family: 'Cormorant Garamond', serif;
     color: #d9c5a0;
     margin-bottom: 20px;
-    letter-spacing: 1px;
-    font-weight: normal;
+    letter-spacing: 2px;
+    font-weight: 500;
+    line-height: 1.2;
   }
   
   .hero p {
-    font-size: 20px;
+    font-size: 18px;
     color: #f0e6d2;
     margin-bottom: 40px;
     font-style: italic;
+    font-weight: 400;
   }
   
   .btn {
@@ -101,13 +107,14 @@
     padding: 18px 45px;
     border-radius: 50px;
     text-decoration: none;
-    font-weight: 700;
-    font-size: 16px;
+    font-weight: 600;
+    font-size: 14px;
     border: none;
     cursor: pointer;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     transition: all 0.3s;
+    font-family: 'Montserrat', sans-serif;
   }
   
   .btn:hover {
@@ -121,12 +128,12 @@
   
   .section-title {
     text-align: center;
-    font-size: 42px;
-    font-family: Georgia, serif;
+    font-size: 48px;
+    font-family: 'Cormorant Garamond', serif;
     color: #04211d;
     margin-bottom: 15px;
-    letter-spacing: 1px;
-    font-weight: normal;
+    letter-spacing: 2px;
+    font-weight: 500;
     position: relative;
   }
   
@@ -144,7 +151,7 @@
     color: #6b6b6b;
     margin-bottom: 50px;
     font-style: italic;
-    font-size: 17px;
+    font-size: 16px;
   }
   
   /* Каталог */
@@ -181,17 +188,17 @@
   .card-body { padding: 25px; }
   
   .card-title {
-    font-size: 21px;
-    font-weight: normal;
-    font-family: Georgia, serif;
+    font-size: 26px;
+    font-weight: 500;
+    font-family: 'Cormorant Garamond', serif;
     margin-bottom: 10px;
     color: #04211d;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
   }
   
   .card-desc {
     color: #888;
-    font-size: 14px;
+    font-size: 13px;
     margin-bottom: 18px;
     font-style: italic;
   }
@@ -205,10 +212,11 @@
   }
   
   .price {
-    font-size: 22px;
-    font-weight: bold;
+    font-size: 24px;
+    font-weight: 600;
     color: #0a3d36;
-    font-family: Georgia, serif;
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 1px;
   }
   
   .buy-btn {
@@ -220,8 +228,10 @@
     cursor: pointer;
     font-weight: 600;
     letter-spacing: 0.5px;
-    font-size: 13px;
+    font-size: 12px;
     transition: all 0.3s;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
   }
   
   .buy-btn:hover {
@@ -255,12 +265,13 @@
   .feature h3 {
     margin-bottom: 12px;
     color: #04211d;
-    font-family: Georgia, serif;
-    font-weight: normal;
-    letter-spacing: 0.5px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 24px;
   }
   
-  .feature p { color: #777; font-size: 15px; }
+  .feature p { color: #777; font-size: 14px; }
   
   /* Отзывы */
   .reviews {
@@ -283,14 +294,17 @@
     font-style: italic;
     margin-bottom: 20px;
     color: #555;
-    font-family: Georgia, serif;
-    line-height: 1.8;
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 1.7;
+    font-size: 18px;
   }
   
   .review-author {
     font-weight: 600;
     color: #0a3d36;
     letter-spacing: 0.5px;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
   }
   
   /* Контакты */
@@ -306,17 +320,18 @@
   }
   
   .contact h2 {
-    font-size: 38px;
-    font-family: Georgia, serif;
+    font-size: 44px;
+    font-family: 'Cormorant Garamond', serif;
     margin-bottom: 18px;
     color: #d9c5a0;
-    font-weight: normal;
-    letter-spacing: 1px;
+    font-weight: 500;
+    letter-spacing: 2px;
   }
   
   .contact p {
     color: #f0e6d2;
     font-style: italic;
+    font-size: 16px;
   }
   
   .contact form {
@@ -334,10 +349,11 @@
     padding: 16px 24px;
     border: none;
     border-radius: 40px;
-    font-size: 16px;
+    font-size: 14px;
     outline: none;
     background: rgba(255,255,255,0.1);
     color: white;
+    font-family: 'Montserrat', sans-serif;
   }
   
   .contact input::placeholder {
@@ -352,6 +368,7 @@
   .contact .btn {
     background: #d9c5a0;
     color: #04211d;
+    font-size: 12px;
   }
   
   .contact .btn:hover {
@@ -370,13 +387,15 @@
   footer .logo {
     color: #d9c5a0;
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 28px;
+    letter-spacing: 4px;
   }
   
   footer p {
     margin: 8px 0;
-    font-size: 14px;
+    font-size: 13px;
     letter-spacing: 0.5px;
+    font-family: 'Montserrat', sans-serif;
   }
   
   footer a {
@@ -404,6 +423,8 @@
     z-index: 1000;
     font-style: italic;
     letter-spacing: 0.5px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
   }
   
   .toast.show {
@@ -412,11 +433,12 @@
   }
   
   @media (max-width: 768px) {
-    .hero h1 { font-size: 34px; }
+    .hero h1 { font-size: 38px; }
     nav { display: none; }
-    .section-title { font-size: 28px; }
+    .section-title { font-size: 32px; }
     .contact { padding: 50px 25px; }
-    .contact h2 { font-size: 26px; }
+    .contact h2 { font-size: 28px; }
+    .logo { font-size: 22px; letter-spacing: 3px; }
   }
 </style>
 </head>
