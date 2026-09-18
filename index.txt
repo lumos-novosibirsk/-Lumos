@@ -407,3 +407,62 @@ function applyFilters(){
     }
   } else if(no) no.remove();
 }
+
+function sortCards(){
+  const g=document.getElementById('catalogGrid');
+  const cards=Array.from(g.querySelectorAll('.card'));
+  cards.sort((a,b)=>{
+    if(sortMode==='price-asc')return +a.dataset.price-+b.dataset.price;
+    if(sortMode==='price-desc')return +b.dataset.price-+a.dataset.price;
+    return +b.dataset.popularity-+a.dataset.popularity;
+  });
+  cards.forEach(c=>g.appendChild(c));
+}
+
+document.querySelectorAll('.filter-buttons').forEach(group=>{
+  group.querySelectorAll('.filter-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      group.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      filterState[group.dataset.filterGroup]=btn.dataset.value;
+      applyFilters();
+    });
+  });
+});
+
+const sortSel=document.getElementById('sortSelect');
+if(sortSel) sortSel.addEventListener('change',e=>{sortMode=e.target.value;applyFilters();});
+
+function resetFilters(){
+  filterState.occasion='all';
+  filterState.type='all';
+  filterState.size='all';
+  sortMode='popular';
+  document.querySelectorAll('.filter-buttons').forEach(g=>{
+    g.querySelectorAll('.filter-btn').forEach(b=>b.classList.toggle('active',b.dataset.value==='all'));
+  });
+  if(sortSel) sortSel.value='popular';
+  applyFilters();
+}
+
+function showToast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg;
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),3000);
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t) t.scrollIntoView({behavior:'smooth'});
+  });
+});
+
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeCart();});
+
+applyFilters();
+</script>
+</body>
+</html>
