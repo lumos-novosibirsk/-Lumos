@@ -38,10 +38,7 @@
     flex-shrink: 0;
   }
   
-  nav {
-    display: flex;
-    align-items: center;
-  }
+  nav { display: flex; align-items: center; }
   
   nav a {
     margin: 0 12px;
@@ -123,7 +120,6 @@
     color: #f0e6d2;
     margin-bottom: 40px;
     font-style: italic;
-    font-weight: 400;
   }
   
   .btn {
@@ -278,15 +274,8 @@
     box-shadow: 0 5px 30px rgba(4,33,29,0.06);
   }
   
-  .feature {
-    text-align: center;
-    padding: 30px 20px;
-  }
-  
-  .feature-icon {
-    font-size: 50px;
-    margin-bottom: 20px;
-  }
+  .feature { text-align: center; padding: 30px 20px; }
+  .feature-icon { font-size: 50px; margin-bottom: 20px; }
   
   .feature h3 {
     margin-bottom: 12px;
@@ -330,7 +319,6 @@
     color: #0a3d36;
     letter-spacing: 0.5px;
     font-size: 14px;
-    font-family: 'Montserrat', sans-serif;
   }
   
   /* Контакты */
@@ -342,7 +330,6 @@
     margin: 0 auto;
     padding: 70px 50px;
     text-align: center;
-    position: relative;
   }
   
   .contact h2 {
@@ -354,11 +341,7 @@
     letter-spacing: 2px;
   }
   
-  .contact p {
-    color: #f0e6d2;
-    font-style: italic;
-    font-size: 16px;
-  }
+  .contact p { color: #f0e6d2; font-style: italic; font-size: 16px; }
   
   .contact form {
     display: flex;
@@ -382,24 +365,10 @@
     font-family: 'Montserrat', sans-serif;
   }
   
-  .contact input::placeholder {
-    color: #a89b80;
-    font-style: italic;
-  }
-  
-  .contact input:focus {
-    background: rgba(255,255,255,0.18);
-  }
-  
-  .contact .btn {
-    background: #d9c5a0;
-    color: #04211d;
-    font-size: 12px;
-  }
-  
-  .contact .btn:hover {
-    background: #f0e6d2;
-  }
+  .contact input::placeholder { color: #a89b80; font-style: italic; }
+  .contact input:focus { background: rgba(255,255,255,0.18); }
+  .contact .btn { background: #d9c5a0; color: #04211d; font-size: 12px; }
+  .contact .btn:hover { background: #f0e6d2; }
   
   /* Подвал */
   footer {
@@ -421,16 +390,181 @@
     margin: 8px 0;
     font-size: 13px;
     letter-spacing: 0.5px;
+  }
+  
+  footer a { color: #d9c5a0 !important; text-decoration: none; }
+  footer a:hover { color: #f0e6d2 !important; }
+  
+  /* Панель корзины */
+  .cart-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(4,33,29,0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 998;
+  }
+  
+  .cart-overlay.open { opacity: 1; visibility: visible; }
+  
+  .cart-panel {
+    position: fixed;
+    top: 0; right: 0;
+    width: 420px;
+    max-width: 100%;
+    height: 100%;
+    background: #faf5ea;
+    box-shadow: -10px 0 40px rgba(0,0,0,0.3);
+    transform: translateX(100%);
+    transition: transform 0.4s;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cart-panel.open { transform: translateX(0); }
+  
+  .cart-header {
+    background: #04211d;
+    color: #d9c5a0;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d9c5a0;
+  }
+  
+  .cart-header h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+  
+  .cart-close {
+    background: transparent;
+    border: none;
+    color: #d9c5a0;
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0 5px;
+    transition: color 0.3s;
+  }
+  
+  .cart-close:hover { color: #f0e6d2; }
+  
+  .cart-items {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px 25px;
+  }
+  
+  .cart-empty {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    padding: 60px 20px;
+    font-size: 16px;
+  }
+  
+  .cart-item {
+    background: white;
+    border-radius: 16px;
+    padding: 18px 20px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 3px 15px rgba(4,33,29,0.06);
+  }
+  
+  .cart-item-info { flex: 1; }
+  
+  .cart-item-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    color: #04211d;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+  
+  .cart-item-price {
+    color: #0a3d36;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  
+  .cart-item-remove {
+    background: transparent;
+    border: 1px solid #d9c5a0;
+    color: #0a3d36;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+    transition: all 0.3s;
+    flex-shrink: 0;
+  }
+  
+  .cart-item-remove:hover {
+    background: #0a3d36;
+    color: #d9c5a0;
+    border-color: #0a3d36;
+  }
+  
+  .cart-footer {
+    background: white;
+    padding: 25px 30px;
+    border-top: 1px solid #f0e6d2;
+  }
+  
+  .cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .cart-total-label {
+    font-size: 15px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .cart-total-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: #04211d;
+    letter-spacing: 1px;
+  }
+  
+  .cart-checkout {
+    width: 100%;
+    background: #0a3d36;
+    color: #d9c5a0;
+    padding: 16px;
+    border: none;
+    border-radius: 50px;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
   }
   
-  footer a {
-    color: #d9c5a0 !important;
-    text-decoration: none;
-  }
-  
-  footer a:hover {
-    color: #f0e6d2 !important;
+  .cart-checkout:hover {
+    background: #d9c5a0;
+    color: #04211d;
   }
   
   /* Уведомление */
@@ -453,10 +587,7 @@
     font-size: 18px;
   }
   
-  .toast.show {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  .toast.show { transform: translateY(0); opacity: 1; }
   
   /* Адаптив */
   @media (max-width: 1100px) {
@@ -476,6 +607,7 @@
     .contact h2 { font-size: 28px; }
     .logo { font-size: 20px; letter-spacing: 3px; }
     header { padding: 12px 5%; }
+    .cart-panel { width: 100%; }
   }
 </style>
 </head>
@@ -491,7 +623,7 @@
   </nav>
   <div class="header-right">
     <a href="tel:+79095295349" class="header-phone">📞 +7 (909) 529-53-49</a>
-    <button class="cart">Корзина · <span id="cartCount">0</span></button>
+    <button class="cart" onclick="openCart()">Корзина · <span id="cartCount">0</span></button>
   </div>
 </header>
 
@@ -623,15 +755,93 @@
   <p>📸 <a href="https://instagram.com/lumos_novosibirsk" target="_blank">@lumos_novosibirsk</a></p>
 </footer>
 
+<!-- Корзина -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="cart-panel" id="cartPanel">
+  <div class="cart-header">
+    <h3>Корзина</h3>
+    <button class="cart-close" onclick="closeCart()">×</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty">Корзина пуста<br>Выберите букет из каталога 🌸</div>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span class="cart-total-label">Итого</span>
+      <span class="cart-total-value" id="cartTotal">0 ₽</span>
+    </div>
+    <button class="cart-checkout" onclick="checkout()">Оформить заказ</button>
+  </div>
+</div>
+
 <div class="toast" id="toast"></div>
 
 <script>
-  let cartCount = 0;
+  let cart = [];
   
   function addToCart(name, price) {
-    cartCount++;
-    document.getElementById('cartCount').textContent = cartCount;
+    const existing = cart.find(item => item.name === name);
+    if (existing) {
+      existing.qty++;
+    } else {
+      cart.push({ name: name, price: price, qty: 1 });
+    }
+    renderCart();
     showToast(`«${name}» · добавлено в корзину`);
+  }
+  
+  function removeFromCart(name) {
+    cart = cart.filter(item => item.name !== name);
+    renderCart();
+  }
+  
+  function renderCart() {
+    const container = document.getElementById('cartItems');
+    const countEl = document.getElementById('cartCount');
+    const totalEl = document.getElementById('cartTotal');
+    
+    const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
+    const totalSum = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+    
+    countEl.textContent = totalCount;
+    totalEl.textContent = totalSum.toLocaleString('ru-RU') + ' ₽';
+    
+    if (cart.length === 0) {
+      container.innerHTML = '<div class="cart-empty">Корзина пуста<br>Выберите букет из каталога 🌸</div>';
+      return;
+    }
+    
+    container.innerHTML = cart.map(item => `
+      <div class="cart-item">
+        <div class="cart-item-info">
+          <div class="cart-item-name">${item.name} ${item.qty > 1 ? '× ' + item.qty : ''}</div>
+          <div class="cart-item-price">${(item.price * item.qty).toLocaleString('ru-RU')} ₽</div>
+        </div>
+        <button class="cart-item-remove" onclick="removeFromCart('${item.name}')">×</button>
+      </div>
+    `).join('');
+  }
+  
+  function openCart() {
+    document.getElementById('cartPanel').classList.add('open');
+    document.getElementById('cartOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  
+  function closeCart() {
+    document.getElementById('cartPanel').classList.remove('open');
+    document.getElementById('cartOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  
+  function checkout() {
+    if (cart.length === 0) {
+      showToast('Корзина пуста · добавьте букет 🌸');
+      return;
+    }
+    const totalSum = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+    showToast(`Заказ на ${totalSum.toLocaleString('ru-RU')} ₽ · мы позвоним для подтверждения`);
+    closeCart();
   }
   
   function showToast(message) {
@@ -647,6 +857,10 @@
       const target = document.querySelector(link.getAttribute('href'));
       if (target) target.scrollIntoView({ behavior: 'smooth' });
     });
+  });
+  
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeCart();
   });
 </script>
 
