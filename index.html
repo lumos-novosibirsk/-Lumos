@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Люмос — Свежие букеты с доставкой</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    color: #2c2c2c;
+    line-height: 1.6;
+    background: #faf5ea;
+  }
+  
+  /* Шапка */
+  header {
+    position: sticky;
+    top: 0;
+    background: #04211d;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+    z-index: 100;
+    border-bottom: 1px solid #d9c5a0;
+  }
+  
+  .logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #d9c5a0;
+    font-family: Georgia, serif;
+    letter-spacing: 2px;
+  }
+  
+  nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #f0e6d2;
+    font-weight: 500;
+    transition: color 0.3s;
+    letter-spacing: 0.5px;
+  }
+  
+  nav a:hover { color: #d9c5a0; }
+  
+  .cart {
+    background: #d9c5a0;
+    color: #04211d;
+    padding: 10px 22px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: none;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: background 0.3s;
+  }
+  
+  .cart:hover { background: #c9b088; }
+  
+  /* Hero */
+  .hero {
+    background: linear-gradient(135deg, #0a3d36 0%, #04211d 100%);
+    padding: 120px 5%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #d9c5a0, transparent);
+  }
+  
+  .hero h1 {
+    font-size: 58px;
+    font-family: Georgia, serif;
+    color: #d9c5a0;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    font-weight: normal;
+  }
+  
+  .hero p {
+    font-size: 20px;
+    color: #f0e6d2;
+    margin-bottom: 40px;
+    font-style: italic;
+  }
+  
+  .btn {
+    display: inline-block;
+    background: #d9c5a0;
+    color: #04211d;
+    padding: 18px 45px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+  }
+  
+  .btn:hover {
+    background: #c9b088;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(217,197,160,0.4);
+  }
+  
+  /* Секции */
+  section { padding: 80px 5%; }
+  
+  .section-title {
+    text-align: center;
+    font-size: 42px;
+    font-family: Georgia, serif;
+    color: #04211d;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    font-weight: normal;
+    position: relative;
+  }
+  
+  .section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: #d9c5a0;
+    margin: 20px auto 0;
+  }
+  
+  .section-subtitle {
+    text-align: center;
+    color: #6b6b6b;
+    margin-bottom: 50px;
+    font-style: italic;
+    font-size: 17px;
+  }
+  
+  /* Каталог */
+  .catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 5px 30px rgba(4,33,29,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(4,33,29,0.18);
+  }
+  
+  .card-img {
+    height: 260px;
+    background: linear-gradient(135deg, #f0e6d2, #d9c5a0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+  }
+  
+  .card-body { padding: 25px; }
+  
+  .card-title {
+    font-size: 21px;
+    font-weight: normal;
+    font-family: Georgia, serif;
+    margin-bottom: 10px;
+    color: #04211d;
+    letter-spacing: 0.5px;
+  }
+  
+  .card-desc {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 18px;
+    font-style: italic;
+  }
+  
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #f0e6d2;
+  }
+  
+  .price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #0a3d36;
+    font-family: Georgia, serif;
+  }
+  
+  .buy-btn {
+    background: #0a3d36;
+    color: #f0e6d2;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 13px;
+    transition: all 0.3s;
+  }
+  
+  .buy-btn:hover {
+    background: #d9c5a0;
+    color: #04211d;
+  }
+  
+  /* Преимущества */
+  .features {
+    background: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    border-radius: 30px;
+    box-shadow: 0 5px 30px rgba(4,33,29,0.06);
+  }
+  
+  .feature {
+    text-align: center;
+    padding: 30px 20px;
+  }
+  
+  .feature-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .feature h3 {
+    margin-bottom: 12px;
+    color: #04211d;
+    font-family: Georgia, serif;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+  }
+  
+  .feature p { color: #777; font-size: 15px; }
+  
+  /* Отзывы */
+  .reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .review {
+    background: white;
+    padding: 35px;
+    border-radius: 24px;
+    border-left: 4px solid #d9c5a0;
+    box-shadow: 0 5px 20px rgba(4,33,29,0.06);
+  }
+  
+  .review-text {
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #555;
+    font-family: Georgia, serif;
+    line-height: 1.8;
+  }
+  
+  .review-author {
+    font-weight: 600;
+    color: #0a3d36;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Контакты */
+  .contact {
+    background: linear-gradient(135deg, #04211d, #0a3d36);
+    color: white;
+    border-radius: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 70px 50px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .contact h2 {
+    font-size: 38px;
+    font-family: Georgia, serif;
+    margin-bottom: 18px;
+    color: #d9c5a0;
+    font-weight: normal;
+    letter-spacing: 1px;
+  }
+  
+  .contact p {
+    color: #f0e6d2;
+    font-style: italic;
+  }
+  
+  .contact form {
+    display: flex;
+    gap: 12px;
+    max-width: 500px;
+    margin: 35px auto 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .contact input {
+    flex: 1;
+    min-width: 200px;
+    padding: 16px 24px;
+    border: none;
+    border-radius: 40px;
+    font-size: 16px;
+    outline: none;
+    background: rgba(255,255,255,0.1);
+    color: white;
+  }
+  
+  .contact input::placeholder {
+    color: #a89b80;
+    font-style: italic;
+  }
+  
+  .contact input:focus {
+    background: rgba(255,255,255,0.18);
+  }
+  
+  .contact .btn {
+    background: #d9c5a0;
+    color: #04211d;
+  }
+  
+  .contact .btn:hover {
+    background: #f0e6d2;
+  }
+  
+  /* Подвал */
+  footer {
+    background: #04211d;
+    color: #a89b80;
+    padding: 50px 5%;
+    text-align: center;
+    border-top: 1px solid #d9c5a0;
+  }
+  
+  footer .logo {
+    color: #d9c5a0;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  footer p {
+    margin: 8px 0;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Уведомление */
+  .toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #04211d;
+    color: #d9c5a0;
+    padding: 18px 30px;
+    border-radius: 16px;
+    border: 1px solid #d9c5a0;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 0.4s;
+    z-index: 1000;
+    font-style: italic;
+    letter-spacing: 0.5px;
+  }
+  
+  .toast.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 34px; }
+    nav { display: none; }
+    .section-title { font-size: 28px; }
+    .contact { padding: 50px 25px; }
+    .contact h2 { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">✦ ЛЮМОС</div>
+  <nav>
+    <a href="#catalog">Каталог</a>
+    <a href="#features">О нас</a>
+    <a href="#reviews">Отзывы</a>
+    <a href="#contact">Контакты</a>
+  </nav>
+  <button class="cart">Корзина · <span id="cartCount">0</span></button>
+</header>
+
+<section class="hero">
+  <h1>Цветы, полные света</h1>
+  <p>Свежие букеты с доставкой за 2 часа — соберём для вас идеальный</p>
+  <a href="#catalog" class="btn">Выбрать букет</a>
+</section>
+
+<section id="catalog">
+  <h2 class="section-title">Наши букеты</h2>
+  <p class="section-subtitle">Каждый букет создаётся вручную с любовью</p>
+  
+  <div class="catalog">
+    <div class="card">
+      <div class="card-img">🌸</div>
+      <div class="card-body">
+        <h3 class="card-title">Классические розы</h3>
+        <p class="card-desc">15 бархатных роз пудрового оттенка</p>
+        <div class="card-footer">
+          <span class="price">3 500 ₽</span>
+          <button class="buy-btn" onclick="addToCart('Классические розы', 3500)">В корзину</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-img">🌷</div>
+      <div class="card-body">
+        <h3 class="card-title">Весенний микс</h3>
+        <p class="card-desc">Тюльпаны, нарциссы и ирисы</p>
+        <div class="card-footer">
+          <span class="price">2 200 ₽</span>
+          <button class="buy-btn" onclick="addToCart('Весенний микс', 2200)">В корзину</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-img">🌺</div>
+      <div class="card-body">
+        <h3 class="card-title">Нежный пион</h3>
+        <p class="card-desc">Пионы и ранункулюсы в пастели</p>
+        <div class="card-footer">
+          <span class="price">2 800 ₽</span>
+          <button class="buy-btn" onclick="addToCart('Нежный пион', 2800)">В корзину</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-img">💐</div>
+      <div class="card-body">
+        <h3 class="card-title">Авторский микс</h3>
+        <p class="card-desc">Сезонные цветы от флориста</p>
+        <div class="card-footer">
+          <span class="price">4 500 ₽</span>
+          <button class="buy-btn" onclick="addToCart('Авторский микс', 4500)">В корзину</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <h2 class="section-title">Почему мы</h2>
+  <p class="section-subtitle">Заботимся о каждом клиенте</p>
+  <div class="features">
+    <div class="feature">
+      <div class="feature-icon">🚚</div>
+      <h3>Доставка за 2 часа</h3>
+      <p>Привезём букет в течение двух часов по городу</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">💐</div>
+      <h3>Свежие цветы</h3>
+      <p>Работаем напрямую с плантациями Эквадора и Голландии</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📷</div>
+      <h3>Фото перед отправкой</h3>
+      <p>Пришлём фото букета, чтобы вы были уверены</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">💝</div>
+      <h3>Открытка в подарок</h3>
+      <p>Бесплатная авторская открытка к каждому букету</p>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <h2 class="section-title">Отзывы клиентов</h2>
+  <p class="section-subtitle">Нам доверяют более 5000 клиентов</p>
+  <div class="reviews">
+    <div class="review">
+      <p class="review-text">"Заказала маме букет на день рождения — привезли точно в срок, цветы свежайшие! Мама была в восторге."</p>
+      <div class="review-author">— Анна К.</div>
+    </div>
+    <div class="review">
+      <p class="review-text">"Отличный сервис! Прислали фото букета до отправки, всё как на сайте. Обязательно закажу ещё."</p>
+      <div class="review-author">— Дмитрий С.</div>
+    </div>
+    <div class="review">
+      <p class="review-text">"Авторский микс превзошёл все ожидания! Флорист учла все пожелания. Спасибо!"</p>
+      <div class="review-author">— Мария В.</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact">
+    <h2>Закажите консультацию флориста</h2>
+    <p>Поможем выбрать идеальный букет для любого повода</p>
+    <form onsubmit="event.preventDefault(); showToast('Заявка отправлена · Мы свяжемся с вами 🌿'); this.reset();">
+      <input type="text" placeholder="Ваше имя" required>
+      <input type="tel" placeholder="Телефон" required>
+      <button type="submit" class="btn">Отправить</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="logo">✦ ЛЮМОС</div>
+  <p>© 2025 Люмос. Все права защищены.</p>
+  <p>+7 (999) 123-45-67 · hello@lumos.ru</p>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+  let cartCount = 0;
+  
+  function addToCart(name, price) {
+    cartCount++;
+    document.getElementById('cartCount').textContent = cartCount;
+    showToast(`«${name}» · добавлено в корзину`);
+  }
+  
+  function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 3000);
+  }
+  
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+
+</body>
+</html>
