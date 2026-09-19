@@ -10,14 +10,16 @@
 body{font-family:'Montserrat',sans-serif;color:#2c2c2c;line-height:1.6;background:#faf5ea}
 header{position:sticky;top:0;background:#04211d;padding:15px 5%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 20px rgba(0,0,0,.2);z-index:100;border-bottom:1px solid #d9c5a0}
 .logo{font-size:26px;font-weight:600;color:#d9c5a0;font-family:'Cormorant Garamond',serif;letter-spacing:4px;flex-shrink:0}
-nav{display:flex;align-items:center}
-nav a{margin:0 10px;text-decoration:none;color:#f0e6d2;font-weight:500;font-size:12px;white-space:nowrap}
-nav a:hover{color:#d9c5a0}
 .header-right{display:flex;align-items:center;gap:18px}
 .header-phone{color:#d9c5a0;text-decoration:none;font-weight:600;font-size:13px;white-space:nowrap}
 .header-phone:hover{color:#f0e6d2}
 .cart-btn{background:#d9c5a0;color:#04211d;padding:9px 18px;border-radius:30px;cursor:pointer;border:none;font-weight:700;font-size:12px;font-family:'Montserrat',sans-serif;white-space:nowrap}
 .cart-btn:hover{background:#c9b088}
+.nav-sections{position:sticky;top:60px;background:#0a3d36;padding:12px 5%;display:flex;gap:8px;overflow-x:auto;white-space:nowrap;box-shadow:0 2px 10px rgba(0,0,0,.15);z-index:99;border-bottom:1px solid rgba(217,197,160,.3);scrollbar-width:none}
+.nav-sections::-webkit-scrollbar{display:none}
+.nav-sections a{padding:8px 16px;border-radius:30px;text-decoration:none;color:#f0e6d2;font-size:13px;font-weight:500;transition:all .25s;flex-shrink:0;border:1px solid transparent}
+.nav-sections a:hover{background:rgba(217,197,160,.15);color:#d9c5a0}
+.nav-sections a.active{background:#d9c5a0;color:#04211d;font-weight:700}
 .hero{background:linear-gradient(135deg,#0a3d36,#04211d);padding:100px 5%;text-align:center}
 .hero h1{font-size:60px;font-family:'Cormorant Garamond',serif;color:#d9c5a0;margin-bottom:20px;letter-spacing:2px;font-weight:500}
 .hero p{font-size:18px;color:#f0e6d2;margin-bottom:40px;font-style:italic}
@@ -54,7 +56,7 @@ section{padding:70px 5%}
 .card-desc{color:#888;font-size:13px;margin-bottom:16px;font-style:italic;min-height:38px}
 .card-footer{display:flex;justify-content:space-between;align-items:center;padding-top:14px;border-top:1px solid #f0e6d2}
 .price{font-size:20px;font-weight:600;color:#0a3d36;font-family:'Cormorant Garamond',serif}
-.price-request{font-size:14px;color:#0a3d36;font-family:'Montserrat',sans-serif;font-style:italic}
+.price-request{font-size:13px;color:#0a3d36;font-family:'Montserrat',sans-serif;font-style:italic}
 .buy-btn{background:#0a3d36;color:#f0e6d2;border:none;padding:10px 16px;border-radius:30px;cursor:pointer;font-weight:600;font-size:11px;font-family:'Montserrat',sans-serif;text-transform:uppercase}
 .buy-btn:hover{background:#d9c5a0;color:#04211d}
 .request-btn{background:#d9c5a0;color:#04211d;border:none;padding:10px 16px;border-radius:30px;cursor:pointer;font-weight:700;font-size:11px;font-family:'Montserrat',sans-serif;text-transform:uppercase}
@@ -82,7 +84,6 @@ footer a:hover{color:#f0e6d2!important}
 .tg:hover{background:#1a7fb0}
 .max{background:#7c3aed;color:white!important}
 .max:hover{background:#5f2ab8}
-/* Подписка */
 .subscription-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;max-width:1200px;margin:0 auto}
 .sub-card{background:white;border-radius:24px;padding:40px 30px;text-align:center;box-shadow:0 5px 30px rgba(4,33,29,.08);border:2px solid #f0e6d2;transition:all .3s;position:relative}
 .sub-card:hover{border-color:#d9c5a0;transform:translateY(-8px);box-shadow:0 20px 45px rgba(4,33,29,.15)}
@@ -96,7 +97,6 @@ footer a:hover{color:#f0e6d2!important}
 .sub-period{display:block;font-size:12px;color:#888;font-family:'Montserrat',sans-serif;font-weight:400;font-style:italic;margin-top:6px}
 .sub-btn{width:100%;background:#0a3d36;color:#d9c5a0;border:none;padding:16px;border-radius:50px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .3s}
 .sub-btn:hover{background:#d9c5a0;color:#04211d}
-/* Флорист-декоратор */
 .florist-block{max-width:1000px;margin:0 auto;background:linear-gradient(135deg,#04211d 0%,#0a3d36 100%);color:white;border-radius:30px;padding:60px 50px;position:relative;overflow:hidden}
 .florist-block::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#d9c5a0,transparent)}
 .florist-block h2{font-family:'Cormorant Garamond',serif;font-size:40px;color:#d9c5a0;font-weight:500;letter-spacing:2px;margin-bottom:15px;text-align:center}
@@ -108,7 +108,6 @@ footer a:hover{color:#f0e6d2!important}
 .florist-feature-text{color:#b8c8bd;font-size:12px;line-height:1.6}
 .florist-price{text-align:center;font-family:'Cormorant Garamond',serif;font-size:24px;color:#d9c5a0;margin-bottom:25px;font-style:italic}
 .florist-btn-wrap{text-align:center}
-/* Корзина */
 .cart-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(4,33,29,.6);opacity:0;visibility:hidden;transition:all .3s;z-index:998}
 .cart-overlay.open{opacity:1;visibility:visible}
 .cart-panel{position:fixed;top:0;right:0;width:420px;max-width:100%;height:100%;background:#faf5ea;box-shadow:-10px 0 40px rgba(0,0,0,.3);transform:translateX(100%);transition:transform .4s;z-index:999;display:flex;flex-direction:column}
@@ -130,7 +129,6 @@ footer a:hover{color:#f0e6d2!important}
 .cart-total-value{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:#04211d}
 .cart-checkout{width:100%;background:#0a3d36;color:#d9c5a0;padding:15px;border:none;border-radius:50px;font-family:'Montserrat',sans-serif;font-weight:600;font-size:13px;letter-spacing:2px;text-transform:uppercase;cursor:pointer}
 .cart-checkout:hover{background:#d9c5a0;color:#04211d}
-/* Оформление */
 .checkout-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(4,33,29,.7);opacity:0;visibility:hidden;transition:all .3s;z-index:1000;display:flex;align-items:center;justify-content:center;padding:20px}
 .checkout-overlay.open{opacity:1;visibility:visible}
 .checkout-modal{background:#faf5ea;border-radius:24px;max-width:520px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,.4)}
@@ -160,7 +158,6 @@ footer a:hover{color:#f0e6d2!important}
 .send-max{background:#7c3aed;color:white}
 .send-max:hover{background:#5f2ab8}
 .checkout-note{font-size:12px;color:#888;text-align:center;margin-top:14px;font-style:italic;line-height:1.5}
-/* Заявка (подписка, флорист) */
 .request-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(4,33,29,.7);opacity:0;visibility:hidden;transition:all .3s;z-index:1001;display:flex;align-items:center;justify-content:center;padding:20px}
 .request-overlay.open{opacity:1;visibility:visible}
 .request-modal{background:#faf5ea;border-radius:24px;max-width:520px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,.4)}
@@ -181,30 +178,31 @@ footer a:hover{color:#f0e6d2!important}
 .period-option.active .period-option-check::after{content:"✓";color:#d9c5a0;font-size:12px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-weight:700}
 .toast{position:fixed;bottom:30px;right:30px;background:#04211d;color:#d9c5a0;padding:18px 28px;border-radius:16px;border:1px solid #d9c5a0;transform:translateY(150px);opacity:0;transition:all .4s;z-index:1100;font-family:'Cormorant Garamond',serif;font-size:18px;max-width:340px}
 .toast.show{transform:translateY(0);opacity:1}
-@media(max-width:1100px){.header-phone{font-size:12px}nav a{margin:0 6px;font-size:11px}}
-@media(max-width:1000px){.header-phone{display:none}}
-@media(max-width:768px){.hero h1{font-size:36px}nav{display:none}.section-title{font-size:30px}.contact{padding:45px 22px}.contact h2{font-size:26px}.logo{font-size:20px;letter-spacing:3px}header{padding:12px 5%}.cart-panel{width:100%}.catalog-controls{padding:20px}.filter-row{flex-direction:column;align-items:flex-start;gap:8px}.filter-label{min-width:auto}.filter-btn{padding:7px 12px;font-size:11px}.sort-select{min-width:100%}.reset-filters{margin-left:0}.send-buttons{grid-template-columns:1fr}.checkout-modal{max-height:95vh}.delivery-options{grid-template-columns:1fr}.florist-block{padding:40px 25px}.florist-block h2{font-size:28px}.sub-card{padding:30px 22px}}
+@media(max-width:1100px){.header-phone{font-size:12px}}
+@media(max-width:900px){.header-phone{display:none}}
+@media(max-width:768px){.hero h1{font-size:36px}.section-title{font-size:30px}.contact{padding:45px 22px}.contact h2{font-size:26px}.logo{font-size:20px;letter-spacing:3px}header{padding:12px 5%}.cart-panel{width:100%}.catalog-controls{padding:20px}.filter-row{flex-direction:column;align-items:flex-start;gap:8px}.filter-label{min-width:auto}.filter-btn{padding:7px 12px;font-size:11px}.sort-select{min-width:100%}.reset-filters{margin-left:0}.send-buttons{grid-template-columns:1fr}.checkout-modal{max-height:95vh}.delivery-options{grid-template-columns:1fr}.florist-block{padding:40px 25px}.florist-block h2{font-size:28px}.sub-card{padding:30px 22px}.nav-sections{top:52px;padding:10px 5%}.nav-sections a{padding:7px 12px;font-size:12px}}
 </style>
 </head>
 <body><header>
   <div class="logo">LŪMOS</div>
-  <nav>
-    <a href="#catalog">Букеты</a>
-    <a href="#exotic">Экзотика</a>
-    <a href="#dry">Сухоцветы</a>
-    <a href="#sets">Комплекты</a>
-    <a href="#vases">Вазы</a>
-    <a href="#gifts">Подарки</a>
-    <a href="#sweets">Сладости</a>
-    <a href="#subscription">Подписка</a>
-    <a href="#florist">Флорист</a>
-    <a href="#contact">Контакты</a>
-  </nav>
   <div class="header-right">
     <a href="tel:+79095295349" class="header-phone">📞 +7 (909) 529-53-49</a>
     <button class="cart-btn" onclick="openCart()">Корзина · <span id="cartCount">0</span></button>
   </div>
 </header>
+
+<div class="nav-sections" id="navSections">
+  <a href="#catalog" class="active">🌸 Букеты</a>
+  <a href="#exotic">🌺 Экзотика</a>
+  <a href="#dry">🌾 Сухоцветы</a>
+  <a href="#sets">💐 Комплекты</a>
+  <a href="#vases">🏺 Вазы</a>
+  <a href="#gifts">🎁 Подарки</a>
+  <a href="#sweets">🍓 Сладости</a>
+  <a href="#subscription">💌 Подписка</a>
+  <a href="#florist">👰 Флорист</a>
+  <a href="#contact">📞 Контакты</a>
+</div>
 
 <section class="hero">
   <h1>Цветы, полные света</h1>
@@ -799,9 +797,7 @@ footer a:hover{color:#f0e6d2!important}
     <a href="https://t.me/+79095295349" target="_blank" class="messenger-btn tg">✈️ Telegram</a>
     <a href="https://max.ru/+79095295349" target="_blank" class="messenger-btn max">💬 MAX</a>
   </div>
-</footer>
-
-<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+</footer><div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
 <div class="cart-panel" id="cartPanel">
   <div class="cart-header">
     <h3>Корзина</h3>
@@ -913,7 +909,9 @@ footer a:hover{color:#f0e6d2!important}
   </div>
 </div>
 
-<div class="toast" id="toast"></div><script>
+<div class="toast" id="toast"></div>
+
+<script>
 let cart=[];
 const filterState={occasion:'all',type:'all',size:'all'};
 let sortMode='popular';
@@ -1037,9 +1035,7 @@ function sendOrder(messenger){
     document.getElementById('coAddress').value='';
     document.getElementById('coComment').value='';
   },1500);
-}
-
-function openRequest(type,size){
+}function openRequest(type,size){
   requestType=type;
   requestSize=size;
   requestPeriod='Раз в месяц';
@@ -1177,6 +1173,25 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){
 document.addEventListener('keydown',function(e){
   if(e.key==='Escape'){closeCart();closeCheckout();closeRequest();}
 });
+
+// Подсветка активного раздела
+const sections=document.querySelectorAll('section[id]');
+const navLinks=document.querySelectorAll('.nav-sections a');
+
+function updateActiveNav(){
+  let current='';
+  sections.forEach(function(section){
+    const top=section.offsetTop-120;
+    if(window.scrollY >= top) current=section.getAttribute('id');
+  });
+  navLinks.forEach(function(link){
+    link.classList.remove('active');
+    if(link.getAttribute('href')==='#'+current) link.classList.add('active');
+  });
+}
+
+window.addEventListener('scroll',updateActiveNav);
+window.addEventListener('load',updateActiveNav);
 
 applyFilters();
 </script>
