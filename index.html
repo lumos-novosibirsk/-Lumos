@@ -11,10 +11,10 @@ body{font-family:'Montserrat',sans-serif;color:#2c2c2c;line-height:1.6;backgroun
 header{position:sticky;top:0;background:#04211d;padding:15px 5%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 20px rgba(0,0,0,.2);z-index:100;border-bottom:1px solid #d9c5a0}
 .logo{font-size:26px;font-weight:600;color:#d9c5a0;font-family:'Cormorant Garamond',serif;letter-spacing:4px;flex-shrink:0}
 nav{display:flex;align-items:center}
-nav a{margin:0 12px;text-decoration:none;color:#f0e6d2;font-weight:500;font-size:13px;white-space:nowrap}
+nav a{margin:0 10px;text-decoration:none;color:#f0e6d2;font-weight:500;font-size:12px;white-space:nowrap}
 nav a:hover{color:#d9c5a0}
 .header-right{display:flex;align-items:center;gap:18px}
-.header-phone{color:#d9c5a0;text-decoration:none;font-weight:600;font-size:14px;white-space:nowrap}
+.header-phone{color:#d9c5a0;text-decoration:none;font-weight:600;font-size:13px;white-space:nowrap}
 .header-phone:hover{color:#f0e6d2}
 .cart-btn{background:#d9c5a0;color:#04211d;padding:9px 18px;border-radius:30px;cursor:pointer;border:none;font-weight:700;font-size:12px;font-family:'Montserrat',sans-serif;white-space:nowrap}
 .cart-btn:hover{background:#c9b088}
@@ -23,6 +23,8 @@ nav a:hover{color:#d9c5a0}
 .hero p{font-size:18px;color:#f0e6d2;margin-bottom:40px;font-style:italic}
 .btn{display:inline-block;background:#d9c5a0;color:#04211d;padding:18px 45px;border-radius:50px;text-decoration:none;font-weight:600;font-size:14px;border:none;cursor:pointer;letter-spacing:2px;text-transform:uppercase;font-family:'Montserrat',sans-serif}
 .btn:hover{background:#c9b088;transform:translateY(-3px)}
+.btn-outline{background:transparent;color:#d9c5a0;border:2px solid #d9c5a0}
+.btn-outline:hover{background:#d9c5a0;color:#04211d}
 section{padding:70px 5%}
 .section-title{text-align:center;font-size:44px;font-family:'Cormorant Garamond',serif;color:#04211d;margin-bottom:15px;letter-spacing:2px;font-weight:500}
 .section-title::after{content:"";display:block;width:60px;height:2px;background:#d9c5a0;margin:20px auto 0}
@@ -31,7 +33,7 @@ section{padding:70px 5%}
 .filter-row{display:flex;align-items:center;gap:15px;flex-wrap:wrap}
 .filter-label{font-size:11px;color:#0a3d36;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;min-width:90px}
 .filter-buttons{display:flex;flex-wrap:wrap;gap:8px}
-.filter-btn{background:transparent;border:1px solid #e0d5c0;color:#666;padding:8px 16px;border-radius:30px;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:500}
+.filter-btn{background:transparent;border:1px solid #e0d5c0;color:#666;padding:8px 14px;border-radius:30px;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500}
 .filter-btn:hover{border-color:#0a3d36;color:#0a3d36}
 .filter-btn.active{background:#0a3d36;color:#d9c5a0;border-color:#0a3d36}
 .sort-row{display:flex;align-items:center;gap:15px;padding-top:18px;border-top:1px solid #f0e6d2;flex-wrap:wrap}
@@ -49,12 +51,14 @@ section{padding:70px 5%}
 .card-badge{position:absolute;top:15px;right:15px;background:#04211d;color:#d9c5a0;padding:5px 14px;border-radius:20px;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;z-index:2}
 .card-body{padding:22px}
 .card-title{font-size:24px;font-weight:500;font-family:'Cormorant Garamond',serif;margin-bottom:8px;color:#04211d;letter-spacing:1px}
-.card-desc{color:#888;font-size:13px;margin-bottom:16px;font-style:italic}
+.card-desc{color:#888;font-size:13px;margin-bottom:16px;font-style:italic;min-height:38px}
 .card-footer{display:flex;justify-content:space-between;align-items:center;padding-top:14px;border-top:1px solid #f0e6d2}
-.price{font-size:22px;font-weight:600;color:#0a3d36;font-family:'Cormorant Garamond',serif}
-.buy-btn{background:#0a3d36;color:#f0e6d2;border:none;padding:10px 18px;border-radius:30px;cursor:pointer;font-weight:600;font-size:12px;font-family:'Montserrat',sans-serif;text-transform:uppercase}
+.price{font-size:20px;font-weight:600;color:#0a3d36;font-family:'Cormorant Garamond',serif}
+.price-request{font-size:14px;color:#0a3d36;font-family:'Montserrat',sans-serif;font-style:italic}
+.buy-btn{background:#0a3d36;color:#f0e6d2;border:none;padding:10px 16px;border-radius:30px;cursor:pointer;font-weight:600;font-size:11px;font-family:'Montserrat',sans-serif;text-transform:uppercase}
 .buy-btn:hover{background:#d9c5a0;color:#04211d}
-.no-results{grid-column:1/-1;text-align:center;padding:60px 20px;color:#888;font-family:'Cormorant Garamond',serif;font-size:24px;font-style:italic}
+.request-btn{background:#d9c5a0;color:#04211d;border:none;padding:10px 16px;border-radius:30px;cursor:pointer;font-weight:700;font-size:11px;font-family:'Montserrat',sans-serif;text-transform:uppercase}
+.request-btn:hover{background:#0a3d36;color:#d9c5a0}.no-results{grid-column:1/-1;text-align:center;padding:60px 20px;color:#888;font-family:'Cormorant Garamond',serif;font-size:24px;font-style:italic}
 .no-results span{display:block;font-size:60px;margin-bottom:20px}
 .features{background:white;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;max-width:1200px;margin:0 auto;padding:50px 30px;border-radius:30px}
 .feature{text-align:center;padding:20px}
@@ -78,6 +82,33 @@ footer a:hover{color:#f0e6d2!important}
 .tg:hover{background:#1a7fb0}
 .max{background:#7c3aed;color:white!important}
 .max:hover{background:#5f2ab8}
+/* Подписка */
+.subscription-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;max-width:1200px;margin:0 auto}
+.sub-card{background:white;border-radius:24px;padding:40px 30px;text-align:center;box-shadow:0 5px 30px rgba(4,33,29,.08);border:2px solid #f0e6d2;transition:all .3s;position:relative}
+.sub-card:hover{border-color:#d9c5a0;transform:translateY(-8px);box-shadow:0 20px 45px rgba(4,33,29,.15)}
+.sub-card.featured{border-color:#d9c5a0;background:linear-gradient(180deg,#ffffff 0%,#fdf9f0 100%)}
+.sub-label{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:#0a3d36;color:#d9c5a0;padding:6px 20px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;white-space:nowrap}
+.sub-icon{font-size:60px;margin-bottom:20px}
+.sub-title{font-family:'Cormorant Garamond',serif;font-size:32px;color:#04211d;font-weight:500;letter-spacing:2px;margin-bottom:8px}
+.sub-size{color:#888;font-size:14px;letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:20px}
+.sub-desc{color:#666;font-size:14px;line-height:1.7;margin-bottom:25px;min-height:80px}
+.sub-price{font-family:'Cormorant Garamond',serif;font-size:26px;color:#0a3d36;font-weight:600;margin-bottom:25px;letter-spacing:1px}
+.sub-period{display:block;font-size:12px;color:#888;font-family:'Montserrat',sans-serif;font-weight:400;font-style:italic;margin-top:6px}
+.sub-btn{width:100%;background:#0a3d36;color:#d9c5a0;border:none;padding:16px;border-radius:50px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .3s}
+.sub-btn:hover{background:#d9c5a0;color:#04211d}
+/* Флорист-декоратор */
+.florist-block{max-width:1000px;margin:0 auto;background:linear-gradient(135deg,#04211d 0%,#0a3d36 100%);color:white;border-radius:30px;padding:60px 50px;position:relative;overflow:hidden}
+.florist-block::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#d9c5a0,transparent)}
+.florist-block h2{font-family:'Cormorant Garamond',serif;font-size:40px;color:#d9c5a0;font-weight:500;letter-spacing:2px;margin-bottom:15px;text-align:center}
+.florist-subtitle{text-align:center;color:#f0e6d2;font-style:italic;margin-bottom:35px;font-size:16px}
+.florist-features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:25px;margin-bottom:35px}
+.florist-feature{text-align:center;padding:20px}
+.florist-feature-icon{font-size:36px;margin-bottom:12px}
+.florist-feature-title{color:#d9c5a0;font-weight:600;font-size:14px;letter-spacing:0.5px;margin-bottom:6px}
+.florist-feature-text{color:#b8c8bd;font-size:12px;line-height:1.6}
+.florist-price{text-align:center;font-family:'Cormorant Garamond',serif;font-size:24px;color:#d9c5a0;margin-bottom:25px;font-style:italic}
+.florist-btn-wrap{text-align:center}
+/* Корзина */
 .cart-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(4,33,29,.6);opacity:0;visibility:hidden;transition:all .3s;z-index:998}
 .cart-overlay.open{opacity:1;visibility:visible}
 .cart-panel{position:fixed;top:0;right:0;width:420px;max-width:100%;height:100%;background:#faf5ea;box-shadow:-10px 0 40px rgba(0,0,0,.3);transform:translateX(100%);transition:transform .4s;z-index:999;display:flex;flex-direction:column}
@@ -99,6 +130,7 @@ footer a:hover{color:#f0e6d2!important}
 .cart-total-value{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:#04211d}
 .cart-checkout{width:100%;background:#0a3d36;color:#d9c5a0;padding:15px;border:none;border-radius:50px;font-family:'Montserrat',sans-serif;font-weight:600;font-size:13px;letter-spacing:2px;text-transform:uppercase;cursor:pointer}
 .cart-checkout:hover{background:#d9c5a0;color:#04211d}
+/* Оформление */
 .checkout-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(4,33,29,.7);opacity:0;visibility:hidden;transition:all .3s;z-index:1000;display:flex;align-items:center;justify-content:center;padding:20px}
 .checkout-overlay.open{opacity:1;visibility:visible}
 .checkout-modal{background:#faf5ea;border-radius:24px;max-width:520px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,.4)}
@@ -128,19 +160,44 @@ footer a:hover{color:#f0e6d2!important}
 .send-max{background:#7c3aed;color:white}
 .send-max:hover{background:#5f2ab8}
 .checkout-note{font-size:12px;color:#888;text-align:center;margin-top:14px;font-style:italic;line-height:1.5}
+/* Заявка (подписка, флорист) */
+.request-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(4,33,29,.7);opacity:0;visibility:hidden;transition:all .3s;z-index:1001;display:flex;align-items:center;justify-content:center;padding:20px}
+.request-overlay.open{opacity:1;visibility:visible}
+.request-modal{background:#faf5ea;border-radius:24px;max-width:520px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.request-header{background:#04211d;color:#d9c5a0;padding:22px 28px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #d9c5a0;position:sticky;top:0;z-index:2}
+.request-header h3{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:500;letter-spacing:1.5px}
+.request-close{background:transparent;border:none;color:#d9c5a0;font-size:28px;cursor:pointer}
+.request-body{padding:26px 28px}
+.request-info{background:white;border-radius:14px;padding:18px 20px;margin-bottom:20px;border:1px solid #e0d5c0;text-align:center}
+.request-info-title{font-family:'Cormorant Garamond',serif;font-size:22px;color:#04211d;font-weight:600;margin-bottom:6px}
+.request-info-sub{color:#888;font-size:13px;font-style:italic}
+.period-options{display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
+.period-option{border:2px solid #e0d5c0;border-radius:12px;padding:14px 18px;cursor:pointer;background:white;display:flex;justify-content:space-between;align-items:center;transition:all .2s}
+.period-option:hover{border-color:#0a3d36}
+.period-option.active{border-color:#0a3d36;background:#f0f9f7}
+.period-option-title{font-weight:600;font-size:14px;color:#04211d}
+.period-option-check{width:20px;height:20px;border-radius:50%;border:2px solid #e0d5c0;flex-shrink:0;transition:all .2s;position:relative}
+.period-option.active .period-option-check{border-color:#0a3d36;background:#0a3d36}
+.period-option.active .period-option-check::after{content:"✓";color:#d9c5a0;font-size:12px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-weight:700}
 .toast{position:fixed;bottom:30px;right:30px;background:#04211d;color:#d9c5a0;padding:18px 28px;border-radius:16px;border:1px solid #d9c5a0;transform:translateY(150px);opacity:0;transition:all .4s;z-index:1100;font-family:'Cormorant Garamond',serif;font-size:18px;max-width:340px}
 .toast.show{transform:translateY(0);opacity:1}
-@media(max-width:1000px){.header-phone{font-size:13px}nav a{margin:0 8px;font-size:12px}}
-@media(max-width:900px){.header-phone{display:none}}
-@media(max-width:768px){.hero h1{font-size:36px}nav{display:none}.section-title{font-size:30px}.contact{padding:45px 22px}.contact h2{font-size:26px}.logo{font-size:20px;letter-spacing:3px}header{padding:12px 5%}.cart-panel{width:100%}.catalog-controls{padding:20px}.filter-row{flex-direction:column;align-items:flex-start;gap:8px}.filter-label{min-width:auto}.filter-btn{padding:7px 12px;font-size:12px}.sort-select{min-width:100%}.reset-filters{margin-left:0}.send-buttons{grid-template-columns:1fr}.checkout-modal{max-height:95vh}.delivery-options{grid-template-columns:1fr}}
+@media(max-width:1100px){.header-phone{font-size:12px}nav a{margin:0 6px;font-size:11px}}
+@media(max-width:1000px){.header-phone{display:none}}
+@media(max-width:768px){.hero h1{font-size:36px}nav{display:none}.section-title{font-size:30px}.contact{padding:45px 22px}.contact h2{font-size:26px}.logo{font-size:20px;letter-spacing:3px}header{padding:12px 5%}.cart-panel{width:100%}.catalog-controls{padding:20px}.filter-row{flex-direction:column;align-items:flex-start;gap:8px}.filter-label{min-width:auto}.filter-btn{padding:7px 12px;font-size:11px}.sort-select{min-width:100%}.reset-filters{margin-left:0}.send-buttons{grid-template-columns:1fr}.checkout-modal{max-height:95vh}.delivery-options{grid-template-columns:1fr}.florist-block{padding:40px 25px}.florist-block h2{font-size:28px}.sub-card{padding:30px 22px}}
 </style>
 </head>
 <body><header>
   <div class="logo">LŪMOS</div>
   <nav>
-    <a href="#catalog">Каталог</a>
-    <a href="#decor">Декор</a>
-    <a href="#features">О нас</a>
+    <a href="#catalog">Букеты</a>
+    <a href="#exotic">Экзотика</a>
+    <a href="#dry">Сухоцветы</a>
+    <a href="#sets">Комплекты</a>
+    <a href="#vases">Вазы</a>
+    <a href="#gifts">Подарки</a>
+    <a href="#sweets">Сладости</a>
+    <a href="#subscription">Подписка</a>
+    <a href="#florist">Флорист</a>
     <a href="#contact">Контакты</a>
   </nav>
   <div class="header-right">
@@ -166,6 +223,17 @@ footer a:hover{color:#f0e6d2!important}
         <button class="filter-btn active" data-value="all">Все</button>
         <button class="filter-btn" data-value="birthday">🎂 День рождения</button>
         <button class="filter-btn" data-value="wedding">💍 Свадьба</button>
+        <button class="filter-btn" data-value="8march">💐 8 Марта</button>
+        <button class="filter-btn" data-value="valentine">❤️ 14 Февраля</button>
+        <button class="filter-btn" data-value="graduation">🎓 Выпускной</button>
+        <button class="filter-btn" data-value="anniversary">🌹 Годовщина</button>
+        <button class="filter-btn" data-value="mothersday">👩 День матери</button>
+        <button class="filter-btn" data-value="newyear">🎄 Новый год</button>
+        <button class="filter-btn" data-value="baby">👶 Рождение ребёнка</button>
+        <button class="filter-btn" data-value="sept1">🎓 1 Сентября</button>
+        <button class="filter-btn" data-value="corporate">💼 Корпоратив</button>
+        <button class="filter-btn" data-value="thanks">🙏 Благодарность</button>
+        <button class="filter-btn" data-value="noreason">💝 Без повода</button>
       </div>
     </div>
     <div class="filter-row">
@@ -178,6 +246,7 @@ footer a:hover{color:#f0e6d2!important}
         <button class="filter-btn" data-value="box">🎁 В коробке</button>
         <button class="filter-btn" data-value="interior">🏺 Интерьерные</button>
         <button class="filter-btn" data-value="event">🎊 Для оформления</button>
+        <button class="filter-btn" data-value="umbrella">🌂 В зонтике</button>
       </div>
     </div>
     <div class="filter-row">
@@ -201,10 +270,10 @@ footer a:hover{color:#f0e6d2!important}
     </div>
   </div>
   
-  <p class="results-count">Показано <strong id="resultsCount">4</strong> из 4 букетов</p>
+  <p class="results-count">Показано <strong id="resultsCount">10</strong> из 10 букетов</p>
   
   <div class="catalog" id="catalogGrid">
-    <div class="card" data-occasion="birthday wedding" data-type="mono" data-size="medium" data-price="3500" data-name="Классические розы" data-popularity="4">
+    <div class="card" data-occasion="birthday wedding anniversary" data-type="mono" data-size="medium" data-price="3500" data-name="Классические розы" data-popularity="8">
       <div class="card-img">🌸<span class="card-badge">Хит</span></div>
       <div class="card-body">
         <h3 class="card-title">Классические розы</h3>
@@ -215,7 +284,7 @@ footer a:hover{color:#f0e6d2!important}
         </div>
       </div>
     </div>
-    <div class="card" data-occasion="birthday" data-type="mix" data-size="small" data-price="2200" data-name="Весенний микс" data-popularity="2">
+    <div class="card" data-occasion="birthday 8march mothersday noreason" data-type="mix" data-size="small" data-price="2200" data-name="Весенний микс" data-popularity="4">
       <div class="card-img">🌷</div>
       <div class="card-body">
         <h3 class="card-title">Весенний микс</h3>
@@ -226,7 +295,7 @@ footer a:hover{color:#f0e6d2!important}
         </div>
       </div>
     </div>
-    <div class="card" data-occasion="wedding" data-type="mix" data-size="medium" data-price="2800" data-name="Нежный пион" data-popularity="3">
+    <div class="card" data-occasion="wedding 8march anniversary" data-type="mix" data-size="medium" data-price="2800" data-name="Нежный пион" data-popularity="6">
       <div class="card-img">🌺</div>
       <div class="card-body">
         <h3 class="card-title">Нежный пион</h3>
@@ -237,7 +306,7 @@ footer a:hover{color:#f0e6d2!important}
         </div>
       </div>
     </div>
-    <div class="card" data-occasion="wedding birthday" data-type="author" data-size="large" data-price="4500" data-name="Авторский микс" data-popularity="5">
+    <div class="card" data-occasion="wedding birthday anniversary corporate" data-type="author" data-size="large" data-price="4500" data-name="Авторский микс" data-popularity="9">
       <div class="card-img">💐<span class="card-badge">Новинка</span></div>
       <div class="card-body">
         <h3 class="card-title">Авторский микс</h3>
@@ -248,56 +317,449 @@ footer a:hover{color:#f0e6d2!important}
         </div>
       </div>
     </div>
+    <div class="card" data-occasion="valentine anniversary wedding" data-type="mono" data-size="xl" data-price="6500" data-name="Розовое облако" data-popularity="7">
+      <div class="card-img">🌹</div>
+      <div class="card-body">
+        <h3 class="card-title">Розовое облако</h3>
+        <p class="card-desc">25 роз в пастельных тонах</p>
+        <div class="card-footer">
+          <span class="price">6 500 ₽</span>
+          <button class="buy-btn" onclick="addToCart('Розовое облако',6500)">В корзину</button>
+        </div>
+      </div>
+    </div>
+    <div class="card" data-occasion="8march mothersday noreason" data-type="mix" data-size="medium" data-price="3200" data-name="Нежность" data-popularity="5">
+      <div class="card-img">🌷</div>
+      <div class="card-body">
+        <h3 class="card-title">Нежность</h3>
+        <p class="card-desc">Пастельные тюльпаны и эустома</p>
+        <div class="card-footer">
+          <span class="price">3 200 ₽</span>
+          <button class="buy-btn" onclick="addToCart('Нежность',3200)">В корзину</button>
+        </div>
+      </div>
+    </div>
+    <div class="card" data-occasion="birthday noreason graduation" data-type="mix" data-size="medium" data-price="3800" data-name="Солнечный" data-popularity="4">
+      <div class="card-img">🌻</div>
+      <div class="card-body">
+        <h3 class="card-title">Солнечный</h3>
+        <p class="card-desc">Подсолнухи, герберы и зелень</p>
+        <div class="card-footer">
+          <span class="price">3 800 ₽</span>
+          <button class="buy-btn" onclick="addToCart('Солнечный',3800)">В корзину</button>
+        </div>
+      </div>
+    </div>
+    <div class="card" data-occasion="wedding corporate anniversary" data-type="author" data-size="xl" data-price="8500" data-name="Авторский премиум" data-popularity="6">
+      <div class="card-img">💐<span class="card-badge">Премиум</span></div>
+      <div class="card-body">
+        <h3 class="card-title">Авторский премиум</h3>
+        <p class="card-desc">Большой букет от флориста</p>
+        <div class="card-footer">
+          <span class="price">8 500 ₽</span>
+          <button class="buy-btn" onclick="addToCart('Авторский премиум',8500)">В корзину</button>
+        </div>
+      </div>
+    </div>
+    <div class="card" data-occasion="wedding 8march anniversary" data-type="mono" data-size="large" data-price="5200" data-name="Пионовый рай" data-popularity="7">
+      <div class="card-img">🌸</div>
+      <div class="card-body">
+        <h3 class="card-title">Пионовый рай</h3>
+        <p class="card-desc">Пионы трёх оттенков</p>
+        <div class="card-footer">
+          <span class="price">5 200 ₽</span>
+          <button class="buy-btn" onclick="addToCart('Пионовый рай',5200)">В корзину</button>
+        </div>
+      </div>
+    </div>
+    <div class="card" data-occasion="noreason birthday corporate" data-type="author" data-size="medium" data-price="4200" data-name="Ботанический" data-popularity="5">
+      <div class="card-img">🌿</div>
+      <div class="card-body">
+        <h3 class="card-title">Ботанический</h3>
+        <p class="card-desc">Зелень и цветы в природном стиле</p>
+        <div class="card-footer">
+          <span class="price">4 200 ₽</span>
+          <button class="buy-btn" onclick="addToCart('Ботанический',4200)">В корзину</button>
+        </div>
+      </div>
+    </div>
   </div>
-</section>
-
-<section id="decor">
-  <h2 class="section-title">Декор</h2>
-  <p class="section-subtitle">Гипсовые шкатулки и авторские изделия ручной работы</p>
+</section><section id="exotic">
+  <h2 class="section-title">Экзотические цветы</h2>
+  <p class="section-subtitle">Редкие и необычные цветы для особых случаев</p>
   <div class="catalog">
     <div class="card">
-      <div class="card-img">🏺<span class="card-badge">Хит</span></div>
+      <div class="card-img">🌺</div>
       <div class="card-body">
-        <h3 class="card-title">Гипсовая шкатулка</h3>
-        <p class="card-desc">Круглая, с фактурной крышкой — под украшения</p>
+        <h3 class="card-title">Орхидеи</h3>
+        <p class="card-desc">Изысканные орхидеи в горшке или в букете</p>
         <div class="card-footer">
-          <span class="price">1 500 ₽</span>
-          <button class="buy-btn" onclick="addToCart('Гипсовая шкатулка',1500)">В корзину</button>
+          <span class="price-request">Цена по запросу</span>
+          <button class="buy-btn" onclick="addToCart('Орхидеи',0)">Узнать цену</button>
         </div>
       </div>
     </div>
     <div class="card">
-      <div class="card-img">🕯️</div>
+      <div class="card-img">🌷</div>
       <div class="card-body">
-        <h3 class="card-title">Гипсовый подсвечник</h3>
-        <p class="card-desc">Под интерьерные свечи, ручная работа</p>
+        <h3 class="card-title">Протеи</h3>
+        <p class="card-desc">Крупные экзотические цветы, символ силы</p>
         <div class="card-footer">
-          <span class="price">900 ₽</span>
-          <button class="buy-btn" onclick="addToCart('Гипсовый подсвечник',900)">В корзину</button>
+          <span class="price-request">Цена по запросу</span>
+          <button class="buy-btn" onclick="addToCart('Протеи',0)">Узнать цену</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">🌸</div>
+      <div class="card-body">
+        <h3 class="card-title">Антириумы</h3>
+        <p class="card-desc">Элегантные цветы в форме сердца</p>
+        <div class="card-footer">
+          <span class="price-request">Цена по запросу</span>
+          <button class="buy-btn" onclick="addToCart('Антириумы',0)">Узнать цену</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">🤍</div>
+      <div class="card-body">
+        <h3 class="card-title">Каллы</h3>
+        <p class="card-desc">Строгие и изысканные, для особых событий</p>
+        <div class="card-footer">
+          <span class="price-request">Цена по запросу</span>
+          <button class="buy-btn" onclick="addToCart('Каллы',0)">Узнать цену</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">🌼</div>
+      <div class="card-body">
+        <h3 class="card-title">Ранункулюсы</h3>
+        <p class="card-desc">Нежные, многослойные, как маленькие пионы</p>
+        <div class="card-footer">
+          <span class="price-request">Цена по запросу</span>
+          <button class="buy-btn" onclick="addToCart('Ранункулюсы',0)">Узнать цену</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="dry">
+  <h2 class="section-title">Сухоцветы</h2>
+  <p class="section-subtitle">Цветы, которые сохраняют красоту годами</p>
+  <div class="catalog">
+    <div class="card">
+      <div class="card-img">🌾</div>
+      <div class="card-body">
+        <h3 class="card-title">Букет из сухоцветов</h3>
+        <p class="card-desc">Полевые травы, лаванда, пшеница</p>
+        <div class="card-footer">
+          <span class="price-request">Цена по запросу</span>
+          <button class="buy-btn" onclick="addToCart('Букет из сухоцветов',0)">Узнать цену</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">🏺</div>
+      <div class="card-body">
+        <h3 class="card-title">Сухоцветы в коробке</h3>
+        <p class="card-desc">Шляпная коробка с сухоцветами</p>
+        <div class="card-footer">
+          <span class="price-request">Цена по запросу</span>
+          <button class="buy-btn" onclick="addToCart('Сухоцветы в коробке',0)">Узнать цену</button>
         </div>
       </div>
     </div>
     <div class="card">
       <div class="card-img">🎨</div>
       <div class="card-body">
-        <h3 class="card-title">Интерьерное панно</h3>
-        <p class="card-desc">Гипсовое панно с цветочным узором</p>
+        <h3 class="card-title">Панно из сухоцветов</h3>
+        <p class="card-desc">Интерьерное панно ручной работы</p>
         <div class="card-footer">
-          <span class="price">2 500 ₽</span>
-          <button class="buy-btn" onclick="addToCart('Интерьерное панно',2500)">В корзину</button>
+          <span class="price-request">Цена по запросу</span>
+          <button class="buy-btn" onclick="addToCart('Панно из сухоцветов',0)">Узнать цену</button>
         </div>
       </div>
     </div>
     <div class="card">
-      <div class="card-img">🪞</div>
+      <div class="card-img">🌿</div>
       <div class="card-body">
-        <h3 class="card-title">Декоративное зеркало</h3>
-        <p class="card-desc">Мини-зеркало в гипсовой раме</p>
+        <h3 class="card-title">Мини-букет сухоцветов</h3>
+        <p class="card-desc">Маленький букетик для настроения</p>
         <div class="card-footer">
-          <span class="price">1 900 ₽</span>
-          <button class="buy-btn" onclick="addToCart('Декоративное зеркало',1900)">В корзину</button>
+          <span class="price-request">Цена по запросу</span>
+          <button class="buy-btn" onclick="addToCart('Мини-букет сухоцветов',0)">Узнать цену</button>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="sets">
+  <h2 class="section-title">Комплекты цветов</h2>
+  <p class="section-subtitle">Готовые наборы букетов — для семьи, пары, коллег</p>
+  <div class="catalog">
+    <div class="card">
+      <div class="card-img">💐<span class="card-badge">Хит</span></div>
+      <div class="card-body">
+        <h3 class="card-title">Мама и дочь</h3>
+        <p class="card-desc">Два нежных букета — для мамы и для дочки</p>
+        <div class="card-footer">
+          <span class="price-request">Цена по запросу</span>
+          <button class="buy-btn" onclick="addToCart('Комплект Мама и дочь',0)">Узнать цену</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">🌹</div>
+      <div class="card-body">
+        <h3 class="card-title">Семья</h3>
+        <p class="card-desc">Три букета — маме, дочке и бабушке</p>
+        <div class="card-footer">
+          <span class="price-request">Цена по запросу</span>
+          <button class="buy-btn" onclick="addToCart('Комплект Семья',0)">Узнать цену</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">💕</div>
+      <div class="card-body">
+        <h3 class="card-title">Пара</h3>
+        <p class="card-desc">Два букета — для него и для неё</p>
+        <div class="card-footer">
+          <span class="price-request">Цена по запросу</span>
+          <button class="buy-btn" onclick="addToCart('Комплект Пара',0)">Узнать цену</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="vases">
+  <h2 class="section-title">Вазы</h2>
+  <p class="section-subtitle">Подберём вазу под ваш букет</p>
+  <div class="catalog">
+    <div class="card">
+      <div class="card-img">🫙</div>
+      <div class="card-body">
+        <h3 class="card-title">Стеклянные</h3>
+        <p class="card-desc">Прозрачные вазы разных форм и размеров</p>
+        <div class="card-footer">
+          <span class="price-request">Цена по запросу</span>
+          <button class="buy-btn" onclick="addToCart('Стеклянная ваза',0)">Узнать цену</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">🧴</div>
+      <div class="card-body">
+        <h3 class="card-title">Пластиковые</h3>
+        <p class="card-desc">Лёгкие и практичные, разных цветов</p>
+        <div class="card-footer">
+          <span class="price-request">Цена по запросу</span>
+          <button class="buy-btn" onclick="addToCart('Пластиковая ваза',0)">Узнать цену</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">🏺</div>
+      <div class="card-body">
+        <h3 class="card-title">Керамические</h3>
+        <p class="card-desc">Тёплые, уютные, авторские</p>
+        <div class="card-footer">
+          <span class="price-request">Цена по запросу</span>
+          <button class="buy-btn" onclick="addToCart('Керамическая ваза',0)">Узнать цену</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">🗿</div>
+      <div class="card-body">
+        <h3 class="card-title">Гипсовые</h3>
+        <p class="card-desc">Авторские гипсовые вазы ручной работы</p>
+        <div class="card-footer">
+          <span class="price-request">Цена по запросу</span>
+          <button class="buy-btn" onclick="addToCart('Гипсовая ваза',0)">Узнать цену</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">⚙️</div>
+      <div class="card-body">
+        <h3 class="card-title">Металлические</h3>
+        <p class="card-desc">Современные, стильные, долговечные</p>
+        <div class="card-footer">
+          <span class="price-request">Цена по запросу</span>
+          <button class="buy-btn" onclick="addToCart('Металлическая ваза',0)">Узнать цену</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><section id="gifts">
+  <h2 class="section-title">Подарки</h2>
+  <p class="section-subtitle">Дополните букет приятным сюрпризом</p>
+  <div class="catalog">
+    <div class="card">
+      <div class="card-img">🕯️</div>
+      <div class="card-body">
+        <h3 class="card-title">Ароматическая свеча</h3>
+        <p class="card-desc">Уютный аромат для дома</p>
+        <div class="card-footer">
+          <span class="price-request">Цена по запросу</span>
+          <button class="buy-btn" onclick="addToCart('Ароматическая свеча',0)">Узнать цену</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">🏺</div>
+      <div class="card-body">
+        <h3 class="card-title">Диффузор для дома</h3>
+        <p class="card-desc">Стойкий аромат на несколько недель</p>
+        <div class="card-footer">
+          <span class="price-request">Цена по запросу</span>
+          <button class="buy-btn" onclick="addToCart('Диффузор для дома',0)">Узнать цену</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">💌</div>
+      <div class="card-body">
+        <h3 class="card-title">Маленькие открытки</h3>
+        <p class="card-desc">Открытки для тёплых слов</p>
+        <div class="card-footer">
+          <span class="price-request">Цена по запросу</span>
+          <button class="buy-btn" onclick="addToCart('Маленькие открытки',0)">Узнать цену</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">🧸</div>
+      <div class="card-body">
+        <h3 class="card-title">Мягкая игрушка</h3>
+        <p class="card-desc">Милый плюшевый подарок</p>
+        <div class="card-footer">
+          <span class="price-request">Цена по запросу</span>
+          <button class="buy-btn" onclick="addToCart('Мягкая игрушка',0)">Узнать цену</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sweets">
+  <h2 class="section-title">Сладости</h2>
+  <p class="section-subtitle">Сладкое дополнение к букету</p>
+  <div class="catalog">
+    <div class="card">
+      <div class="card-img">🍓<span class="card-badge">Хит</span></div>
+      <div class="card-body">
+        <h3 class="card-title">Клубника в шоколаде</h3>
+        <p class="card-desc">Свежая клубника в тёмном или молочном шоколаде</p>
+        <div class="card-footer">
+          <span class="price-request">Цена по запросу</span>
+          <button class="buy-btn" onclick="addToCart('Клубника в шоколаде',0)">Узнать цену</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">🍫</div>
+      <div class="card-body">
+        <h3 class="card-title">Шоколад</h3>
+        <p class="card-desc">Плитки шоколада разных вкусов</p>
+        <div class="card-footer">
+          <span class="price-request">Цена по запросу</span>
+          <button class="buy-btn" onclick="addToCart('Шоколад',0)">Узнать цену</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">🥚</div>
+      <div class="card-body">
+        <h3 class="card-title">Набор киндеров</h3>
+        <p class="card-desc">Несколько киндер-сюрпризов в одной упаковке</p>
+        <div class="card-footer">
+          <span class="price-request">Цена по запросу</span>
+          <button class="buy-btn" onclick="addToCart('Набор киндеров',0)">Узнать цену</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">🍬</div>
+      <div class="card-body">
+        <h3 class="card-title">Конфеты в коробке</h3>
+        <p class="card-desc">Ассорти конфет в подарочной упаковке</p>
+        <div class="card-footer">
+          <span class="price-request">Цена по запросу</span>
+          <button class="buy-btn" onclick="addToCart('Конфеты в коробке',0)">Узнать цену</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="subscription">
+  <h2 class="section-title">Подписка на цветы</h2>
+  <p class="section-subtitle">Свежие цветы регулярно — без забот</p>
+  <div class="subscription-grid">
+    <div class="sub-card">
+      <div class="sub-icon">💚</div>
+      <h3 class="sub-title">Базовая</h3>
+      <p class="sub-size">Размер S</p>
+      <p class="sub-desc">Небольшой букет для настроения — 3-5 цветов, сезонная зелень, авторская упаковка</p>
+      <p class="sub-price">Цена по запросу<span class="sub-period">от 1 месяца</span></p>
+      <button class="sub-btn" onclick="openRequest('Базовая','S')">Оставить заявку</button>
+    </div>
+    <div class="sub-card featured">
+      <span class="sub-label">Популярная</span>
+      <div class="sub-icon">💛</div>
+      <h3 class="sub-title">Стандарт</h3>
+      <p class="sub-size">Размер M</p>
+      <p class="sub-desc">Букет на неделю — 7-15 цветов, микс из свежих бутонов, декоративная зелень</p>
+      <p class="sub-price">Цена по запросу<span class="sub-period">от 1 месяца</span></p>
+      <button class="sub-btn" onclick="openRequest('Стандарт','M')">Оставить заявку</button>
+    </div>
+    <div class="sub-card">
+      <div class="sub-icon">💎</div>
+      <h3 class="sub-title">Премиум</h3>
+      <p class="sub-size">Размер L</p>
+      <p class="sub-desc">Большой букет для ценителей — 15-25 цветов, премиум-сорта, авторская композиция</p>
+      <p class="sub-price">Цена по запросу<span class="sub-period">от 1 месяца</span></p>
+      <button class="sub-btn" onclick="openRequest('Премиум','L')">Оставить заявку</button>
+    </div>
+  </div>
+</section>
+
+<section id="florist">
+  <div class="florist-block">
+    <h2>Выездной флорист-декоратор</h2>
+    <p class="florist-subtitle">Оформляем пространство под ключ — свадьбы, корпоративы, праздники</p>
+    <div class="florist-features">
+      <div class="florist-feature">
+        <div class="florist-feature-icon">🎨</div>
+        <div class="florist-feature-title">Разработка концепции</div>
+        <div class="florist-feature-text">Индивидуальный дизайн под ваше событие</div>
+      </div>
+      <div class="florist-feature">
+        <div class="florist-feature-icon">🚚</div>
+        <div class="florist-feature-title">Выезд и монтаж</div>
+        <div class="florist-feature-text">Привезём и установим всё сами</div>
+      </div>
+      <div class="florist-feature">
+        <div class="florist-feature-icon">💐</div>
+        <div class="florist-feature-title">Фотозоны и арки</div>
+        <div class="florist-feature-text">Авторские композиции для фото</div>
+      </div>
+      <div class="florist-feature">
+        <div class="florist-feature-icon">✨</div>
+        <div class="florist-feature-title">Демонтаж</div>
+        <div class="florist-feature-text">Уберём декорации после праздника</div>
+      </div>
+    </div>
+    <p class="florist-price">Стоимость — по договорённости</p>
+    <div class="florist-btn-wrap">
+      <button class="btn" onclick="openRequest('Выездной флорист-декоратор','')">Оставить заявку</button>
     </div>
   </div>
 </section>
@@ -364,7 +826,6 @@ footer a:hover{color:#f0e6d2!important}
       <button class="checkout-close" onclick="closeCheckout()">×</button>
     </div>
     <div class="checkout-body">
-      
       <span class="checkout-label">Как получите заказ?</span>
       <div class="delivery-options">
         <div class="delivery-option active" id="optDelivery" onclick="selectDelivery('delivery')">
@@ -377,35 +838,77 @@ footer a:hover{color:#f0e6d2!important}
         </div>
       </div>
       <p class="delivery-note" id="deliveryNote">Стоимость доставки уточним при подтверждении</p>
-      
       <div class="checkout-field">
         <span class="checkout-label">Ваше имя</span>
         <input type="text" id="coName" placeholder="Как к вам обращаться?">
       </div>
-      
       <div class="checkout-field">
         <span class="checkout-label">Телефон</span>
         <input type="tel" id="coPhone" placeholder="+7 (___) ___-__-__">
       </div>
-      
       <div class="checkout-field" id="fieldAddress">
         <span class="checkout-label">Адрес доставки</span>
         <input type="text" id="coAddress" placeholder="Улица, дом, квартира">
       </div>
-      
       <div class="checkout-field">
         <span class="checkout-label">Комментарий (необязательно)</span>
         <textarea id="coComment" placeholder="Пожелания к букету, время доставки..."></textarea>
       </div>
-      
       <div class="checkout-summary" id="checkoutSummary"></div>
-      
       <div class="send-buttons">
         <button class="send-btn send-tg" onclick="sendOrder('tg')">✈️ В Telegram</button>
         <button class="send-btn send-max" onclick="sendOrder('max')">💬 В MAX</button>
       </div>
       <p class="checkout-note">Нажмите — откроется мессенджер<br>с готовым текстом заказа</p>
-      
+    </div>
+  </div>
+</div>
+
+<div class="request-overlay" id="requestOverlay" onclick="closeRequest(event)">
+  <div class="request-modal" onclick="event.stopPropagation()">
+    <div class="request-header">
+      <h3 id="requestTitle">Оставить заявку</h3>
+      <button class="request-close" onclick="closeRequest()">×</button>
+    </div>
+    <div class="request-body">
+      <div class="request-info">
+        <div class="request-info-title" id="requestInfoTitle">Подписка</div>
+        <div class="request-info-sub" id="requestInfoSub">Размер M</div>
+      </div>
+      <div id="requestPeriodWrap">
+        <span class="checkout-label">Периодичность</span>
+        <div class="period-options" id="periodOptions">
+          <div class="period-option" onclick="selectPeriod(this,'Раз в неделю')">
+            <span class="period-option-title">Раз в неделю</span>
+            <span class="period-option-check"></span>
+          </div>
+          <div class="period-option" onclick="selectPeriod(this,'2 раза в месяц')">
+            <span class="period-option-title">2 раза в месяц</span>
+            <span class="period-option-check"></span>
+          </div>
+          <div class="period-option active" onclick="selectPeriod(this,'Раз в месяц')">
+            <span class="period-option-title">Раз в месяц</span>
+            <span class="period-option-check"></span>
+          </div>
+        </div>
+      </div>
+      <div class="checkout-field">
+        <span class="checkout-label">Ваше имя</span>
+        <input type="text" id="reqName" placeholder="Как к вам обращаться?">
+      </div>
+      <div class="checkout-field">
+        <span class="checkout-label">Телефон</span>
+        <input type="tel" id="reqPhone" placeholder="+7 (___) ___-__-__">
+      </div>
+      <div class="checkout-field">
+        <span class="checkout-label">Комментарий (необязательно)</span>
+        <textarea id="reqComment" placeholder="Пожелания, детали..."></textarea>
+      </div>
+      <div class="send-buttons">
+        <button class="send-btn send-tg" onclick="sendRequest('tg')">✈️ В Telegram</button>
+        <button class="send-btn send-max" onclick="sendRequest('max')">💬 В MAX</button>
+      </div>
+      <p class="checkout-note">Нажмите — откроется мессенджер<br>с готовым текстом заявки</p>
     </div>
   </div>
 </div>
@@ -415,8 +918,12 @@ let cart=[];
 const filterState={occasion:'all',type:'all',size:'all'};
 let sortMode='popular';
 let deliveryType='delivery';
+let requestType='subscription';
+let requestSize='';
+let requestPeriod='Раз в месяц';
 
 function addToCart(name,price){
+  if(price===0){showToast('Цена по запросу · напишите нам в мессенджер');return;}
   const ex=cart.find(function(i){return i.name===name;});
   if(ex)ex.qty++;else cart.push({name:name,price:price,qty:1});
   renderCart();
@@ -513,7 +1020,6 @@ function sendOrder(messenger){
   if(comment) text+='Комментарий: '+comment+'\n';
   
   const encoded=encodeURIComponent(text);
-  
   if(messenger==='tg'){
     window.open('https://t.me/+79095295349?text='+encoded,'_blank');
   } else if(messenger==='max'){
@@ -530,6 +1036,66 @@ function sendOrder(messenger){
     document.getElementById('coPhone').value='';
     document.getElementById('coAddress').value='';
     document.getElementById('coComment').value='';
+  },1500);
+}
+
+function openRequest(type,size){
+  requestType=type;
+  requestSize=size;
+  requestPeriod='Раз в месяц';
+  document.getElementById('requestTitle').textContent=type==='Выездной флорист-декоратор'?'Заявка на оформление':'Заявка на подписку';
+  document.getElementById('requestInfoTitle').textContent=type;
+  document.getElementById('requestInfoSub').textContent=size?'Размер '+size:'Оформление мероприятия';
+  document.getElementById('requestPeriodWrap').style.display=size?'block':'none';
+  document.querySelectorAll('.period-option').forEach(function(el,i){
+    el.classList.toggle('active',i===2);
+  });
+  document.getElementById('reqName').value='';
+  document.getElementById('reqPhone').value='';
+  document.getElementById('reqComment').value='';
+  document.getElementById('requestOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+
+function closeRequest(e){
+  if(e && e.target !== document.getElementById('requestOverlay')) return;
+  document.getElementById('requestOverlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+function selectPeriod(el,period){
+  requestPeriod=period;
+  document.querySelectorAll('.period-option').forEach(function(o){o.classList.remove('active');});
+  el.classList.add('active');
+}
+
+function sendRequest(messenger){
+  const name=document.getElementById('reqName').value.trim();
+  const phone=document.getElementById('reqPhone').value.trim();
+  const comment=document.getElementById('reqComment').value.trim();
+  
+  if(!name){showToast('Пожалуйста, укажите имя');return;}
+  if(!phone){showToast('Пожалуйста, укажите телефон');return;}
+  
+  let text='🌸 Заявка с сайта LŪMOS\n\n';
+  text+='Услуга: '+requestType+'\n';
+  if(requestSize) text+='Размер: '+requestSize+'\n';
+  if(requestType!=='Выездной флорист-декоратор') text+='Периодичность: '+requestPeriod+'\n';
+  text+='\nИмя: '+name+'\n';
+  text+='Телефон: '+phone+'\n';
+  if(comment) text+='Комментарий: '+comment+'\n';
+  
+  const encoded=encodeURIComponent(text);
+  if(messenger==='tg'){
+    window.open('https://t.me/+79095295349?text='+encoded,'_blank');
+  } else if(messenger==='max'){
+    window.open('https://max.ru/+79095295349?text='+encoded,'_blank');
+  }
+  
+  showToast('Мессенджер открывается · отправьте сообщение');
+  setTimeout(function(){
+    document.getElementById('requestOverlay').classList.remove('open');
+    document.body.style.overflow='';
   },1500);
 }
 
@@ -560,8 +1126,8 @@ function sortCards(){
   const g=document.getElementById('catalogGrid');
   const cards=Array.from(g.querySelectorAll('.card'));
   cards.sort(function(a,b){
-    if(sortMode==='price-asc')return +a.dataset.price-+b.dataset.price;
-    if(sortMode==='price-desc')return +b.dataset.price-+a.dataset.price;
+    if(sortMode==='price-asc')return (+a.dataset.price||999999)-(+b.dataset.price||999999);
+    if(sortMode==='price-desc')return (+b.dataset.price||0)-(+a.dataset.price||0);
     return +b.dataset.popularity-+a.dataset.popularity;
   });
   cards.forEach(function(c){g.appendChild(c);});
@@ -609,7 +1175,7 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){
 });
 
 document.addEventListener('keydown',function(e){
-  if(e.key==='Escape'){closeCart();closeCheckout();}
+  if(e.key==='Escape'){closeCart();closeCheckout();closeRequest();}
 });
 
 applyFilters();
