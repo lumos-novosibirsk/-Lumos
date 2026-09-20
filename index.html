@@ -195,7 +195,6 @@ footer a:hover{color:#f0e6d2!important}
   <a href="#catalog" class="active">🌸 Букеты</a>
   <a href="#exotic">🌺 Экзотика</a>
   <a href="#dry">🌾 Сухоцветы</a>
-  <a href="#sets">💐 Комплекты</a>
   <a href="#vases">🏺 Вазы</a>
   <a href="#gifts">🎁 Подарки</a>
   <a href="#sweets">🍓 Сладости</a>
@@ -243,8 +242,8 @@ footer a:hover{color:#f0e6d2!important}
         <button class="filter-btn" data-value="author">🌿 Авторские</button>
         <button class="filter-btn" data-value="box">🎁 В коробке</button>
         <button class="filter-btn" data-value="interior">🏺 Интерьерные</button>
-        <button class="filter-btn" data-value="event">🎊 Для оформления</button>
         <button class="filter-btn" data-value="umbrella">🌂 В зонтике</button>
+        <button class="filter-btn" data-value="combo">🎁 Комплекты</button>
       </div>
     </div>
     <div class="filter-row">
@@ -268,7 +267,7 @@ footer a:hover{color:#f0e6d2!important}
     </div>
   </div>
   
-  <p class="results-count">Показано <strong id="resultsCount">10</strong> из 10 букетов</p>
+  <p class="results-count">Показано <strong id="resultsCount">13</strong> из 13 букетов</p>
   
   <div class="catalog" id="catalogGrid">
     <div class="card" data-occasion="birthday wedding anniversary" data-type="mono" data-size="medium" data-price="3500" data-name="Классические розы" data-popularity="8">
@@ -381,6 +380,39 @@ footer a:hover{color:#f0e6d2!important}
         </div>
       </div>
     </div>
+    <div class="card" data-occasion="birthday 8march mothersday noreason" data-type="combo" data-size="medium" data-price="0" data-name="Комплект Мама и дочь" data-popularity="7">
+      <div class="card-img">💐<span class="card-badge">Хит</span></div>
+      <div class="card-body">
+        <h3 class="card-title">Мама и дочь</h3>
+        <p class="card-desc">Два нежных букета — для мамы и для дочки</p>
+        <div class="card-footer">
+          <span class="price-request">Цена по запросу</span>
+          <button class="buy-btn" onclick="addToCart('Комплект Мама и дочь',0)">Узнать цену</button>
+        </div>
+      </div>
+    </div>
+    <div class="card" data-occasion="birthday 8march mothersday noreason" data-type="combo" data-size="large" data-price="0" data-name="Комплект Семья" data-popularity="6">
+      <div class="card-img">🌹</div>
+      <div class="card-body">
+        <h3 class="card-title">Семья</h3>
+        <p class="card-desc">Три букета — маме, дочке и бабушке</p>
+        <div class="card-footer">
+          <span class="price-request">Цена по запросу</span>
+          <button class="buy-btn" onclick="addToCart('Комплект Семья',0)">Узнать цену</button>
+        </div>
+      </div>
+    </div>
+    <div class="card" data-occasion="valentine anniversary wedding noreason" data-type="combo" data-size="medium" data-price="0" data-name="Комплект Пара" data-popularity="5">
+      <div class="card-img">💕</div>
+      <div class="card-body">
+        <h3 class="card-title">Пара</h3>
+        <p class="card-desc">Два букета — для него и для неё</p>
+        <div class="card-footer">
+          <span class="price-request">Цена по запросу</span>
+          <button class="buy-btn" onclick="addToCart('Комплект Пара',0)">Узнать цену</button>
+        </div>
+      </div>
+    </div>
   </div>
 </section><section id="exotic">
   <h2 class="section-title">Экзотические цветы</h2>
@@ -489,46 +521,6 @@ footer a:hover{color:#f0e6d2!important}
         <div class="card-footer">
           <span class="price-request">Цена по запросу</span>
           <button class="buy-btn" onclick="addToCart('Мини-букет сухоцветов',0)">Узнать цену</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="sets">
-  <h2 class="section-title">Комплекты цветов</h2>
-  <p class="section-subtitle">Готовые наборы букетов — для семьи, пары, коллег</p>
-  <div class="catalog">
-    <div class="card">
-      <div class="card-img">💐<span class="card-badge">Хит</span></div>
-      <div class="card-body">
-        <h3 class="card-title">Мама и дочь</h3>
-        <p class="card-desc">Два нежных букета — для мамы и для дочки</p>
-        <div class="card-footer">
-          <span class="price-request">Цена по запросу</span>
-          <button class="buy-btn" onclick="addToCart('Комплект Мама и дочь',0)">Узнать цену</button>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img">🌹</div>
-      <div class="card-body">
-        <h3 class="card-title">Семья</h3>
-        <p class="card-desc">Три букета — маме, дочке и бабушке</p>
-        <div class="card-footer">
-          <span class="price-request">Цена по запросу</span>
-          <button class="buy-btn" onclick="addToCart('Комплект Семья',0)">Узнать цену</button>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img">💕</div>
-      <div class="card-body">
-        <h3 class="card-title">Пара</h3>
-        <p class="card-desc">Два букета — для него и для неё</p>
-        <div class="card-footer">
-          <span class="price-request">Цена по запросу</span>
-          <button class="buy-btn" onclick="addToCart('Комплект Пара',0)">Узнать цену</button>
         </div>
       </div>
     </div>
@@ -675,11 +667,11 @@ footer a:hover{color:#f0e6d2!important}
     <div class="card">
       <div class="card-img">🥚</div>
       <div class="card-body">
-        <h3 class="card-title">Набор киндеров</h3>
-        <p class="card-desc">Несколько киндер-сюрпризов в одной упаковке</p>
+        <h3 class="card-title">Киндеры</h3>
+        <p class="card-desc">Шоколадные яйца с сюрпризом</p>
         <div class="card-footer">
           <span class="price-request">Цена по запросу</span>
-          <button class="buy-btn" onclick="addToCart('Набор киндеров',0)">Узнать цену</button>
+          <button class="buy-btn" onclick="addToCart('Киндеры',0)">Узнать цену</button>
         </div>
       </div>
     </div>
@@ -1174,7 +1166,6 @@ document.addEventListener('keydown',function(e){
   if(e.key==='Escape'){closeCart();closeCheckout();closeRequest();}
 });
 
-// Подсветка активного раздела
 const sections=document.querySelectorAll('section[id]');
 const navLinks=document.querySelectorAll('.nav-sections a');
 
