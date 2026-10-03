@@ -9,7 +9,6 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Montserrat',sans-serif;color:#2c2c2c;line-height:1.7;background:#faf6ec;-webkit-font-smoothing:antialiased;font-weight:300}
 
-/* ШАПКА — бутиковая с протеей */
 header{background:#0a2c26;padding:30px 6% 0;border-bottom:1px solid #c9a961;position:sticky;top:0;z-index:100}
 .header-top{display:flex;align-items:center;gap:28px;padding-bottom:26px;border-bottom:1px solid rgba(201,169,97,.18);flex-wrap:wrap}
 .hP-monogram{width:78px;height:78px;border:1.5px solid #c9a961;display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;background:rgba(201,169,97,.04)}
@@ -25,7 +24,6 @@ header{background:#0a2c26;padding:30px 6% 0;border-bottom:1px solid #c9a961;posi
 .hP-cart{background:transparent;border:1px solid #c9a961;color:#c9a961;padding:12px 22px;cursor:pointer;font-family:'Montserrat',sans-serif;font-weight:500;font-size:11px;letter-spacing:3px;text-transform:uppercase;transition:all .4s;white-space:nowrap}
 .hP-cart:hover{background:#c9a961;color:#0a2c26}
 
-/* НАВИГАЦИЯ */
 .nav-sections{position:sticky;top:0;background:#0a2c26;padding:0 6%;display:flex;justify-content:center;gap:36px;overflow-x:auto;white-space:nowrap;z-index:99;border-bottom:1px solid rgba(201,169,97,.12);scrollbar-width:none}
 .nav-sections::-webkit-scrollbar{display:none}
 .nav-sections a{padding:18px 0;border:none;text-decoration:none;color:#c9bfa8;font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;font-weight:400;transition:all .3s;flex-shrink:0;position:relative}
@@ -35,7 +33,6 @@ header{background:#0a2c26;padding:30px 6% 0;border-bottom:1px solid #c9a961;posi
 .nav-sections a.active{color:#c9a961}
 .nav-sections a.active::after{left:0;right:0}
 
-/* HERO */
 .hero{background:linear-gradient(180deg,#0a2c26 0%,#06201c 100%);padding:130px 6% 150px;text-align:center;position:relative;overflow:hidden}
 .hero::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,#c9a961,transparent)}
 .hero h1{font-family:'Cormorant Garamond',serif;font-size:86px;color:#e8ddc8;font-weight:300;letter-spacing:2px;line-height:1.05;margin-bottom:35px}
@@ -44,15 +41,12 @@ header{background:#0a2c26;padding:30px 6% 0;border-bottom:1px solid #c9a961;posi
 .hero p{font-family:'Cormorant Garamond',serif;font-size:20px;color:#b8a98a;font-style:italic;font-weight:300;margin-bottom:55px;letter-spacing:1px}
 .btn{display:inline-block;background:transparent;color:#c9a961;border:1px solid #c9a961;padding:20px 60px;text-decoration:none;font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:5px;text-transform:uppercase;font-weight:500;transition:all .5s;cursor:pointer}
 .btn:hover{background:#c9a961;color:#0a2c26}
-.btn-dark{background:#0a2c26;color:#c9a961;border:1px solid #0a2c26}
-.btn-dark:hover{background:#c9a961;color:#0a2c26;border-color:#c9a961}
-.btn-light{background:#c9a961;color:#0a2c26;border:1px solid #c9a961}
-.btn-light:hover{background:transparent;color:#c9a961}
+
 section{padding:100px 6%}
 .section-title{font-family:'Cormorant Garamond',serif;font-size:48px;color:#0a2c26;font-weight:400;letter-spacing:5px;text-transform:uppercase;margin-bottom:12px;text-align:center}
 .section-title::after{content:"";display:block;width:60px;height:1px;background:#c9a961;margin:22px auto 0}
-.section-subtitle{text-align:center;color:#8d8477;margin-bottom:50px;font-style:italic;font-size:16px;font-family:'Cormorant Garamond',serif}/* КАТАЛОГ-КОНТРОЛЫ */
-.catalog-controls{max-width:1320px;margin:0 auto 40px;background:#ffffff;padding:32px 38px;border:1px solid #f0e6d2;display:flex;flex-direction:column;gap:22px}
+.section-subtitle{text-align:center;color:#8d8477;margin-bottom:50px;font-style:italic;font-size:16px;font-family:'Cormorant Garamond',serif}
+.loading{text-align:center;padding:70px 20px;color:#a89b80;font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;grid-column:1/-1}.catalog-controls{max-width:1320px;margin:0 auto 40px;background:#ffffff;padding:32px 38px;border:1px solid #f0e6d2;display:flex;flex-direction:column;gap:22px}
 .filter-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
 .filter-label{font-size:10px;color:#0a2c26;text-transform:uppercase;letter-spacing:3px;font-weight:500;min-width:90px}
 .filter-buttons{display:flex;flex-wrap:wrap;gap:8px}
@@ -65,13 +59,13 @@ section{padding:100px 6%}
 .reset-filters:hover{color:#0a2c26}
 .results-count{max-width:1320px;margin:0 auto 40px;color:#a89b80;font-size:12px;font-style:italic;text-align:center;letter-spacing:1px}
 
-/* КАТАЛОГ */
-.catalog{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;max-width:1320px;margin:0 auto;background:#f0e6d2;border:1px solid #f0e6d2}
+.catalog{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;max-width:1320px;margin:0 auto;background:#f0e6d2;border:1px solid #f0e6d2;min-height:200px}
 .card{background:#faf6ec;padding:0;display:flex;flex-direction:column;transition:background .4s;position:relative}
 .card:hover{background:#fffdf7}
 .card.hidden{display:none}
 .card-img{height:300px;display:flex;align-items:center;justify-content:center;font-size:100px;background:linear-gradient(180deg,#f5ecd9 0%,#ede3cb 100%);position:relative;overflow:hidden;border-bottom:1px solid #f0e6d2}
 .card-img img{width:100%;height:100%;object-fit:cover;display:block}
+.card-img .emoji-fallback{color:#c9a961;font-size:80px;line-height:1}
 .card-badge{position:absolute;top:18px;left:18px;background:#0a2c26;color:#c9a961;padding:6px 14px;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;font-weight:500;font-family:'Montserrat',sans-serif;z-index:2}
 .card-body{padding:28px 26px 32px;display:flex;flex-direction:column;flex:1}
 .card-title{font-family:'Cormorant Garamond',serif;font-size:26px;color:#0a2c26;font-weight:500;letter-spacing:1px;margin-bottom:10px;line-height:1.2}
@@ -85,17 +79,15 @@ section{padding:100px 6%}
 .buy-btn:hover::after{background:#a88a3f;height:2px}
 
 .no-results{grid-column:1/-1;text-align:center;padding:70px 20px;color:#a89b80;font-family:'Cormorant Garamond',serif;font-size:24px;font-style:italic;background:#faf6ec}
-.no-results span{display:block;font-size:60px;margin-bottom:20px;opacity:.4}
+.no-results span{display:block;font-size:60px;margin-bottom:20px;opacity:.4;color:#c9a961}
 
-/* ПРЕИМУЩЕСТВА */
 .features{background:#ffffff;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;max-width:1320px;margin:0 auto;padding:0;border:1px solid #f0e6d2}
 .feature{text-align:center;padding:50px 30px;background:#faf6ec;border-right:1px solid #f0e6d2}
 .feature:last-child{border-right:none}
-.feature-icon{font-size:38px;margin-bottom:18px;color:#c9a961}
+.feature-icon{font-size:32px;margin-bottom:18px;color:#c9a961}
 .feature h3{margin-bottom:10px;color:#0a2c26;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:22px;letter-spacing:1px}
 .feature p{color:#8d8477;font-size:13px;font-style:italic;font-family:'Cormorant Garamond',serif}
 
-/* КОНТАКТЫ */
 .contact{background:#0a2c26;color:white;max-width:1000px;margin:0 auto;padding:80px 60px;text-align:center;border:1px solid #c9a961}
 .contact h2{font-family:'Cormorant Garamond',serif;font-size:44px;margin-bottom:20px;color:#c9a961;font-weight:400;letter-spacing:4px;text-transform:uppercase}
 .contact p{color:#b8a98a;font-style:italic;font-size:16px;font-family:'Cormorant Garamond',serif}
@@ -104,7 +96,6 @@ section{padding:100px 6%}
 .contact input::placeholder{color:#7a7268;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:15px}
 .contact input:focus{border-color:#c9a961}
 
-/* ПОДВАЛ */
 footer{background:#0a2c26;color:#a89b80;padding:70px 6% 50px;text-align:center;border-top:1px solid #c9a961;margin-top:0}
 footer .footer-logo{font-family:'Cormorant Garamond',serif;color:#c9a961;margin-bottom:25px;font-size:32px;letter-spacing:10px;font-weight:400;padding-left:10px}
 footer p{margin:10px 0;font-size:12px;letter-spacing:1px;font-family:'Montserrat',sans-serif;font-weight:300}
@@ -112,15 +103,14 @@ footer a{color:#c9a961!important;text-decoration:none;transition:color .3s}
 footer a:hover{color:#e8ddc8!important}
 .messengers{display:flex;justify-content:center;gap:14px;margin:30px 0;flex-wrap:wrap}
 .messenger-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border:1px solid #c9a961;text-decoration:none;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:#c9a961!important;transition:all .4s}
-.messenger-btn:hover{background:#c9a961;color:#0a2c26!important}/* ПОДПИСКА */
-.subscription-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;max-width:1320px;margin:0 auto;background:#f0e6d2;border:1px solid #f0e6d2}
+.messenger-btn:hover{background:#c9a961;color:#0a2c26!important}.subscription-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;max-width:1320px;margin:0 auto;background:#f0e6d2;border:1px solid #f0e6d2}
 .sub-card{background:#faf6ec;padding:50px 35px;text-align:center;position:relative;display:flex;flex-direction:column;transition:background .3s}
 .sub-card:hover{background:#fffdf7}
 .sub-card.featured{background:#0a2c26;color:#e8ddc8}
 .sub-card.featured .sub-title,.sub-card.featured .sub-price{color:#c9a961}
 .sub-card.featured .sub-size,.sub-card.featured .sub-desc{color:#b8a98a}
 .sub-label{position:absolute;top:0;left:50%;transform:translateX(-50%);background:#c9a961;color:#0a2c26;padding:6px 18px;font-size:9px;font-weight:600;letter-spacing:3px;text-transform:uppercase;font-family:'Montserrat',sans-serif}
-.sub-icon{font-size:36px;margin-bottom:25px;color:#c9a961}
+.sub-icon{font-size:28px;margin-bottom:25px;color:#c9a961}
 .sub-title{font-family:'Cormorant Garamond',serif;font-size:32px;color:#0a2c26;font-weight:400;letter-spacing:4px;text-transform:uppercase;margin-bottom:10px}
 .sub-size{color:#a89b80;font-size:11px;letter-spacing:4px;text-transform:uppercase;font-weight:400;margin-bottom:24px;font-family:'Montserrat',sans-serif}
 .sub-desc{color:#6b5e42;font-size:14px;line-height:1.8;margin-bottom:28px;min-height:90px;font-family:'Cormorant Garamond',serif;font-style:italic}
@@ -131,19 +121,17 @@ footer a:hover{color:#e8ddc8!important}
 .sub-card.featured .sub-btn{color:#c9a961;border-color:#c9a961}
 .sub-card.featured .sub-btn:hover{background:#c9a961;color:#0a2c26}
 
-/* ФЛОРИСТ */
 .florist-block{max-width:1100px;margin:0 auto;background:#0a2c26;color:#e8ddc8;padding:80px 60px;border:1px solid #c9a961;position:relative}
 .florist-block h2{font-family:'Cormorant Garamond',serif;font-size:44px;color:#c9a961;font-weight:400;letter-spacing:5px;text-transform:uppercase;margin-bottom:18px;text-align:center}
 .florist-subtitle{text-align:center;color:#b8a98a;font-style:italic;margin-bottom:45px;font-size:16px;font-family:'Cormorant Garamond',serif}
 .florist-features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:rgba(201,169,97,.2);margin-bottom:45px;border:1px solid rgba(201,169,97,.2)}
 .florist-feature{text-align:center;padding:35px 20px;background:#0a2c26}
-.florist-feature-icon{font-size:30px;margin-bottom:16px;color:#c9a961}
+.florist-feature-icon{font-size:24px;margin-bottom:16px;color:#c9a961}
 .florist-feature-title{color:#c9a961;font-weight:500;font-size:11px;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px;font-family:'Montserrat',sans-serif}
 .florist-feature-text{color:#b8a98a;font-size:13px;line-height:1.7;font-family:'Cormorant Garamond',serif;font-style:italic}
 .florist-price{text-align:center;font-family:'Cormorant Garamond',serif;font-size:22px;color:#c9a961;margin-bottom:30px;font-style:italic;letter-spacing:1px}
 .florist-btn-wrap{text-align:center}
 
-/* КОРЗИНА */
 .cart-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(10,44,38,.75);opacity:0;visibility:hidden;transition:all .4s;z-index:998;backdrop-filter:blur(3px)}
 .cart-overlay.open{opacity:1;visibility:visible}
 .cart-panel{position:fixed;top:0;right:0;width:440px;max-width:100%;height:100%;background:#faf6ec;box-shadow:-20px 0 60px rgba(0,0,0,.3);transform:translateX(100%);transition:transform .5s;z-index:999;display:flex;flex-direction:column}
@@ -167,7 +155,6 @@ footer a:hover{color:#e8ddc8!important}
 .cart-checkout{width:100%;background:#0a2c26;color:#c9a961;padding:18px;border:1px solid #0a2c26;font-family:'Montserrat',sans-serif;font-weight:500;font-size:11px;letter-spacing:4px;text-transform:uppercase;cursor:pointer;transition:all .4s}
 .cart-checkout:hover{background:#c9a961;color:#0a2c26;border-color:#c9a961}
 
-/* ОФОРМЛЕНИЕ */
 .checkout-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(10,44,38,.8);opacity:0;visibility:hidden;transition:all .4s;z-index:1000;display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
 .checkout-overlay.open{opacity:1;visibility:visible}
 .checkout-modal{background:#faf6ec;max-width:560px;width:100%;max-height:92vh;overflow-y:auto;border:1px solid #c9a961}
@@ -180,7 +167,7 @@ footer a:hover{color:#e8ddc8!important}
 .delivery-option{border:1px solid #e0d5c0;padding:18px 14px;cursor:pointer;text-align:center;background:#ffffff;transition:all .3s}
 .delivery-option:hover{border-color:#0a2c26}
 .delivery-option.active{border-color:#c9a961;background:#0a2c26}
-.delivery-option-icon{font-size:24px;margin-bottom:8px;color:#c9a961}
+.delivery-option-icon{font-size:22px;margin-bottom:8px;color:#c9a961}
 .delivery-option-title{font-weight:500;font-size:11px;color:#0a2c26;letter-spacing:2px;text-transform:uppercase;font-family:'Montserrat',sans-serif}
 .delivery-option.active .delivery-option-title{color:#c9a961}
 .delivery-note{font-size:12px;color:#a89b80;text-align:center;margin-top:10px;font-style:italic;line-height:1.6;font-family:'Cormorant Garamond',serif;margin-bottom:22px}
@@ -194,7 +181,8 @@ footer a:hover{color:#e8ddc8!important}
 .send-buttons{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
 .send-btn{padding:16px;border:1px solid #0a2c26;font-family:'Montserrat',sans-serif;font-weight:500;font-size:10px;letter-spacing:3px;text-transform:uppercase;cursor:pointer;transition:all .4s;display:flex;align-items:center;justify-content:center;gap:8px;background:transparent;color:#0a2c26}
 .send-btn:hover{background:#0a2c26;color:#c9a961;border-color:#0a2c26}
-.checkout-note{font-size:12px;color:#a89b80;text-align:center;margin-top:18px;font-style:italic;line-height:1.6;font-family:'Cormorant Garamond',serif}/* ЗАЯВКА (подписка, флорист) */
+.checkout-note{font-size:12px;color:#a89b80;text-align:center;margin-top:18px;font-style:italic;line-height:1.6;font-family:'Cormorant Garamond',serif}
+
 .request-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(10,44,38,.8);opacity:0;visibility:hidden;transition:all .4s;z-index:1001;display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
 .request-overlay.open{opacity:1;visibility:visible}
 .request-modal{background:#faf6ec;max-width:560px;width:100%;max-height:92vh;overflow-y:auto;border:1px solid #c9a961}
@@ -215,11 +203,9 @@ footer a:hover{color:#e8ddc8!important}
 .period-option.active .period-option-check{background:#c9a961}
 .period-option.active .period-option-check::after{content:"✓";color:#0a2c26;font-size:12px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-weight:700;line-height:1}
 
-/* ТОСТ */
 .toast{position:fixed;bottom:40px;right:40px;background:#0a2c26;color:#c9a961;padding:22px 32px;border:1px solid #c9a961;transform:translateY(200px);opacity:0;transition:all .5s;z-index:1100;font-family:'Cormorant Garamond',serif;font-size:18px;max-width:360px;font-style:italic;letter-spacing:.5px}
 .toast.show{transform:translateY(0);opacity:1}
 
-/* МЕДИА-ЗАПРОСЫ */
 @media(max-width:1200px){
   .catalog{grid-template-columns:repeat(3,1fr)}
 }
@@ -274,10 +260,7 @@ footer a:hover{color:#e8ddc8!important}
 }
 </style>
 </head>
-<body>
-
-<!-- ШАПКА -->
-<header>
+<body><header>
   <div class="header-top">
     <div class="hP-monogram">
       <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -319,7 +302,6 @@ footer a:hover{color:#e8ddc8!important}
   </div>
 </header>
 
-<!-- НАВИГАЦИЯ ПО РАЗДЕЛАМ -->
 <div class="nav-sections" id="navSections">
   <a href="#catalog" class="active">Букеты</a>
   <a href="#exotic">Экзотика</a>
@@ -332,58 +314,58 @@ footer a:hover{color:#e8ddc8!important}
   <a href="#contact">Контакты</a>
 </div>
 
-<!-- HERO -->
 <section class="hero">
   <h1>Цветы, полные света</h1>
   <div class="hero-line"></div>
   <p>Свежие букеты с доставкой за 2 часа</p>
   <a href="#catalog" class="btn">Выбрать букет</a>
-</section><!-- КАТАЛОГ БУКЕТОВ -->
+</section>
+
 <section id="catalog">
   <h2 class="section-title">Букеты</h2>
   <p class="section-subtitle">Каждый букет создаётся вручную с любовью</p>
   
-  <div class="catalog-controls">
+  <div class="catalog-controls" id="catalogControls" style="display:none">
     <div class="filter-row">
       <span class="filter-label">Повод</span>
       <div class="filter-buttons" data-filter-group="occasion">
         <button class="filter-btn active" data-value="all">Все</button>
-        <button class="filter-btn" data-value="birthday">День рождения</button>
-        <button class="filter-btn" data-value="wedding">Свадьба</button>
-        <button class="filter-btn" data-value="8march">8 Марта</button>
-        <button class="filter-btn" data-value="valentine">14 Февраля</button>
-        <button class="filter-btn" data-value="graduation">Выпускной</button>
-        <button class="filter-btn" data-value="anniversary">Годовщина</button>
-        <button class="filter-btn" data-value="mothersday">День матери</button>
-        <button class="filter-btn" data-value="newyear">Новый год</button>
-        <button class="filter-btn" data-value="baby">Рождение ребёнка</button>
-        <button class="filter-btn" data-value="sept1">1 Сентября</button>
-        <button class="filter-btn" data-value="corporate">Корпоратив</button>
-        <button class="filter-btn" data-value="thanks">Благодарность</button>
-        <button class="filter-btn" data-value="noreason">Без повода</button>
+        <button class="filter-btn" data-value="день рождения">День рождения</button>
+        <button class="filter-btn" data-value="свадьба">Свадьба</button>
+        <button class="filter-btn" data-value="8марта">8 Марта</button>
+        <button class="filter-btn" data-value="14февраля">14 Февраля</button>
+        <button class="filter-btn" data-value="выпускной">Выпускной</button>
+        <button class="filter-btn" data-value="годовщина">Годовщина</button>
+        <button class="filter-btn" data-value="день матери">День матери</button>
+        <button class="filter-btn" data-value="новый год">Новый год</button>
+        <button class="filter-btn" data-value="рождение ребенка">Рождение ребёнка</button>
+        <button class="filter-btn" data-value="1сентября">1 Сентября</button>
+        <button class="filter-btn" data-value="корпоратив">Корпоратив</button>
+        <button class="filter-btn" data-value="благодарность">Благодарность</button>
+        <button class="filter-btn" data-value="без повода">Без повода</button>
       </div>
     </div>
     <div class="filter-row">
       <span class="filter-label">Тип</span>
       <div class="filter-buttons" data-filter-group="type">
         <button class="filter-btn active" data-value="all">Все</button>
-        <button class="filter-btn" data-value="mono">Монобукеты</button>
-        <button class="filter-btn" data-value="mix">Миксы</button>
-        <button class="filter-btn" data-value="author">Авторские</button>
-        <button class="filter-btn" data-value="box">В коробке</button>
-        <button class="filter-btn" data-value="interior">Интерьерные</button>
-        <button class="filter-btn" data-value="umbrella">В зонтике</button>
-        <button class="filter-btn" data-value="combo">Комплекты</button>
+        <button class="filter-btn" data-value="монобукет">Монобукеты</button>
+        <button class="filter-btn" data-value="микс">Миксы</button>
+        <button class="filter-btn" data-value="авторский">Авторские</button>
+        <button class="filter-btn" data-value="коробка">В коробке</button>
+        <button class="filter-btn" data-value="интерьерный">Интерьерные</button>
+        <button class="filter-btn" data-value="зонтик">В зонтике</button>
+        <button class="filter-btn" data-value="комплект">Комплекты</button>
       </div>
     </div>
     <div class="filter-row">
       <span class="filter-label">Размер</span>
       <div class="filter-buttons" data-filter-group="size">
         <button class="filter-btn active" data-value="all">Все</button>
-        <button class="filter-btn" data-value="small">S</button>
-        <button class="filter-btn" data-value="medium">M</button>
-        <button class="filter-btn" data-value="large">L</button>
-        <button class="filter-btn" data-value="xl">XL</button>
+        <button class="filter-btn" data-value="маленький">S</button>
+        <button class="filter-btn" data-value="средний">M</button>
+        <button class="filter-btn" data-value="большой">L</button>
+        <button class="filter-btn" data-value="огромный">XL</button>
       </div>
     </div>
     <div class="sort-row">
@@ -397,437 +379,52 @@ footer a:hover{color:#e8ddc8!important}
     </div>
   </div>
   
-  <p class="results-count">Показано <strong id="resultsCount">13</strong> из 13 букетов</p>
+  <p class="results-count" id="resultsWrap" style="display:none">Показано <strong id="resultsCount">0</strong> из <strong id="totalCount">0</strong></p>
   
   <div class="catalog" id="catalogGrid">
-    <div class="card" data-occasion="birthday wedding anniversary" data-type="mono" data-size="medium" data-price="3500" data-name="Классические розы" data-popularity="8">
-      <div class="card-img">🌸<span class="card-badge">Хит</span></div>
-      <div class="card-body">
-        <h3 class="card-title">Классические розы</h3>
-        <p class="card-desc">15 бархатных роз пудрового оттенка</p>
-        <div class="card-footer">
-          <span class="price">3 500 ₽</span>
-          <button class="buy-btn" onclick="addToCart('Классические розы',3500)">В корзину</button>
-        </div>
-      </div>
-    </div>
-    <div class="card" data-occasion="birthday 8march mothersday noreason" data-type="mix" data-size="small" data-price="2200" data-name="Весенний микс" data-popularity="4">
-      <div class="card-img">🌷</div>
-      <div class="card-body">
-        <h3 class="card-title">Весенний микс</h3>
-        <p class="card-desc">Тюльпаны, нарциссы и ирисы</p>
-        <div class="card-footer">
-          <span class="price">2 200 ₽</span>
-          <button class="buy-btn" onclick="addToCart('Весенний микс',2200)">В корзину</button>
-        </div>
-      </div>
-    </div>
-    <div class="card" data-occasion="wedding 8march anniversary" data-type="mix" data-size="medium" data-price="2800" data-name="Нежный пион" data-popularity="6">
-      <div class="card-img">🌺</div>
-      <div class="card-body">
-        <h3 class="card-title">Нежный пион</h3>
-        <p class="card-desc">Пионы и ранункулюсы в пастели</p>
-        <div class="card-footer">
-          <span class="price">2 800 ₽</span>
-          <button class="buy-btn" onclick="addToCart('Нежный пион',2800)">В корзину</button>
-        </div>
-      </div>
-    </div>
-    <div class="card" data-occasion="wedding birthday anniversary corporate" data-type="author" data-size="large" data-price="4500" data-name="Авторский микс" data-popularity="9">
-      <div class="card-img">💐<span class="card-badge">Новинка</span></div>
-      <div class="card-body">
-        <h3 class="card-title">Авторский микс</h3>
-        <p class="card-desc">Сезонные цветы от флориста</p>
-        <div class="card-footer">
-          <span class="price">4 500 ₽</span>
-          <button class="buy-btn" onclick="addToCart('Авторский микс',4500)">В корзину</button>
-        </div>
-      </div>
-    </div>
-    <div class="card" data-occasion="valentine anniversary wedding" data-type="mono" data-size="xl" data-price="6500" data-name="Розовое облако" data-popularity="7">
-      <div class="card-img">🌹</div>
-      <div class="card-body">
-        <h3 class="card-title">Розовое облако</h3>
-        <p class="card-desc">25 роз в пастельных тонах</p>
-        <div class="card-footer">
-          <span class="price">6 500 ₽</span>
-          <button class="buy-btn" onclick="addToCart('Розовое облако',6500)">В корзину</button>
-        </div>
-      </div>
-    </div>
-    <div class="card" data-occasion="8march mothersday noreason" data-type="mix" data-size="medium" data-price="3200" data-name="Нежность" data-popularity="5">
-      <div class="card-img">🌷</div>
-      <div class="card-body">
-        <h3 class="card-title">Нежность</h3>
-        <p class="card-desc">Пастельные тюльпаны и эустома</p>
-        <div class="card-footer">
-          <span class="price">3 200 ₽</span>
-          <button class="buy-btn" onclick="addToCart('Нежность',3200)">В корзину</button>
-        </div>
-      </div>
-    </div>
-    <div class="card" data-occasion="birthday noreason graduation" data-type="mix" data-size="medium" data-price="3800" data-name="Солнечный" data-popularity="4">
-      <div class="card-img">🌻</div>
-      <div class="card-body">
-        <h3 class="card-title">Солнечный</h3>
-        <p class="card-desc">Подсолнухи, герберы и зелень</p>
-        <div class="card-footer">
-          <span class="price">3 800 ₽</span>
-          <button class="buy-btn" onclick="addToCart('Солнечный',3800)">В корзину</button>
-        </div>
-      </div>
-    </div>
-    <div class="card" data-occasion="wedding corporate anniversary" data-type="author" data-size="xl" data-price="8500" data-name="Авторский премиум" data-popularity="6">
-      <div class="card-img">💐<span class="card-badge">Премиум</span></div>
-      <div class="card-body">
-        <h3 class="card-title">Авторский премиум</h3>
-        <p class="card-desc">Большой букет от флориста</p>
-        <div class="card-footer">
-          <span class="price">8 500 ₽</span>
-          <button class="buy-btn" onclick="addToCart('Авторский премиум',8500)">В корзину</button>
-        </div>
-      </div>
-    </div>
-    <div class="card" data-occasion="wedding 8march anniversary" data-type="mono" data-size="large" data-price="5200" data-name="Пионовый рай" data-popularity="7">
-      <div class="card-img">🌸</div>
-      <div class="card-body">
-        <h3 class="card-title">Пионовый рай</h3>
-        <p class="card-desc">Пионы трёх оттенков</p>
-        <div class="card-footer">
-          <span class="price">5 200 ₽</span>
-          <button class="buy-btn" onclick="addToCart('Пионовый рай',5200)">В корзину</button>
-        </div>
-      </div>
-    </div>
-    <div class="card" data-occasion="noreason birthday corporate" data-type="author" data-size="medium" data-price="4200" data-name="Ботанический" data-popularity="5">
-      <div class="card-img">🌿</div>
-      <div class="card-body">
-        <h3 class="card-title">Ботанический</h3>
-        <p class="card-desc">Зелень и цветы в природном стиле</p>
-        <div class="card-footer">
-          <span class="price">4 200 ₽</span>
-          <button class="buy-btn" onclick="addToCart('Ботанический',4200)">В корзину</button>
-        </div>
-      </div>
-    </div>
-    <div class="card" data-occasion="birthday 8march mothersday noreason" data-type="combo" data-size="medium" data-price="0" data-name="Комплект Мама и дочь" data-popularity="7">
-      <div class="card-img">💐<span class="card-badge">Хит</span></div>
-      <div class="card-body">
-        <h3 class="card-title">Мама и дочь</h3>
-        <p class="card-desc">Два нежных букета — для мамы и для дочки</p>
-        <div class="card-footer">
-          <span class="price-request">Цена по запросу</span>
-          <button class="buy-btn" onclick="addToCart('Комплект Мама и дочь',0)">Узнать цену</button>
-        </div>
-      </div>
-    </div>
-    <div class="card" data-occasion="birthday 8march mothersday noreason" data-type="combo" data-size="large" data-price="0" data-name="Комплект Семья" data-popularity="6">
-      <div class="card-img">🌹</div>
-      <div class="card-body">
-        <h3 class="card-title">Семья</h3>
-        <p class="card-desc">Три букета — маме, дочке и бабушке</p>
-        <div class="card-footer">
-          <span class="price-request">Цена по запросу</span>
-          <button class="buy-btn" onclick="addToCart('Комплект Семья',0)">Узнать цену</button>
-        </div>
-      </div>
-    </div>
-    <div class="card" data-occasion="valentine anniversary wedding noreason" data-type="combo" data-size="medium" data-price="0" data-name="Комплект Пара" data-popularity="5">
-      <div class="card-img">💕</div>
-      <div class="card-body">
-        <h3 class="card-title">Пара</h3>
-        <p class="card-desc">Два букета — для него и для неё</p>
-        <div class="card-footer">
-          <span class="price-request">Цена по запросу</span>
-          <button class="buy-btn" onclick="addToCart('Комплект Пара',0)">Узнать цену</button>
-        </div>
-      </div>
-    </div>
+    <div class="loading">Загружаем букеты...</div>
   </div>
 </section>
 
-<!-- ЭКЗОТИКА -->
 <section id="exotic">
   <h2 class="section-title">Экзотические цветы</h2>
   <p class="section-subtitle">Редкие и необычные цветы для особых случаев</p>
-  <div class="catalog">
-    <div class="card">
-      <div class="card-img">🌺</div>
-      <div class="card-body">
-        <h3 class="card-title">Орхидеи</h3>
-        <p class="card-desc">Изысканные орхидеи в горшке или в букете</p>
-        <div class="card-footer">
-          <span class="price-request">Цена по запросу</span>
-          <button class="buy-btn" onclick="addToCart('Орхидеи',0)">Узнать цену</button>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img">🌷</div>
-      <div class="card-body">
-        <h3 class="card-title">Протеи</h3>
-        <p class="card-desc">Крупные экзотические цветы, символ силы</p>
-        <div class="card-footer">
-          <span class="price-request">Цена по запросу</span>
-          <button class="buy-btn" onclick="addToCart('Протеи',0)">Узнать цену</button>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img">🌸</div>
-      <div class="card-body">
-        <h3 class="card-title">Антириумы</h3>
-        <p class="card-desc">Элегантные цветы в форме сердца</p>
-        <div class="card-footer">
-          <span class="price-request">Цена по запросу</span>
-          <button class="buy-btn" onclick="addToCart('Антириумы',0)">Узнать цену</button>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img">🤍</div>
-      <div class="card-body">
-        <h3 class="card-title">Каллы</h3>
-        <p class="card-desc">Строгие и изысканные, для особых событий</p>
-        <div class="card-footer">
-          <span class="price-request">Цена по запросу</span>
-          <button class="buy-btn" onclick="addToCart('Каллы',0)">Узнать цену</button>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img">🌼</div>
-      <div class="card-body">
-        <h3 class="card-title">Ранункулюсы</h3>
-        <p class="card-desc">Нежные, многослойные, как маленькие пионы</p>
-        <div class="card-footer">
-          <span class="price-request">Цена по запросу</span>
-          <button class="buy-btn" onclick="addToCart('Ранункулюсы',0)">Узнать цену</button>
-        </div>
-      </div>
-    </div>
+  <div class="catalog" id="exoticGrid">
+    <div class="loading">Загружаем...</div>
   </div>
 </section>
 
-<!-- СУХОЦВЕТЫ -->
 <section id="dry">
   <h2 class="section-title">Сухоцветы</h2>
   <p class="section-subtitle">Цветы, которые сохраняют красоту годами</p>
-  <div class="catalog">
-    <div class="card">
-      <div class="card-img">🌾</div>
-      <div class="card-body">
-        <h3 class="card-title">Букет из сухоцветов</h3>
-        <p class="card-desc">Полевые травы, лаванда, пшеница</p>
-        <div class="card-footer">
-          <span class="price-request">Цена по запросу</span>
-          <button class="buy-btn" onclick="addToCart('Букет из сухоцветов',0)">Узнать цену</button>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img">🏺</div>
-      <div class="card-body">
-        <h3 class="card-title">Сухоцветы в коробке</h3>
-        <p class="card-desc">Шляпная коробка с сухоцветами</p>
-        <div class="card-footer">
-          <span class="price-request">Цена по запросу</span>
-          <button class="buy-btn" onclick="addToCart('Сухоцветы в коробке',0)">Узнать цену</button>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img">🎨</div>
-      <div class="card-body">
-        <h3 class="card-title">Панно из сухоцветов</h3>
-        <p class="card-desc">Интерьерное панно ручной работы</p>
-        <div class="card-footer">
-          <span class="price-request">Цена по запросу</span>
-          <button class="buy-btn" onclick="addToCart('Панно из сухоцветов',0)">Узнать цену</button>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img">🌿</div>
-      <div class="card-body">
-        <h3 class="card-title">Мини-букет сухоцветов</h3>
-        <p class="card-desc">Маленький букетик для настроения</p>
-        <div class="card-footer">
-          <span class="price-request">Цена по запросу</span>
-          <button class="buy-btn" onclick="addToCart('Мини-букет сухоцветов',0)">Узнать цену</button>
-        </div>
-      </div>
-    </div>
+  <div class="catalog" id="dryGrid">
+    <div class="loading">Загружаем...</div>
   </div>
 </section>
 
-<!-- ВАЗЫ -->
 <section id="vases">
   <h2 class="section-title">Вазы</h2>
   <p class="section-subtitle">Подберём вазу под ваш букет</p>
-  <div class="catalog">
-    <div class="card">
-      <div class="card-img">🫙</div>
-      <div class="card-body">
-        <h3 class="card-title">Стеклянные</h3>
-        <p class="card-desc">Прозрачные вазы разных форм и размеров</p>
-        <div class="card-footer">
-          <span class="price-request">Цена по запросу</span>
-          <button class="buy-btn" onclick="addToCart('Стеклянная ваза',0)">Узнать цену</button>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img">🧴</div>
-      <div class="card-body">
-        <h3 class="card-title">Пластиковые</h3>
-        <p class="card-desc">Лёгкие и практичные, разных цветов</p>
-        <div class="card-footer">
-          <span class="price-request">Цена по запросу</span>
-          <button class="buy-btn" onclick="addToCart('Пластиковая ваза',0)">Узнать цену</button>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img">🏺</div>
-      <div class="card-body">
-        <h3 class="card-title">Керамические</h3>
-        <p class="card-desc">Тёплые, уютные, авторские</p>
-        <div class="card-footer">
-          <span class="price-request">Цена по запросу</span>
-          <button class="buy-btn" onclick="addToCart('Керамическая ваза',0)">Узнать цену</button>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img">🗿</div>
-      <div class="card-body">
-        <h3 class="card-title">Гипсовые</h3>
-        <p class="card-desc">Авторские гипсовые вазы ручной работы</p>
-        <div class="card-footer">
-          <span class="price-request">Цена по запросу</span>
-          <button class="buy-btn" onclick="addToCart('Гипсовая ваза',0)">Узнать цену</button>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img">⚙️</div>
-      <div class="card-body">
-        <h3 class="card-title">Металлические</h3>
-        <p class="card-desc">Современные, стильные, долговечные</p>
-        <div class="card-footer">
-          <span class="price-request">Цена по запросу</span>
-          <button class="buy-btn" onclick="addToCart('Металлическая ваза',0)">Узнать цену</button>
-        </div>
-      </div>
-    </div>
+  <div class="catalog" id="vasesGrid">
+    <div class="loading">Загружаем...</div>
   </div>
-</section><!-- ПОДАРКИ -->
+</section>
+
 <section id="gifts">
   <h2 class="section-title">Подарки</h2>
   <p class="section-subtitle">Дополните букет приятным сюрпризом</p>
-  <div class="catalog">
-    <div class="card">
-      <div class="card-img">🕯️</div>
-      <div class="card-body">
-        <h3 class="card-title">Ароматическая свеча</h3>
-        <p class="card-desc">Уютный аромат для дома</p>
-        <div class="card-footer">
-          <span class="price-request">Цена по запросу</span>
-          <button class="buy-btn" onclick="addToCart('Ароматическая свеча',0)">Узнать цену</button>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img">🏺</div>
-      <div class="card-body">
-        <h3 class="card-title">Диффузор для дома</h3>
-        <p class="card-desc">Стойкий аромат на несколько недель</p>
-        <div class="card-footer">
-          <span class="price-request">Цена по запросу</span>
-          <button class="buy-btn" onclick="addToCart('Диффузор для дома',0)">Узнать цену</button>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img">💌</div>
-      <div class="card-body">
-        <h3 class="card-title">Маленькие открытки</h3>
-        <p class="card-desc">Открытки для тёплых слов</p>
-        <div class="card-footer">
-          <span class="price-request">Цена по запросу</span>
-          <button class="buy-btn" onclick="addToCart('Маленькие открытки',0)">Узнать цену</button>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img">🧸</div>
-      <div class="card-body">
-        <h3 class="card-title">Мягкая игрушка</h3>
-        <p class="card-desc">Милый плюшевый подарок</p>
-        <div class="card-footer">
-          <span class="price-request">Цена по запросу</span>
-          <button class="buy-btn" onclick="addToCart('Мягкая игрушка',0)">Узнать цену</button>
-        </div>
-      </div>
-    </div>
+  <div class="catalog" id="giftsGrid">
+    <div class="loading">Загружаем...</div>
   </div>
 </section>
 
-<!-- СЛАДОСТИ -->
 <section id="sweets">
   <h2 class="section-title">Сладости</h2>
   <p class="section-subtitle">Сладкое дополнение к букету</p>
-  <div class="catalog">
-    <div class="card">
-      <div class="card-img">🍓<span class="card-badge">Хит</span></div>
-      <div class="card-body">
-        <h3 class="card-title">Клубника в шоколаде</h3>
-        <p class="card-desc">Свежая клубника в тёмном или молочном шоколаде</p>
-        <div class="card-footer">
-          <span class="price-request">Цена по запросу</span>
-          <button class="buy-btn" onclick="addToCart('Клубника в шоколаде',0)">Узнать цену</button>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img">🍫</div>
-      <div class="card-body">
-        <h3 class="card-title">Шоколад</h3>
-        <p class="card-desc">Плитки шоколада разных вкусов</p>
-        <div class="card-footer">
-          <span class="price-request">Цена по запросу</span>
-          <button class="buy-btn" onclick="addToCart('Шоколад',0)">Узнать цену</button>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img">🥚</div>
-      <div class="card-body">
-        <h3 class="card-title">Киндеры</h3>
-        <p class="card-desc">Шоколадные яйца с сюрпризом</p>
-        <div class="card-footer">
-          <span class="price-request">Цена по запросу</span>
-          <button class="buy-btn" onclick="addToCart('Киндеры',0)">Узнать цену</button>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img">🍬</div>
-      <div class="card-body">
-        <h3 class="card-title">Конфеты в коробке</h3>
-        <p class="card-desc">Ассорти конфет в подарочной упаковке</p>
-        <div class="card-footer">
-          <span class="price-request">Цена по запросу</span>
-          <button class="buy-btn" onclick="addToCart('Конфеты в коробке',0)">Узнать цену</button>
-        </div>
-      </div>
-    </div>
+  <div class="catalog" id="sweetsGrid">
+    <div class="loading">Загружаем...</div>
   </div>
-</section>
-
-<!-- ПОДПИСКА -->
-<section id="subscription">
+</section><section id="subscription">
   <h2 class="section-title">Подписка на цветы</h2>
   <p class="section-subtitle">Свежие цветы регулярно — без забот</p>
   <div class="subscription-grid">
@@ -859,7 +456,6 @@ footer a:hover{color:#e8ddc8!important}
   </div>
 </section>
 
-<!-- ФЛОРИСТ -->
 <section id="florist">
   <div class="florist-block">
     <h2>Выездной флорист-декоратор</h2>
@@ -893,7 +489,6 @@ footer a:hover{color:#e8ddc8!important}
   </div>
 </section>
 
-<!-- ПОЧЕМУ МЫ -->
 <section id="features">
   <h2 class="section-title">Почему мы</h2>
   <p class="section-subtitle">Заботимся о каждом клиенте</p>
@@ -905,12 +500,11 @@ footer a:hover{color:#e8ddc8!important}
   </div>
 </section>
 
-<!-- КОНТАКТЫ -->
 <section id="contact">
   <div class="contact">
     <h2>Закажите консультацию флориста</h2>
     <p>Поможем выбрать идеальный букет для любого повода</p>
-    <form onsubmit="event.preventDefault();showToast('Заявка отправлена · Мы свяжемся с вами 🌿');this.reset()">
+    <form onsubmit="event.preventDefault();showToast('Заявка отправлена · Мы свяжемся с вами');this.reset()">
       <input type="text" placeholder="Ваше имя" required>
       <input type="tel" placeholder="Телефон" required>
       <button type="submit" class="btn">Отправить</button>
@@ -918,7 +512,6 @@ footer a:hover{color:#e8ddc8!important}
   </div>
 </section>
 
-<!-- ПОДВАЛ -->
 <footer>
   <div class="footer-logo">LŪMOS</div>
   <p>© 2025 LŪMOS. Все права защищены.</p>
@@ -933,7 +526,6 @@ footer a:hover{color:#e8ddc8!important}
   </div>
 </footer>
 
-<!-- КОРЗИНА -->
 <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
 <div class="cart-panel" id="cartPanel">
   <div class="cart-header">
@@ -952,7 +544,6 @@ footer a:hover{color:#e8ddc8!important}
   </div>
 </div>
 
-<!-- ОФОРМЛЕНИЕ -->
 <div class="checkout-overlay" id="checkoutOverlay" onclick="closeCheckout(event)">
   <div class="checkout-modal" onclick="event.stopPropagation()">
     <div class="checkout-header">
@@ -998,7 +589,6 @@ footer a:hover{color:#e8ddc8!important}
   </div>
 </div>
 
-<!-- ЗАЯВКА -->
 <div class="request-overlay" id="requestOverlay" onclick="closeRequest(event)">
   <div class="request-modal" onclick="event.stopPropagation()">
     <div class="request-header">
@@ -1049,289 +639,455 @@ footer a:hover{color:#e8ddc8!important}
 </div>
 
 <div class="toast" id="toast"></div><script>
-let cart=[];
-const filterState={occasion:'all',type:'all',size:'all'};
-let sortMode='popular';
-let deliveryType='delivery';
-let requestType='subscription';
-let requestSize='';
-let requestPeriod='Раз в месяц';
+// ============ ССЫЛКА НА GOOGLE ТАБЛИЦУ ============
+// Если поменяете таблицу — замените эту ссылку
+const SHEET_URL = 'https://script.google.com/macros/s/AKfycby0IuRzbj8-O9gm8eM31QLyh4Qvftt2Ohg5ie-nUkBwD1KMDLG8cdD1B6EB8CHjQfn8/exec';
 
-function addToCart(name,price){
-  if(price===0){showToast('«'+name+'» · цена по запросу');return;}
-  const ex=cart.find(function(i){return i.name===name;});
-  if(ex)ex.qty++;else cart.push({name:name,price:price,qty:1});
-  renderCart();
-  showToast('«'+name+'» · добавлено в корзину');
+// ============ ФОТО: преобразование ссылок Google Drive ============
+function fixPhotoUrl(url) {
+  if (!url || url === '') return '';
+  if (url.indexOf('drive.google.com') === -1) return url;
+  var m = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
+  if (m && m[1]) return 'https://drive.google.com/uc?export=view&id=' + m[1];
+  return url;
 }
 
-function removeFromCart(name){
-  cart=cart.filter(function(i){return i.name!==name;});
-  renderCart();
+// ============ ЭМОДЗИ ДЛЯ КАТЕГОРИЙ ============
+var categoryEmoji = {
+  'букеты': '🌿',
+  'экзотика': '🌺',
+  'сухоцветы': '🌾',
+  'вазы': '🏺',
+  'подарки': '🎁',
+  'сладости': '🍓'
+};
+
+// ============ ГЛОБАЛЬНЫЕ ДАННЫЕ ============
+var ALL_PRODUCTS = [];
+var cart = [];
+var filterState = { occasion: 'all', type: 'all', size: 'all' };
+var sortMode = 'popular';
+var deliveryType = 'delivery';
+var requestType = 'subscription';
+var requestSize = '';
+var requestPeriod = 'Раз в месяц';
+
+// ============ ЗАГРУЗКА ДАННЫХ ============
+async function loadProducts() {
+  try {
+    var response = await fetch(SHEET_URL);
+    var data = await response.json();
+    ALL_PRODUCTS = data.filter(function(item) {
+      return String(item['активно'] || '').trim().toLowerCase() === 'да';
+    });
+    renderAll();
+  } catch (err) {
+    console.error('Ошибка загрузки:', err);
+    document.getElementById('catalogGrid').innerHTML = '<div class="no-results"><span>⚠️</span>Не удалось загрузить данные. Попробуйте позже.</div>';
+  }
 }
 
-function renderCart(){
-  const box=document.getElementById('cartItems');
-  const cnt=document.getElementById('cartCount');
-  const tot=document.getElementById('cartTotal');
-  const c=cart.reduce(function(s,i){return s+i.qty;},0);
-  const t=cart.reduce(function(s,i){return s+i.price*i.qty;},0);
-  cnt.textContent=c;
-  tot.textContent=t.toLocaleString('ru-RU')+' ₽';
-  if(cart.length===0){
-    box.innerHTML='<div class="cart-empty">Корзина пуста<br>Выберите букет из каталога</div>';
+// ============ РЕНДЕР ВСЕХ РАЗДЕЛОВ ============
+function renderAll() {
+  renderCategory('catalogGrid', 'букеты');
+  renderCategory('exoticGrid', 'экзотика');
+  renderCategory('dryGrid', 'сухоцветы');
+  renderCategory('vasesGrid', 'вазы');
+  renderCategory('giftsGrid', 'подарки');
+  renderCategory('sweetsGrid', 'сладости');
+  
+  // Показать контролы фильтров, если есть букеты
+  var bouquets = ALL_PRODUCTS.filter(function(p) { return p['категория'] === 'букеты'; });
+  if (bouquets.length > 0) {
+    document.getElementById('catalogControls').style.display = 'flex';
+    document.getElementById('resultsWrap').style.display = 'block';
+  }
+  applyFilters();
+}
+
+// ============ РЕНДЕР ОДНОГО РАЗДЕЛА ============
+function renderCategory(gridId, category) {
+  var grid = document.getElementById(gridId);
+  if (!grid) return;
+  
+  var items = ALL_PRODUCTS.filter(function(p) {
+    return String(p['категория'] || '').trim().toLowerCase() === category;
+  });
+  
+  if (items.length === 0) {
+    grid.innerHTML = '<div class="no-results"><span>✦</span>Скоро пополнение — заходите позже</div>';
     return;
   }
-  box.innerHTML=cart.map(function(i){
-    return '<div class="cart-item"><div class="cart-item-info"><div class="cart-item-name">'+i.name+(i.qty>1?' × '+i.qty:'')+'</div><div class="cart-item-price">'+(i.price*i.qty).toLocaleString('ru-RU')+' ₽</div></div><button class="cart-item-remove" onclick="removeFromCart(\''+i.name+'\')">×</button></div>';
+  
+  grid.innerHTML = items.map(function(p) {
+    return buildCard(p);
   }).join('');
 }
 
-function openCart(){
-  document.getElementById('cartPanel').classList.add('open');
-  document.getElementById('cartOverlay').classList.add('open');
-  document.body.style.overflow='hidden';
-}
-
-function closeCart(){
-  document.getElementById('cartPanel').classList.remove('open');
-  document.getElementById('cartOverlay').classList.remove('open');
-  document.body.style.overflow='';
-}
-
-function openCheckout(){
-  if(cart.length===0){showToast('Корзина пуста · добавьте букет');return;}
-  closeCart();
-  const total=cart.reduce(function(s,i){return s+i.price*i.qty;},0);
-  const summary='<div class="checkout-summary-row"><span>Товаров:</span><span>'+cart.reduce(function(s,i){return s+i.qty;},0)+'</span></div>'+cart.map(function(i){return '<div class="checkout-summary-row"><span>'+i.name+(i.qty>1?' × '+i.qty:'')+'</span><span>'+(i.price*i.qty).toLocaleString('ru-RU')+' ₽</span></div>';}).join('')+'<div class="checkout-summary-total"><span>Итого</span><span>'+total.toLocaleString('ru-RU')+' ₽</span></div>';
-  document.getElementById('checkoutSummary').innerHTML=summary;
-  document.getElementById('checkoutOverlay').classList.add('open');
-  document.body.style.overflow='hidden';
-}
-
-function closeCheckout(e){
-  if(e && e.target !== document.getElementById('checkoutOverlay')) return;
-  document.getElementById('checkoutOverlay').classList.remove('open');
-  document.body.style.overflow='';
-}
-
-function selectDelivery(type){
-  deliveryType=type;
-  document.getElementById('optDelivery').classList.toggle('active',type==='delivery');
-  document.getElementById('optPickup').classList.toggle('active',type==='pickup');
-  document.getElementById('fieldAddress').style.display=type==='delivery'?'block':'none';
-  document.getElementById('deliveryNote').textContent=type==='delivery'
-    ?'Стоимость доставки уточним при подтверждении'
-    :'Заберёте по адресу: ул. Владимира Заровного, 8';
-}
-
-function sendOrder(messenger){
-  const name=document.getElementById('coName').value.trim();
-  const phone=document.getElementById('coPhone').value.trim();
-  const address=document.getElementById('coAddress').value.trim();
-  const comment=document.getElementById('coComment').value.trim();
+// ============ ПОСТРОЕНИЕ КАРТОЧКИ ============
+function buildCard(p) {
+  var name = p['название'] || '';
+  var desc = p['описание'] || '';
+  var price = parseInt(p['цена']) || 0;
+  var photo = fixPhotoUrl(p['фото'] || '');
+  var category = String(p['категория'] || '').trim().toLowerCase();
+  var badge = p['бейдж'] || '';
   
-  if(!name){showToast('Пожалуйста, укажите имя');return;}
-  if(!phone){showToast('Пожалуйста, укажите телефон');return;}
-  if(deliveryType==='delivery' && !address){showToast('Пожалуйста, укажите адрес доставки');return;}
-  
-  const total=cart.reduce(function(s,i){return s+i.price*i.qty;},0);
-  
-  let text='Заказ с сайта LŪMOS\n\n';
-  cart.forEach(function(i){
-    text+='• '+i.name+(i.qty>1?' × '+i.qty:'')+' = '+(i.price*i.qty).toLocaleString('ru-RU')+' ₽\n';
-  });
-  text+='────────────────\n';
-  text+='Итого: '+total.toLocaleString('ru-RU')+' ₽\n\n';
-  text+='Способ: '+(deliveryType==='delivery'?'Доставка курьером':'Самовывоз')+'\n';
-  if(deliveryType==='delivery'){
-    text+='Адрес: '+address+'\n';
-    text+='Доставка: по договорённости\n';
+  var imgHtml;
+  if (photo) {
+    imgHtml = '<img src="' + photo + '" alt="' + name + '" loading="lazy" onerror="this.style.display=\'none\';this.parentNode.innerHTML=\'<span class=&quot;emoji-fallback&quot;>' + (categoryEmoji[category] || '🌿') + '</span>\';">';
   } else {
-    text+='Заберу по адресу: ул. Владимира Заровного, 8\n';
-  }
-  text+='\nИмя: '+name+'\n';
-  text+='Телефон: '+phone+'\n';
-  if(comment) text+='Комментарий: '+comment+'\n';
-  
-  const encoded=encodeURIComponent(text);
-  if(messenger==='tg'){
-    window.open('https://t.me/+79095295349?text='+encoded,'_blank');
-  } else if(messenger==='max'){
-    window.open('https://max.ru/+79095295349?text='+encoded,'_blank');
+    imgHtml = '<span class="emoji-fallback">' + (categoryEmoji[category] || '🌿') + '</span>';
   }
   
-  showToast('Мессенджер открывается · отправьте сообщение');
-  setTimeout(function(){
-    cart=[];
-    renderCart();
-    document.getElementById('checkoutOverlay').classList.remove('open');
-    document.body.style.overflow='';
-    document.getElementById('coName').value='';
-    document.getElementById('coPhone').value='';
-    document.getElementById('coAddress').value='';
-    document.getElementById('coComment').value='';
-  },1500);
-}
-
-function openRequest(type,size){
-  requestType=type;
-  requestSize=size;
-  requestPeriod='Раз в месяц';
-  document.getElementById('requestTitle').textContent=type==='Выездной флорист-декоратор'?'Заявка на оформление':'Заявка на подписку';
-  document.getElementById('requestInfoTitle').textContent=type;
-  document.getElementById('requestInfoSub').textContent=size?'Размер '+size:'Оформление мероприятия';
-  document.getElementById('requestPeriodWrap').style.display=size?'block':'none';
-  document.querySelectorAll('.period-option').forEach(function(el,i){
-    el.classList.toggle('active',i===2);
-  });
-  document.getElementById('reqName').value='';
-  document.getElementById('reqPhone').value='';
-  document.getElementById('reqComment').value='';
-  document.getElementById('requestOverlay').classList.add('open');
-  document.body.style.overflow='hidden';
-}
-
-function closeRequest(e){
-  if(e && e.target !== document.getElementById('requestOverlay')) return;
-  document.getElementById('requestOverlay').classList.remove('open');
-  document.body.style.overflow='';
-}
-
-function selectPeriod(el,period){
-  requestPeriod=period;
-  document.querySelectorAll('.period-option').forEach(function(o){o.classList.remove('active');});
-  el.classList.add('active');
-}
-
-function sendRequest(messenger){
-  const name=document.getElementById('reqName').value.trim();
-  const phone=document.getElementById('reqPhone').value.trim();
-  const comment=document.getElementById('reqComment').value.trim();
+  var badgeHtml = badge ? '<span class="card-badge">' + badge + '</span>' : '';
   
-  if(!name){showToast('Пожалуйста, укажите имя');return;}
-  if(!phone){showToast('Пожалуйста, укажите телефон');return;}
-  
-  let text='Заявка с сайта LŪMOS\n\n';
-  text+='Услуга: '+requestType+'\n';
-  if(requestSize) text+='Размер: '+requestSize+'\n';
-  if(requestType!=='Выездной флорист-декоратор') text+='Периодичность: '+requestPeriod+'\n';
-  text+='\nИмя: '+name+'\n';
-  text+='Телефон: '+phone+'\n';
-  if(comment) text+='Комментарий: '+comment+'\n';
-  
-  const encoded=encodeURIComponent(text);
-  if(messenger==='tg'){
-    window.open('https://t.me/+79095295349?text='+encoded,'_blank');
-  } else if(messenger==='max'){
-    window.open('https://max.ru/+79095295349?text='+encoded,'_blank');
+  var priceHtml;
+  if (price > 0) {
+    priceHtml = '<span class="price">' + price.toLocaleString('ru-RU') + ' ₽</span>';
+  } else {
+    priceHtml = '<span class="price-request">Цена по запросу</span>';
   }
   
-  showToast('Мессенджер открывается · отправьте сообщение');
-  setTimeout(function(){
-    document.getElementById('requestOverlay').classList.remove('open');
-    document.body.style.overflow='';
-  },1500);
+  var btnText = price > 0 ? 'В корзину' : 'Узнать цену';
+  
+  var dataAttrs = '';
+  if (category === 'букеты') {
+    dataAttrs = 
+      ' data-occasion="' + (p['повод'] || '') + '"' +
+      ' data-type="' + (p['тип'] || '') + '"' +
+      ' data-size="' + (p['размер'] || '') + '"' +
+      ' data-price="' + price + '"' +
+      ' data-popularity="' + (parseInt(p['популярность']) || 5) + '"' +
+      ' data-name="' + name + '"';
+  }
+  
+  return '<div class="card"' + dataAttrs + '>' +
+    '<div class="card-img">' + imgHtml + badgeHtml + '</div>' +
+    '<div class="card-body">' +
+      '<h3 class="card-title">' + name + '</h3>' +
+      '<p class="card-desc">' + desc + '</p>' +
+      '<div class="card-footer">' +
+        priceHtml +
+        '<button class="buy-btn" onclick="addToCart(\'' + name.replace(/'/g, "\\'") + '\',' + price + ')">' + btnText + '</button>' +
+      '</div>' +
+    '</div>' +
+  '</div>';
 }
 
-function applyFilters(){
-  let v=0;
-  document.querySelectorAll('#catalogGrid .card').forEach(function(card){
-    const ok1=filterState.occasion==='all'||(card.dataset.occasion||'').includes(filterState.occasion);
-    const ok2=filterState.type==='all'||card.dataset.type===filterState.type;
-    const ok3=filterState.size==='all'||card.dataset.size===filterState.size;
-    if(ok1&&ok2&&ok3){card.classList.remove('hidden');v++;}
-    else card.classList.add('hidden');
-  });
-  document.getElementById('resultsCount').textContent=v;
-  sortCards();
-  const g=document.getElementById('catalogGrid');
-  const no=g.querySelector('.no-results');
-  if(v===0){
-    if(!no){
-      const d=document.createElement('div');
-      d.className='no-results';
-      d.innerHTML='<span>✦</span>Скоро пополнение — заходите позже';
-      g.appendChild(d);
+// ============ ФИЛЬТРЫ И СОРТИРОВКА ============
+function applyFilters() {
+  var grid = document.getElementById('catalogGrid');
+  if (!grid) return;
+  
+  var cards = grid.querySelectorAll('.card');
+  var visible = 0;
+  
+  cards.forEach(function(card) {
+    var occasion = card.dataset.occasion || '';
+    var type = card.dataset.type || '';
+    var size = card.dataset.size || '';
+    
+    var ok1 = filterState.occasion === 'all' || occasion.indexOf(filterState.occasion) !== -1;
+    var ok2 = filterState.type === 'all' || type === filterState.type;
+    var ok3 = filterState.size === 'all' || size === filterState.size;
+    
+    if (ok1 && ok2 && ok3) {
+      card.classList.remove('hidden');
+      visible++;
+    } else {
+      card.classList.add('hidden');
     }
-  } else if(no) no.remove();
-}
-
-function sortCards(){
-  const g=document.getElementById('catalogGrid');
-  const cards=Array.from(g.querySelectorAll('.card'));
-  cards.sort(function(a,b){
-    if(sortMode==='price-asc')return (+a.dataset.price||999999)-(+b.dataset.price||999999);
-    if(sortMode==='price-desc')return (+b.dataset.price||0)-(+a.dataset.price||0);
-    return +b.dataset.popularity-+a.dataset.popularity;
   });
-  cards.forEach(function(c){g.appendChild(c);});
+  
+  var rc = document.getElementById('resultsCount');
+  var tc = document.getElementById('totalCount');
+  if (rc) rc.textContent = visible;
+  if (tc) tc.textContent = cards.length;
+  
+  sortCards();
+  
+  var noRes = grid.querySelector('.no-results');
+  if (visible === 0 && cards.length > 0) {
+    if (!noRes) {
+      var d = document.createElement('div');
+      d.className = 'no-results';
+      d.innerHTML = '<span>✦</span>Скоро пополнение — заходите позже';
+      grid.appendChild(d);
+    }
+  } else if (noRes) {
+    noRes.remove();
+  }
 }
 
-document.querySelectorAll('.filter-buttons').forEach(function(group){
-  group.querySelectorAll('.filter-btn').forEach(function(btn){
-    btn.addEventListener('click',function(){
-      group.querySelectorAll('.filter-btn').forEach(function(b){b.classList.remove('active');});
+function sortCards() {
+  var g = document.getElementById('catalogGrid');
+  if (!g) return;
+  var cards = Array.from(g.querySelectorAll('.card'));
+  cards.sort(function(a, b) {
+    if (sortMode === 'price-asc') return (+a.dataset.price || 999999) - (+b.dataset.price || 999999);
+    if (sortMode === 'price-desc') return (+b.dataset.price || 0) - (+a.dataset.price || 0);
+    return (+b.dataset.popularity || 0) - (+a.dataset.popularity || 0);
+  });
+  cards.forEach(function(c) { g.appendChild(c); });
+}
+
+document.querySelectorAll('.filter-buttons').forEach(function(group) {
+  group.querySelectorAll('.filter-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      group.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
       btn.classList.add('active');
-      filterState[group.dataset.filterGroup]=btn.dataset.value;
+      filterState[group.dataset.filterGroup] = btn.dataset.value;
       applyFilters();
     });
   });
 });
 
-const sortSel=document.getElementById('sortSelect');
-if(sortSel) sortSel.addEventListener('change',function(e){sortMode=e.target.value;applyFilters();});
+var sortSel = document.getElementById('sortSelect');
+if (sortSel) sortSel.addEventListener('change', function(e) { sortMode = e.target.value; applyFilters(); });
 
-function resetFilters(){
-  filterState.occasion='all';
-  filterState.type='all';
-  filterState.size='all';
-  sortMode='popular';
-  document.querySelectorAll('.filter-buttons').forEach(function(g){
-    g.querySelectorAll('.filter-btn').forEach(function(b){b.classList.toggle('active',b.dataset.value==='all');});
+function resetFilters() {
+  filterState.occasion = 'all';
+  filterState.type = 'all';
+  filterState.size = 'all';
+  sortMode = 'popular';
+  document.querySelectorAll('.filter-buttons').forEach(function(g) {
+    g.querySelectorAll('.filter-btn').forEach(function(b) {
+      b.classList.toggle('active', b.dataset.value === 'all');
+    });
   });
-  if(sortSel) sortSel.value='popular';
+  if (sortSel) sortSel.value = 'popular';
   applyFilters();
 }
 
-function showToast(msg){
-  const t=document.getElementById('toast');
-  t.textContent=msg;
+// ============ КОРЗИНА ============
+function addToCart(name, price) {
+  if (price === 0) {
+    showToast('«' + name + '» · цена по запросу');
+    return;
+  }
+  var ex = cart.find(function(i) { return i.name === name; });
+  if (ex) ex.qty++; else cart.push({ name: name, price: price, qty: 1 });
+  renderCart();
+  showToast('«' + name + '» · добавлено в корзину');
+}
+
+function removeFromCart(name) {
+  cart = cart.filter(function(i) { return i.name !== name; });
+  renderCart();
+}
+
+function renderCart() {
+  var box = document.getElementById('cartItems');
+  var cnt = document.getElementById('cartCount');
+  var tot = document.getElementById('cartTotal');
+  var c = cart.reduce(function(s, i) { return s + i.qty; }, 0);
+  var t = cart.reduce(function(s, i) { return s + i.price * i.qty; }, 0);
+  cnt.textContent = c;
+  tot.textContent = t.toLocaleString('ru-RU') + ' ₽';
+  if (cart.length === 0) {
+    box.innerHTML = '<div class="cart-empty">Корзина пуста<br>Выберите букет из каталога</div>';
+    return;
+  }
+  box.innerHTML = cart.map(function(i) {
+    return '<div class="cart-item"><div class="cart-item-info"><div class="cart-item-name">' + i.name + (i.qty > 1 ? ' × ' + i.qty : '') + '</div><div class="cart-item-price">' + (i.price * i.qty).toLocaleString('ru-RU') + ' ₽</div></div><button class="cart-item-remove" onclick="removeFromCart(\'' + i.name.replace(/'/g, "\\'") + '\')">×</button></div>';
+  }).join('');
+}
+
+function openCart() {
+  document.getElementById('cartPanel').classList.add('open');
+  document.getElementById('cartOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCart() {
+  document.getElementById('cartPanel').classList.remove('open');
+  document.getElementById('cartOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+</script><script>
+// ============ ОФОРМЛЕНИЕ ЗАКАЗА ============
+function openCheckout() {
+  if (cart.length === 0) { showToast('Корзина пуста · добавьте букет'); return; }
+  closeCart();
+  var total = cart.reduce(function(s, i) { return s + i.price * i.qty; }, 0);
+  var summary = '<div class="checkout-summary-row"><span>Товаров:</span><span>' + cart.reduce(function(s, i) { return s + i.qty; }, 0) + '</span></div>' +
+    cart.map(function(i) {
+      return '<div class="checkout-summary-row"><span>' + i.name + (i.qty > 1 ? ' × ' + i.qty : '') + '</span><span>' + (i.price * i.qty).toLocaleString('ru-RU') + ' ₽</span></div>';
+    }).join('') +
+    '<div class="checkout-summary-total"><span>Итого</span><span>' + total.toLocaleString('ru-RU') + ' ₽</span></div>';
+  document.getElementById('checkoutSummary').innerHTML = summary;
+  document.getElementById('checkoutOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCheckout(e) {
+  if (e && e.target !== document.getElementById('checkoutOverlay')) return;
+  document.getElementById('checkoutOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function selectDelivery(type) {
+  deliveryType = type;
+  document.getElementById('optDelivery').classList.toggle('active', type === 'delivery');
+  document.getElementById('optPickup').classList.toggle('active', type === 'pickup');
+  document.getElementById('fieldAddress').style.display = type === 'delivery' ? 'block' : 'none';
+  document.getElementById('deliveryNote').textContent = type === 'delivery'
+    ? 'Стоимость доставки уточним при подтверждении'
+    : 'Заберёте по адресу: ул. Владимира Заровного, 8';
+}
+
+function sendOrder(messenger) {
+  var name = document.getElementById('coName').value.trim();
+  var phone = document.getElementById('coPhone').value.trim();
+  var address = document.getElementById('coAddress').value.trim();
+  var comment = document.getElementById('coComment').value.trim();
+  
+  if (!name) { showToast('Пожалуйста, укажите имя'); return; }
+  if (!phone) { showToast('Пожалуйста, укажите телефон'); return; }
+  if (deliveryType === 'delivery' && !address) { showToast('Пожалуйста, укажите адрес доставки'); return; }
+  
+  var total = cart.reduce(function(s, i) { return s + i.price * i.qty; }, 0);
+  
+  var text = 'Заказ с сайта LŪMOS\n\n';
+  cart.forEach(function(i) {
+    text += '• ' + i.name + (i.qty > 1 ? ' × ' + i.qty : '') + ' = ' + (i.price * i.qty).toLocaleString('ru-RU') + ' ₽\n';
+  });
+  text += '────────────────\n';
+  text += 'Итого: ' + total.toLocaleString('ru-RU') + ' ₽\n\n';
+  text += 'Способ: ' + (deliveryType === 'delivery' ? 'Доставка курьером' : 'Самовывоз') + '\n';
+  if (deliveryType === 'delivery') {
+    text += 'Адрес: ' + address + '\n';
+    text += 'Доставка: по договорённости\n';
+  } else {
+    text += 'Заберу по адресу: ул. Владимира Заровного, 8\n';
+  }
+  text += '\nИмя: ' + name + '\n';
+  text += 'Телефон: ' + phone + '\n';
+  if (comment) text += 'Комментарий: ' + comment + '\n';
+  
+  var encoded = encodeURIComponent(text);
+  if (messenger === 'tg') {
+    window.open('https://t.me/+79095295349?text=' + encoded, '_blank');
+  } else if (messenger === 'max') {
+    window.open('https://max.ru/+79095295349?text=' + encoded, '_blank');
+  }
+  
+  showToast('Мессенджер открывается · отправьте сообщение');
+  setTimeout(function() {
+    cart = [];
+    renderCart();
+    document.getElementById('checkoutOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+    document.getElementById('coName').value = '';
+    document.getElementById('coPhone').value = '';
+    document.getElementById('coAddress').value = '';
+    document.getElementById('coComment').value = '';
+  }, 1500);
+}
+
+// ============ ЗАЯВКА (подписка, флорист) ============
+function openRequest(type, size) {
+  requestType = type;
+  requestSize = size;
+  requestPeriod = 'Раз в месяц';
+  document.getElementById('requestTitle').textContent = type === 'Выездной флорист-декоратор' ? 'Заявка на оформление' : 'Заявка на подписку';
+  document.getElementById('requestInfoTitle').textContent = type;
+  document.getElementById('requestInfoSub').textContent = size ? 'Размер ' + size : 'Оформление мероприятия';
+  document.getElementById('requestPeriodWrap').style.display = size ? 'block' : 'none';
+  document.querySelectorAll('.period-option').forEach(function(el, i) {
+    el.classList.toggle('active', i === 2);
+  });
+  document.getElementById('reqName').value = '';
+  document.getElementById('reqPhone').value = '';
+  document.getElementById('reqComment').value = '';
+  document.getElementById('requestOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeRequest(e) {
+  if (e && e.target !== document.getElementById('requestOverlay')) return;
+  document.getElementById('requestOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function selectPeriod(el, period) {
+  requestPeriod = period;
+  document.querySelectorAll('.period-option').forEach(function(o) { o.classList.remove('active'); });
+  el.classList.add('active');
+}
+
+function sendRequest(messenger) {
+  var name = document.getElementById('reqName').value.trim();
+  var phone = document.getElementById('reqPhone').value.trim();
+  var comment = document.getElementById('reqComment').value.trim();
+  
+  if (!name) { showToast('Пожалуйста, укажите имя'); return; }
+  if (!phone) { showToast('Пожалуйста, укажите телефон'); return; }
+  
+  var text = 'Заявка с сайта LŪMOS\n\n';
+  text += 'Услуга: ' + requestType + '\n';
+  if (requestSize) text += 'Размер: ' + requestSize + '\n';
+  if (requestType !== 'Выездной флорист-декоратор') text += 'Периодичность: ' + requestPeriod + '\n';
+  text += '\nИмя: ' + name + '\n';
+  text += 'Телефон: ' + phone + '\n';
+  if (comment) text += 'Комментарий: ' + comment + '\n';
+  
+  var encoded = encodeURIComponent(text);
+  if (messenger === 'tg') {
+    window.open('https://t.me/+79095295349?text=' + encoded, '_blank');
+  } else if (messenger === 'max') {
+    window.open('https://max.ru/+79095295349?text=' + encoded, '_blank');
+  }
+  
+  showToast('Мессенджер открывается · отправьте сообщение');
+  setTimeout(function() {
+    document.getElementById('requestOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }, 1500);
+}
+
+// ============ ТОСТ ============
+function showToast(msg) {
+  var t = document.getElementById('toast');
+  t.textContent = msg;
   t.classList.add('show');
-  setTimeout(function(){t.classList.remove('show');},3000);
+  setTimeout(function() { t.classList.remove('show'); }, 3000);
 }
 
-document.querySelectorAll('a[href^="#"]').forEach(function(a){
-  a.addEventListener('click',function(e){
+// ============ НАВИГАЦИЯ ПО РАЗДЕЛАМ ============
+document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+  a.addEventListener('click', function(e) {
     e.preventDefault();
-    const t=document.querySelector(a.getAttribute('href'));
-    if(t) t.scrollIntoView({behavior:'smooth'});
+    var t = document.querySelector(a.getAttribute('href'));
+    if (t) t.scrollIntoView({ behavior: 'smooth' });
   });
 });
 
-document.addEventListener('keydown',function(e){
-  if(e.key==='Escape'){closeCart();closeCheckout();closeRequest();}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') { closeCart(); closeCheckout(); closeRequest(); }
 });
 
-const sections=document.querySelectorAll('section[id]');
-const navLinks=document.querySelectorAll('.nav-sections a');
+var sections = document.querySelectorAll('section[id]');
+var navLinks = document.querySelectorAll('.nav-sections a');
 
-function updateActiveNav(){
-  let current='';
-  sections.forEach(function(section){
-    const top=section.offsetTop-160;
-    if(window.scrollY >= top) current=section.getAttribute('id');
+function updateActiveNav() {
+  var current = '';
+  sections.forEach(function(section) {
+    var top = section.offsetTop - 160;
+    if (window.scrollY >= top) current = section.getAttribute('id');
   });
-  navLinks.forEach(function(link){
+  navLinks.forEach(function(link) {
     link.classList.remove('active');
-    if(link.getAttribute('href')==='#'+current) link.classList.add('active');
+    if (link.getAttribute('href') === '#' + current) link.classList.add('active');
   });
 }
 
-window.addEventListener('scroll',updateActiveNav);
-window.addEventListener('load',updateActiveNav);
+window.addEventListener('scroll', updateActiveNav);
+window.addEventListener('load', updateActiveNav);
 
-applyFilters();
+// ============ ЗАПУСК ============
+loadProducts();
 </script>
 </body>
 </html>
